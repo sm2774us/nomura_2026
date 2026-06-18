@@ -2090,9 +2090,9 @@ where $T$ = number of leaves, $w_j$ = leaf weight, $\gamma$ = min gain threshold
 
 **Second-order Taylor expansion:**
 
-$$\mathcal{L}^{(t)} \approx \sum_i \left[g_i f_t(x_i) + \frac{1}{2}h_i f_t^2(x_i)\right] + \Omega(f_t)$$
+&Lscr;<sup>(*t*)</sup> &asymp; &sum;<sub>*i*</sub> **[** *g*<sub>*i*</sub> *f*<sub>*t*</sub>(*x*<sub>*i*</sub>) + &frac12; *h*<sub>*i*</sub> *f*<sub>*t*</sub><sup>2</sup>(*x*<sub>*i*</sub>) **]** + &Omega;(*f*<sub>*t*</sub>)
 
-Optimal leaf weight: $w_j^* = -\frac{G_j}{H_j + \lambda}$, Gain: $\frac{G_j^2}{H_j+\lambda}$
+Optimal leaf weight: *w*<sub>*j*</sub><sup>\*</sup> = &minus; *G*<sub>*j*</sub> / (*H*<sub>*j*</sub> + &lambda;), Gain: *G*<sub>*j*</sub><sup>2</sup> / (*H*<sub>*j*</sub> + &lambda;)
 
 **Feature importance:**
 
