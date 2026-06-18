@@ -464,6 +464,21 @@ if __name__ == "__main__":
     main()
 ```
 
+**Output:**
+
+```text
+2026-06-18 17:10:15,953 | INFO     | __main__ | FactorRiskModel fitted: N=100, K=5
+2026-06-18 17:10:15,955 | INFO     | __main__ | Decomposition: sys=0.0000  idio=0.0020  total=0.0020  cond(B'B)=2.1
+
+Portfolio Annualised Vol  : 71.59%
+Systematic Share          : 0.2%
+Idiosyncratic Share       : 99.8%
+Condition Number cond(B'B): 2.1
+2026-06-18 17:10:16,098 | INFO     | __main__ | Saved: outputs\variance_waterfall.html
+2026-06-18 17:10:16,175 | INFO     | __main__ | Saved: outputs\marginal_risk_contributions.html
+2026-06-18 17:10:16,211 | INFO     | __main__ | Saved: outputs\correlation_heatmap.html
+```
+
 ![variance_waterfall.png](./outputs/variance_waterfall.png)
 
 ![marginal_risk_contributions.png](./outputs/marginal_risk_contributions.png)
@@ -2802,6 +2817,21 @@ def main() -> None:
 if __name__ == "__main__":
     main()
 ```
+
+**Output:**
+
+```text
+VaR 99%  (parametric): 0.0272
+CVaR 99% (parametric): 0.0311
+CVaR 99% (historical): 0.0296
+Annual Sharpe: 0.06  95% CI: [-1.33, 1.44]
+2026-06-18 17:08:29,865 | INFO     | __main__ | Saved: outputs\efficient_frontier.html
+2026-06-18 17:08:29,926 | INFO     | __main__ | Saved: outputs\cvar_distribution.html
+```
+
+![efficient_frontier.png](./outputs/efficient_frontier.png)
+
+![cvar_distribution.png](./outputs/cvar_distribution.png)
 
 ---
 
