@@ -12,7 +12,7 @@
 ---
 ---
 
-## Table of Contents
+## 🗺️ Table of Contents
 
 **Part I — kdb+/q**
 
@@ -21,6 +21,7 @@
 3. [Q3 — Real-Time Tick Capture & RDB/HDB Architecture](#kq3)
 4. [Q4 — VWAP, TWAP, and Realized Variance in q](#kq4)
 5. [Q5 — Factor Return Computation & Cross-Sectional Regression in q](#kq5)
+PartI-Appendix. [Appendix: kdb+/q Cheat Sheet](#appendix-kdbq-cheat-sheet)
 
 **Part II — Risk Systems**
 
@@ -29,10 +30,18 @@
 8. [Q8 — Bloomberg PORT: Exposure & Attribution Workflow](#rs8)
 9. [Q9 — Cross-System Reconciliation & Residual Risk Diagnosis](#rs9)
 10. [Q10 — End-to-End CRB Risk Pipeline: kdb+ → Axioma → PORT](#rs10)
+PartII-Appendix. [Appendix: Quick-Reference — Risk Systems Comparison](#appendix-quick-reference--risk-systems-comparison)
+
+[🔝 Back to Top](#-table-of-contents)
 
 ---
 
 ## Part I — kdb+/q
+
+
+[🔝 Back to Top](#-table-of-contents)
+
+---
 
 <a name="kq1"></a>
 ## Q1 — kdb+/q Architecture & Core Query Patterns
@@ -122,6 +131,8 @@ dynamicSelect:{[tbl;cols;whr]
 | Sorted attr `` `s# `` | Binary search; `aj` (asof join) requires `s#` on time |
 | Partitioned HDB | Data sharded by date on disk; `select from trade where date=2026.06.17` loads one partition |
 | Splayed tables | Each column stored as separate file; enables column-projection pushdown |
+
+[🔝 Back to Top](#-table-of-contents)
 
 ---
 
@@ -361,6 +372,8 @@ if __name__ == "__main__":
 
 ![effective_spread.png](./outputs/effective_spread.png)
 
+[🔝 Back to Top](#-table-of-contents)
+
 ---
 
 <a name="kq3"></a>
@@ -457,6 +470,8 @@ updatePnL:{[newTrades]
                                    │          history→HDB │
                                    └─────────────────────┘
 ```
+
+[🔝 Back to Top](#-table-of-contents)
 
 ---
 
@@ -754,6 +769,8 @@ if __name__ == "__main__":
 ![realized_variance_term_structure.png](./outputs/realized_variance_term_structure.png)
 
 ![har_rv_scatter.png](./outputs/har_rv_scatter.png)
+
+[🔝 Back to Top](#-table-of-contents)
 
 ---
 
@@ -1093,9 +1110,15 @@ if __name__ == "__main__":
 
 ![ic_timeseries.png](./outputs/ic_timeseries.png)
 
+[🔝 Back to Top](#-table-of-contents)
+
 ---
 
 ## Part II — Risk Systems: Axioma · Barra · Bloomberg PORT
+
+[🔝 Back to Top](#-table-of-contents)
+
+---
 
 <a name="rs6"></a>
 ## Q6 — Axioma: Factor Model Structure & Workflow
@@ -1411,6 +1434,8 @@ if __name__ == "__main__":
 
 ![axioma_risk_attribution.png](./outputs/axioma_risk_attribution.png)
 
+[🔝 Back to Top](#-table-of-contents)
+
 ---
 
 <a name="rs7"></a>
@@ -1517,6 +1542,8 @@ riskImpact:{[wts;dB;F]
   / delta variance = dh' F dh (approx, ignoring cross-terms)
   dh mmu F mmu dh}
 ```
+
+[🔝 Back to Top](#-table-of-contents)
 
 ---
 
@@ -1808,6 +1835,8 @@ Rate Shock +200bps -0.079427 -0.074587  -0.004840
 
 ![scenario_stress_test.png](./outputs/scenario_stress_test.png)
 
+[🔝 Back to Top](#-table-of-contents)
+
 ---
 
 <a name="rs9"></a>
@@ -1900,6 +1929,8 @@ portfolioRiskGap:{[rec;wts]
   specGapTotal: wts mmu rec`specVarGap;
   `factorVarGap`specVarGap`totalGap!(varGapTotal; specGapTotal; varGapTotal+specGapTotal)}
 ```
+
+[🔝 Back to Top](#-table-of-contents)
 
 ---
 
@@ -2443,6 +2474,8 @@ if __name__ == "__main__":
 └──────────────────┴──────────────────┴──────────────────┴───────────────────┘
 ```
 
+[🔝 Back to Top](#-table-of-contents)
+
 ---
 
 ## Appendix: kdb+/q Cheat Sheet
@@ -2470,7 +2503,11 @@ if __name__ == "__main__":
 └──────────────────────┴─────────────────────────────────────────────┘
 ```
 
+[🔝 Back to Top](#-table-of-contents)
+
 ---
 
 *Prepared for Nomura Global Markets — Quantitative Researcher Interview, June 23, 2026*  
 *Addendum: kdb+/q & Risk Systems (Axioma · Barra · Bloomberg PORT)*
+
+[↩️ Back to README.md](./README.md)
