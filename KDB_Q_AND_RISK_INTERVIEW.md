@@ -21,7 +21,8 @@
 3. [Q3 — Real-Time Tick Capture & RDB/HDB Architecture](#kq3)
 4. [Q4 — VWAP, TWAP, and Realized Variance in q](#kq4)
 5. [Q5 — Factor Return Computation & Cross-Sectional Regression in q](#kq5)
-PartI-Appendix. [Appendix: kdb+/q Cheat Sheet](#appendix-kdbq-cheat-sheet)
+
+* **PartI-Appendix** [Appendix: kdb+/q Cheat Sheet](#appendix-kdbq-cheat-sheet)
 
 **Part II — Risk Systems**
 
@@ -30,7 +31,8 @@ PartI-Appendix. [Appendix: kdb+/q Cheat Sheet](#appendix-kdbq-cheat-sheet)
 8. [Q8 — Bloomberg PORT: Exposure & Attribution Workflow](#rs8)
 9. [Q9 — Cross-System Reconciliation & Residual Risk Diagnosis](#rs9)
 10. [Q10 — End-to-End CRB Risk Pipeline: kdb+ → Axioma → PORT](#rs10)
-PartII-Appendix. [Appendix: Quick-Reference — Risk Systems Comparison](#appendix-quick-reference--risk-systems-comparison)
+
+* **PartII-Appendix** [Appendix: Quick-Reference — Risk Systems Comparison](#appendix-quick-reference--risk-systems-comparison)
 
 [🔝 Back to Top](#-table-of-contents)
 
