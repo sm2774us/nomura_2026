@@ -729,9 +729,11 @@ $$
 
 ( since $P(L_i > 0) = 2\\% < 2.5\\%$ ).
 
-But $P(L_1 + L_2 > 0) \approx 3.96\\% > 2.5\\%$ , so $\mathrm{VaR}_{0.975}(L_1 + L_2) = 100 > 0 = \mathrm{VaR}(L_1) + \mathrm{VaR}(L_2)$ .
+But $P(L_1 + L_2 > 0) \approx 3.96\\% > 2.5\\%$ , 
 
-VaR penalises the diversified portfolio!
+So $\mathrm{VaR}_{0.975}(L_1 + L_2) = 100 > 0 = \mathrm{VaR}(L_1) + \mathrm{VaR}(L_2)$ .
+
+**VaR penalises the diversified portfolio!**
 
 ### [B] Linear Models — Ridge Regression and the Bias–Variance Tradeoff
 
