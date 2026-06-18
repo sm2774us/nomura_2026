@@ -2045,7 +2045,15 @@ $$\pi_t = \beta_0 + \beta_1\,\sigma_t + \beta_2\,\text{spread}_t + \beta_3\,\tex
 
 1. **Multiple imputation:** MICE (Multivariate Imputation by Chained Equations) — regress each missing feature on others. Preserves distributional properties.
 
-2. **Indicator method:** Add binary indicator $I_{miss,j} = \mathbf{1}[\text{feature } j \text{ missing}]$ as additional regressor. Allows different intercept for missing obs.
+2. **Indicator method:** 
+
+Add binary indicator 
+
+$$
+I_{miss,j} = \mathbf{1}[\text{feature } j \text{ missing}]
+$$
+
+as additional regressor. Allows different intercept for missing obs.
 
 3. **KNN imputation:** Fill missing spread with median of $k$ nearest neighbors by (time, stock).
 
