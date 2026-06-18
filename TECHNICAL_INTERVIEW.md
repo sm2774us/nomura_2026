@@ -43,11 +43,11 @@
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"How do you write out the structural risk matrix for an equity portfolio using a fundamental factor model, and how does the residual risk behave in a large portfolio?"*
-2. *"Derive the formula $\boldsymbol{\Sigma} = \mathbf{B}\mathbf{F}\mathbf{B}^{\top} + \boldsymbol{\Delta}$. What are the operational assumptions on the off-diagonal elements of $\boldsymbol{\Delta}$?"*
-3. *"What happens to the condition number of your factor covariance matrix when two style factors are highly correlated, and how do you fix it?"*
-4. *"Can you walk me through the mathematical difference between systematic and stock-specific risk diversification as $N \to \infty$?"*
-5. *"In multi-factor risk modeling, how do you mathematically handle collinearity among your independent variables?"*
+1. <i>"How do you write out the structural risk matrix for an equity portfolio using a fundamental factor model, and how does the residual risk behave in a large portfolio?"</i>
+2. <i>"Derive the formula $\boldsymbol{\Sigma} = \mathbf{B}\mathbf{F}\mathbf{B}^{\top} + \boldsymbol{\Delta}$. What are the operational assumptions on the off-diagonal elements of $\boldsymbol{\Delta}$?"</i>
+3. <i>"What happens to the condition number of your factor covariance matrix when two style factors are highly correlated, and how do you fix it?"</i>
+4. <i>"Can you walk me through the mathematical difference between systematic and stock-specific risk diversification as $N \to \infty$?"</i>
+5. <i>"In multi-factor risk modeling, how do you mathematically handle collinearity among your independent variables?"</i>
 
 #### Core Mapping & Equivalence
 
@@ -464,11 +464,11 @@ if __name__ == "__main__":
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"What makes OLS the Best Linear Unbiased Estimator (BLUE)? Prove the conditions required for this to hold."*
-2. *"Why is simple cross-sectional OLS bad for tracking equity factor returns across stocks of vastly different market capitalizations?"*
-3. *"Derive Generalized Least Squares (GLS) from first principles by transforming a heteroskedastic error structure."*
-4. *"How does heteroskedasticity bias your OLS standard errors in an asset-pricing regression, and how do you adjust for it?"*
-5. *"What is Weighted Least Squares (WLS), and why does Barra use square-root of market cap as weights?"*
+1. <i>"What makes OLS the Best Linear Unbiased Estimator (BLUE)? Prove the conditions required for this to hold."</i>
+2. <i>"Why is simple cross-sectional OLS bad for tracking equity factor returns across stocks of vastly different market capitalizations?"</i>
+3. <i>"Derive Generalized Least Squares (GLS) from first principles by transforming a heteroskedastic error structure."</i>
+4. <i>"How does heteroskedasticity bias your OLS standard errors in an asset-pricing regression, and how do you adjust for it?"</i>
+5. <i>"What is Weighted Least Squares (WLS), and why does Barra use square-root of market cap as weights?"</i>
 
 #### Core Mapping & Equivalence
 
