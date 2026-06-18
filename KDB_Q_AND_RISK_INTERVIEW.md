@@ -1831,21 +1831,21 @@ When Axioma says your portfolio has 12% active risk and Barra says 15%, the diff
 │                                                                     │
 │  Portfolio Weights w                                                │
 │         │                                                           │
-│         ├──────────────────┬──────────────────────┐                │
-│         ▼                  ▼                      ▼                │
-│   Axioma (AXWW21)    Barra (USE4)          Internal Model          │
-│   σ_active = 12%    σ_active = 15%        σ_active = 13%          │
-│         │                  │                      │                │
-│         └──────────────────┴──────────────────────┘                │
+│         ├──────────────────┬──────────────────────┐                 │
+│         ▼                  ▼                      ▼                 │
+│   Axioma (AXWW21)    Barra (USE4)          Internal Model           │
+│   σ_active = 12%    σ_active = 15%        σ_active = 13%            │
+│         │                  │                      │                 │
+│         └──────────────────┴──────────────────────┘                 │
 │                            │                                        │
 │                    Reconciliation Step                              │
 │                            │                                        │
-│         ┌──────────────────┼──────────────────────┐                │
-│         ▼                  ▼                      ▼                │
-│   Factor loading      Estimation           Universe                │
-│   mapping gap         window diff          coverage diff           │
-│   (Axioma uses        (Barra: 252d         (Barra misses           │
-│    daily loadings,     Axioma: 60d          some ADRs)            │
+│         ┌──────────────────┼──────────────────────┐                 │
+│         ▼                  ▼                      ▼                 │
+│   Factor loading      Estimation           Universe                 │
+│   mapping gap         window diff          coverage diff            │
+│   (Axioma uses        (Barra: 252d         (Barra misses            │
+│    daily loadings,     Axioma: 60d          some ADRs)              │
 │    Barra: monthly)    half-life)                                    │
 └─────────────────────────────────────────────────────────────────────┘
 ```
@@ -1922,38 +1922,38 @@ A Central Risk Book runs a continuous pipeline: ticks arrive from trading desks,
 ┌────────────────────────────────────────────────────────────────────────┐
 │                CRB Real-Time Risk Pipeline                             │
 │                                                                        │
-│  Trading Desks  ──FIX──▶  Tickerplant (kdb+ port 5010)               │
+│  Trading Desks  ──FIX──▶  Tickerplant (kdb+ port 5010)                 │
 │                                  │                                     │
-│                            upd{} handler                              │
+│                            upd{} handler                               │
 │                                  │                                     │
-│                    ┌─────────────▼───────────────┐                    │
+│                    ┌─────────────▼───────────────┐                     │
 │                    │    RDB: trade, position      │                    │
 │                    │    tables (in-memory)        │                    │
-│                    └─────────────┬───────────────┘                    │
-│                                  │ aj[`sym`date; pos; factorExp]      │
+│                    └─────────────┬───────────────┘                     │
+│                                  │ aj[`sym`date; pos; factorExp]       │
 │                                  ▼                                     │
-│                    ┌─────────────────────────────┐                    │
-│                    │  Factor Exposure Lookup     │                    │
-│                    │  (Axioma loadings B,        │                    │
-│                    │   cached in kdb+ HDB)       │                    │
-│                    └─────────────┬───────────────┘                    │
+│                    ┌─────────────────────────────┐                     │
+│                    │  Factor Exposure Lookup     │                     │
+│                    │  (Axioma loadings B,        │                     │
+│                    │   cached in kdb+ HDB)       │                     │
+│                    └─────────────┬───────────────┘                     │
 │                                  │                                     │
-│                    ┌─────────────▼───────────────┐                    │
+│                    ┌─────────────▼───────────────┐                     │
 │                    │  Real-Time Risk Engine       │                    │
-│                    │  σ² = h'Fh + w'Δw           │                    │
+│                    │  σ² = h'Fh + w'Δw           │                     │
 │                    │  Δ updated on trade arrival  │                    │
-│                    └─────────────┬───────────────┘                    │
+│                    └─────────────┬───────────────┘                     │
 │                                  │                                     │
-│                    ┌─────────────▼───────────────┐                    │
-│                    │  Risk Limit Monitor         │                    │
-│                    │  Alert if TE > 500bps       │                    │
-│                    │  Alert if MCAR_i > 50bps    │                    │
-│                    └─────────────┬───────────────┘                    │
+│                    ┌─────────────▼───────────────┐                     │
+│                    │  Risk Limit Monitor         │                     │
+│                    │  Alert if TE > 500bps       │                     │
+│                    │  Alert if MCAR_i > 50bps    │                     │
+│                    └─────────────┬───────────────┘                     │
 │                                  │                                     │
-│                    ┌─────────────▼───────────────┐                    │
+│                    ┌─────────────▼───────────────┐                     │
 │                    │  Dashboard + Bloomberg PORT  │                    │
 │                    │  (EOD reconciliation)        │                    │
-│                    └─────────────────────────────┘                    │
+│                    └─────────────────────────────┘                     │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
