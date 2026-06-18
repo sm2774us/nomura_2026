@@ -2045,19 +2045,13 @@ $$\pi_t = \beta_0 + \beta_1\,\sigma_t + \beta_2\,\text{spread}_t + \beta_3\,\tex
 
 1. **Multiple imputation:** MICE (Multivariate Imputation by Chained Equations) — regress each missing feature on others. Preserves distributional properties.
 
-2. **Indicator method:** 
+2. **Indicator method:** Add binary indicator *I*<sub>miss *j*</sub> = **1**[feature *j* missing] as additional regressor. Allows different intercept for missing obs.
 
-Add binary indicator 
+3. **KNN imputation:** Fill missing spread with median of `k` nearest neighbors by (time, stock).
 
-*I*<sub>miss *j*</sub> = **1**[feature *j* missing]
+**Boundedness:** Logistic transform &pi;<sub>*t*</sub> = &sigma;(&circ;*y*<sub>*t*</sub>) &isin; (0,1) ensures feasible participation rate. Use logistic regression rather than OLS for bounded outputs.
 
-as additional regressor. Allows different intercept for missing obs.
-
-3. **KNN imputation:** Fill missing spread with median of $k$ nearest neighbors by (time, stock).
-
-**Boundedness:** Logistic transform $\pi_t = \sigma(\hat{y}_t) \in (0,1)$ ensures feasible participation rate. Use logistic regression rather than OLS for bounded outputs.
-
-**Tobit model** when $\pi_t \in [0, \pi_{max}]$:
+**Tobit model** when &pi;<sub>*t*</sub> &isin; [0, &pi;<sub>*max*</sub>]:
 
 $$\pi^*_t = \mathbf{x}_t^\top\boldsymbol{\beta} + \epsilon_t, \qquad \pi_t = \max(0, \min(\pi^*_t, \pi_{max}))$$
 
