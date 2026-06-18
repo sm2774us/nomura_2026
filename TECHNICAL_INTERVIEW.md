@@ -576,8 +576,11 @@ $$r_i^{(m)} = -\left[\frac{\partial L(y_i, F(x_i))}{\partial F(x_i)}\right]_{F=F
 1. Initialize $F^{(0)}(x) = \bar{y}$ (constant, minimizes $\sum L$)
 2. For $m = 1, \ldots, M$:
    a. Compute pseudo-residuals $\{r_i^{(m)}\}_{i=1}^n$
+
    b. Fit regression tree $h_m$ to $\{(x_i, r_i^{(m)})\}$
+   
    c. Line search: $\gamma_m = \arg\min_\gamma \sum_i L(y_i, F^{(m-1)}(x_i) + \gamma h_m(x_i))$
+
    d. Update: $F^{(m)} = F^{(m-1)} + \nu \gamma_m h_m$, learning rate $\nu \in (0,1]$
 
 **Bias–Variance decomposition for GBM:**
