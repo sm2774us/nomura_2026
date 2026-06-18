@@ -2082,9 +2082,9 @@ VPIN threshold $\lambda^*$: calibrate via ROC curve on historical toxic flow eve
 
 **XGBoost objective:**
 
-$$\mathcal{L}^{(t)} = \sum_i \ell(y_i, \hat{y}_i^{(t-1)} + f_t(x_i)) + \Omega(f_t)$$
+&Lscr;<sup>(*t*)</sup> = &sum;<sub>*i*</sub> &ell;(*y*<sub>*i*</sub>, &circ;*y*<sub>*i*</sub><sup>(*t*&minus;1)</sup> + *f*<sub>*t*</sub>(*x*<sub>*i*</sub>)) + &Omega;(*f*<sub>*t*</sub>)
 
-$$\Omega(f) = \gamma T + \frac{1}{2}\lambda\sum_{j=1}^T w_j^2$$
+&Omega;(*f*) = &gamma;*T* + &frac12;&lambda;&sum;<sub>*j*=1</sub><sup>*T*</sup> *w*<sub>*j*</sub><sup>2</sup>
 
 where $T$ = number of leaves, $w_j$ = leaf weight, $\gamma$ = min gain threshold, $\lambda$ = L2 penalty on weights.
 
@@ -2096,8 +2096,8 @@ Optimal leaf weight: $w_j^* = -\frac{G_j}{H_j + \lambda}$, Gain: $\frac{G_j^2}{H
 
 **Feature importance:**
 
-- **Gain**: Total improvement in loss from all splits on feature $j$ — measures predictive power
-- **Cover**: Total number of observations routed through splits on feature $j$ — measures breadth
+- **Gain**: Total improvement in loss from all splits on feature `j` — measures predictive power
+- **Cover**: Total number of observations routed through splits on feature `j` — measures breadth
 - **SHAP**: Consistent, additive attribution — preferred for model explanation
 
 **Preventing overfitting:**
