@@ -2301,7 +2301,7 @@ In XGBoost: `scale_pos_weight = C(FN)/C(FP)`.
 **Merton jump-diffusion SDE:**
 
 $$
-\frac{d S_{t}}{S_{t^{-}}} = (\mu - \lambda \bar{k}) dt + \sigma dW_{t} + (J_{t} - 1) dN_{t}
+\frac{dS_{t}}{S_{t^{-}}} = (\mu - \lambda \bar{k}) dt + \sigma dW_{t} + (J_{t} - 1) dN_{t}
 $$
 
 where:
