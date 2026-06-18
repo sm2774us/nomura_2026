@@ -823,7 +823,14 @@ $$\mathrm{MSE}(\hat{\boldsymbol{\beta}}_{\lambda^{\*}}) < \mathrm{MSE}(\hat{\bol
 #### Core Mapping & Equivalence
 
 * **Why they are the same:** These variations look for the mechanics of gradient preservation over sequence steps, contrasting multiplicative matrix weights with additive operations.
-* **How the original answer satisfies them:** The cell-state partial derivative equation ($\frac{\partial \mathbf{c}_t}{\partial \mathbf{c}_{t-1}} = \mathrm{diag}(\mathbf{f}_t)$) explicitly shows how an open forget gate ($\mathbf{f}_t \approx 1$) stops exponential decay, addressing Variations 2, 3, 4, and 5. The comparison to vanilla RNN's $W_{hh}$ spectral radius directly solves Variation 1.
+* **How the original answer satisfies them:**
+The cell-state partial derivative equation:
+
+$$
+\frac{\partial \mathbf{c}_t}{\partial \mathbf{c}_{t-1}} = \mathrm{diag}(\mathbf{f}_t)
+$$
+
+explicitly shows how an open forget gate ( $\mathbf{f}_t \approx 1$ ) stops exponential decay, addressing Variations 2, 3, 4, and 5. The comparison to vanilla RNN's $W_{hh}$ spectral radius directly solves Variation 1.
 
 ---
 
