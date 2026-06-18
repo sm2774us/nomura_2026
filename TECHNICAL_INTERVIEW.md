@@ -2388,14 +2388,14 @@ For daily VaR ($T=1/252$): jump contribution $\approx \frac{1}{252}\times 0.20 \
 
 ### ⚠️ GOTCHA QUESTION — Discussion Required First
 
-> **Question:** **"We trade stocks and futures, and you can both long and short for futures. Assume you built a perfect quantitative trading model with perfect $R^2 = 1.0$, what trading strategy do you recommend and what are the expected returns of such a strategy?"**
+> **Question:** **"We trade stocks and futures, and you can both long and short for futures. Assume you built a perfect quantitative trading model with perfect R<sup>2</sup> = 1.0, what trading strategy do you recommend and what are the expected returns of such a strategy?"**
 
 > **⚠️ STOP — Before answering, ask the interviewer:**
-> 1. "When you say $R^2=1$, do you mean the model predicts **direction** perfectly (classification, $R^2=1$ for sign), or **magnitude** (regression, $R^2=1$ for exact return levels)?"
+> 1. "When you say R<sup>2</sup> = 1, do you mean the model predicts **direction** perfectly (classification, R<sup>2</sup> = 1 for sign), or **magnitude** (regression, $R^2=1$ for exact return levels)?"
 > 2. "Are the stocks and futures on the same underlying? Are the futures cash-settled?"
 > 3. "What are the transaction cost and market impact assumptions — can we trade any size at quoted prices?"
 
-> **The trap:** A naive answer is "go long stocks with positive predictions." But $R^2=1$ means you predict returns **exactly** — you can exploit this far more efficiently via a market-neutral strategy. Also, $R^2=1$ in-sample is almost certainly overfitting; the interviewer is testing whether you challenge unrealistic assumptions.
+> **The trap:** A naive answer is "go long stocks with positive predictions." But R<sup>2</sup> = 1 means you predict returns **exactly** — you can exploit this far more efficiently via a market-neutral strategy. Also, $R^2=1$ in-sample is almost certainly overfitting; the interviewer is testing whether you challenge unrealistic assumptions.
 
 ---
 
