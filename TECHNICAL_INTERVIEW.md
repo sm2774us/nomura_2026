@@ -1673,14 +1673,13 @@ $$IR = \frac{IC \cdot \sigma \cdot \sqrt{BR}}{\sigma} = IC\sqrt{BR}$$
 
 **Out-of-sample metrics (most relevant for prediction):**
 
-1. **Out-of-sample $R^2$ (OOS-$R^2$)**:
-   $$R^2_{OOS} = 1 - \frac{\sum_t(y_t - \hat{y}_t)^2}{\sum_t(y_t - \bar{y}_{train})^2}$$
+1. **Out-of-sample *R*<sup>2</sup> (OOS-*R*<sup>2</sup>)**: *R*<sup>2</sup><sub>*OOS*</sub> = 1 &minus; [&sum;<sub>*t*</sub>(*y*<sub>*t*</sub> &minus; &circ;*y*<sub>*t*</sub>)<sup>2</sup>] / [&sum;<sub>*t*</sub>(*y*<sub>*t*</sub> &minus; &macr;*y*<sub>*train*</sub>)<sup>2</sup>]
 
 2. **RMSE**: $\sqrt{\frac{1}{T}\sum_t(y_t-\hat{y}_t)^2}$ — interpretable in return units.
 
 3. **Information Coefficient (IC)**: $\rho(\hat{y}_t, y_t)$ — preferred for ranking-based signals.
 
-**For factor risk models:** OOS-$R^2$ and IC over a rolling walk-forward window. Positive OOS-$R^2$ is a high bar (Campbell & Thompson 2008: even $OOS\text{-}R^2 \approx 0.5\%$ is economically large for equity return prediction).
+**For factor risk models:** OOS-*R*<sup>2</sup> and IC over a rolling walk-forward window. Positive OOS-*R*<sup>2</sup> is a high bar (Campbell & Thompson 2008: even $OOS\text{-}R^2 \approx 0.5\%$ is economically large for equity return prediction).
 
 ### [C] Machine Learning — Neural Network Weight Initialization (from Q2.2)
 
