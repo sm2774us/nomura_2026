@@ -2376,7 +2376,7 @@ Jump contribution: &lambda; *T* (&delta;<sup>2</sup> + &circ;*k*<sup>2</sup>) &m
 
 Under jump-diffusion, the tails are fatter (mixture of normals with varying means). For &lambda; = 1 jump/year, &circ;*k* = &minus;20%, &delta; = 5%:
 
-*VaR*<sub>99%</sub><sup>*JD*</sup> &asymp; *VaR正式*<sub>99%</sub><sup>*GBM*</sup> + &lambda; *T* &middot; |&circ;*k*| &middot; (jump probability correction)
+*VaR*<sub>99%</sub><sup>*JD*</sup> &asymp; *VaR*<sub>99%</sub><sup>*GBM*</sup> + &lambda; *T* &middot; |&circ;*k*| &middot; (jump probability correction)
 
 For daily VaR (*T*=1/252): jump contribution &asymp; (1 / 252) &times; 0.20 &asymp; 8 bps &mdash; material at the 99% level.
 
@@ -2385,11 +2385,11 @@ For daily VaR (*T*=1/252): jump contribution &asymp; (1 / 252) &times; 0.20 &asy
 <a name="set-10"></a>
 ## Interview Set 10 — The Perfect `R^2` Gotcha (Stochastic Calculus Meets Strategy Design)
 
-### &Aacute;; GOTCHA QUESTION — Discussion Required First
+### ⚠️ GOTCHA QUESTION — Discussion Required First
 
 > **Question:** **"We trade stocks and futures, and you can both long and short for futures. Assume you built a perfect quantitative trading model with perfect R<sup>2</sup> = 1.0, what trading strategy do you recommend and what are the expected returns of such a strategy?"**
 
-> **&Aacute;; STOP — Before answering, ask the interviewer:**
+> **⚠️ STOP — Before answering, ask the interviewer:**
 > 1. "When you say R<sup>2</sup> = 1, do you mean the model predicts **direction** perfectly (classification, R<sup>2</sup> = 1 for sign), or **magnitude** (regression, *R*<sup>2</sup> = 1 for exact return levels)?"
 > 2. "Are the stocks and futures on the same underlying? Are the futures cash-settled?"
 > 3. "What are the transaction cost and market impact assumptions — can we trade any size at quoted prices?"
