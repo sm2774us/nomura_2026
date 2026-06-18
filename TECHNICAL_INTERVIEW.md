@@ -19,7 +19,7 @@
 7. [Interview Set 7 — P&L Attribution & Greeks (Stat / LinReg / ML / Stoch)](#set-7)
 8. [Interview Set 8 — Algorithmic Execution & Smart Order Routing (Stat / LinReg / ML / Stoch)](#set-8)
 9. [Interview Set 9 — Regime Detection & Hidden Markov Models (Stat / LinReg / ML / Stoch)](#set-9)
-10. [Interview Set 10 — Perfect-$R^2$ Gotcha & Trading Strategy Design (Stat / LinReg / ML / Stoch)](#set-10)
+10. [Interview Set 10 — Perfect-`R^2` Gotcha & Trading Strategy Design (Stat / LinReg / ML / Stoch)](#set-10)
 
 ---
 
@@ -530,11 +530,11 @@ $$\mathrm{Var}(\hat{\boldsymbol{\beta}}_{GLS}) = (\mathbf{X}^\top\boldsymbol{\Om
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"How does Gradient Boosting differ from Random Forest regarding how they optimize bias and variance?"*
-2. *"Derive the update step for a GBM when optimizing a standard MSE loss function. What do the residuals represent?"*
-3. *"What are the key hyperparameters to prevent a LightGBM or XGBoost model from overfitting to noisy alpha signals?"*
-4. *"Explain how SHAP values evaluate feature importance. How do they compare to standard built-in tree gain?"*
-5. *"Why do we use shallow trees in boosting instead of deep trees?"*
+1. <i>"How does Gradient Boosting differ from Random Forest regarding how they optimize bias and variance?"</i>
+2. <i>"Derive the update step for a GBM when optimizing a standard MSE loss function. What do the residuals represent?"</i>
+3. <i>"What are the key hyperparameters to prevent a LightGBM or XGBoost model from overfitting to noisy alpha signals?"</i>
+4. <i>"Explain how SHAP values evaluate feature importance. How do they compare to standard built-in tree gain?"</i>
+5. <i>"Why do we use shallow trees in boosting instead of deep trees?"</i>
 
 #### Core Mapping & Equivalence
 
@@ -587,11 +587,11 @@ In CRB context: explains which order-flow feature most drove the model's residua
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"Apply Itô’s Lemma to find the dynamics of the log of a stock price following a geometric Brownian motion."*
-2. *"Where does the negative variance term come from when you solve for the price distribution of a standard stock SDE?"*
-3. *"Prove that the expected value of a stock following $dS_t = \mu S_t dt + \sigma S_t dW_t$ is $S_0 e^{\mu T}$."*
-4. *"Why is the drift of a log-transformed asset price lower than its arithmetic drift? Explain via Jensen’s Inequality."*
-5. *"What is the probability density function of a stock price at a future time $T$ under GBM?"*
+1. <i>"Apply Itô’s Lemma to find the dynamics of the log of a stock price following a geometric Brownian motion."</i>
+2. <i>"Where does the negative variance term come from when you solve for the price distribution of a standard stock SDE?"</i>
+3. <i>"Prove that the expected value of a stock following $dS_t = \mu S_t dt + \sigma S_t dW_t$ is $S_0 e^{\mu T}$."</i>
+4. <i>"Why is the drift of a log-transformed asset price lower than its arithmetic drift? Explain via Jensen’s Inequality."</i>
+5. <i>"What is the probability density function of a stock price at a future time $T$ under GBM?"</i>
 
 #### Core Mapping & Equivalence
 
@@ -660,11 +660,11 @@ The $-\frac{1}{2}\sigma^2$ in the drift of $X_t$ exactly cancels with the varian
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"What is the difference between Value-at-Risk and Expected Shortfall? Derive Expected Shortfall for a normal distribution."*
-2. *"Why is VaR not a coherent risk measure? Provide a concrete scenario where it fails."*
-3. *"Prove the formula for the conditional expectation of a normal variable given that it exceeds a threshold."*
-4. *"What does sub-additivity mean for a portfolio manager, and why does CVaR satisfy it while VaR can fail?"*
-5. *"How do you calculate the average loss in the worst 1% of outcomes if returns are normally distributed?"*
+1. <i>"What is the difference between Value-at-Risk and Expected Shortfall? Derive Expected Shortfall for a normal distribution."</i>
+2. <i>"Why is VaR not a coherent risk measure? Provide a concrete scenario where it fails."</i>
+3. <i>"Prove the formula for the conditional expectation of a normal variable given that it exceeds a threshold."</i>
+4. <i>"What does sub-additivity mean for a portfolio manager, and why does CVaR satisfy it while VaR can fail?"</i>
+5. <i>"How do you calculate the average loss in the worst 1% of outcomes if returns are normally distributed?"</i>
 
 #### Core Mapping & Equivalence
 
@@ -721,11 +721,11 @@ where $\phi(\cdot)$ is the standard normal PDF.
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"Derive L2 regularization from both a frequentist optimization standpoint and a Bayesian standpoint."*
-2. *"Prove that Ridge regression can achieve a lower Mean Squared Error than standard OLS when multi-collinearity is present."*
-3. *"What is the explicit bias-variance trade-off formula for Ridge regression as the penalty parameter $\lambda \to \infty$?"*
-4. *"Show how adding a diagonal matrix $\lambda \mathbf{I}$ stabilizes the inverse of a feature matrix in linear regression."*
-5. *"What prior distribution on regression coefficients corresponds to an L2 penalty?"*
+1. <i>"Derive L2 regularization from both a frequentist optimization standpoint and a Bayesian standpoint."</i>
+2. <i>"Prove that Ridge regression can achieve a lower Mean Squared Error than standard OLS when multi-collinearity is present."</i>
+3. <i>"What is the explicit bias-variance trade-off formula for Ridge regression as the penalty parameter $\lambda \to \infty$?"</i>
+4. <i>"Show how adding a diagonal matrix $\lambda \mathbf{I}$ stabilizes the inverse of a feature matrix in linear regression."</i>
+5. <i>"What prior distribution on regression coefficients corresponds to an L2 penalty?"</i>
 
 #### Core Mapping & Equivalence
 
@@ -2332,7 +2332,7 @@ For daily VaR ($T=1/252$): jump contribution $\approx \frac{1}{252}\times 0.20 \
 ---
 
 <a name="set-10"></a>
-## Interview Set 10 — The Perfect $R^2$ Gotcha (Stochastic Calculus Meets Strategy Design)
+## Interview Set 10 — The Perfect `R^2` Gotcha (Stochastic Calculus Meets Strategy Design)
 
 ### ⚠️ GOTCHA QUESTION — Discussion Required First
 
