@@ -814,11 +814,11 @@ $$\mathrm{MSE}(\hat{\boldsymbol{\beta}}_{\lambda^{\*}}) < \mathrm{MSE}(\hat{\bol
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"Why do standard Recurrent Neural Networks (RNNs) struggle with long-term dependencies, and how does LSTM architecture fix this?"*
-2. *"Derive the mathematical reason why backpropagation through time (BPTT) causes exponential decay of gradients in long sequences."*
-3. *"What is the specific purpose of the forget gate in an LSTM during the backward pass?"*
-4. *"Explain the concept of the 'additive gradient highway' in modern sequential neural networks."*
-5. *"Write out the chain rule decomposition for the gradient of the loss with respect to the cell state at time $t-k$."*
+1. <i>"Why do standard Recurrent Neural Networks (RNNs) struggle with long-term dependencies, and how does LSTM architecture fix this?"</i>
+2. <i>"Derive the mathematical reason why backpropagation through time (BPTT) causes exponential decay of gradients in long sequences."</i>
+3. <i>"What is the specific purpose of the forget gate in an LSTM during the backward pass?"</i>
+4. <i>"Explain the concept of the 'additive gradient highway' in modern sequential neural networks."</i>
+5. <i>"Write out the chain rule decomposition for the gradient of the loss with respect to the cell state at time $t-k$."</i>
 
 #### Core Mapping & Equivalence
 
@@ -877,11 +877,11 @@ Since $\mathbf{f}_t \in (0,1)$ elementwise (sigmoid output), the product is cont
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"Derive the Black-Scholes PDE using a no-arbitrage delta-hedging argument."*
-2. *"What is Girsanov’s theorem, and how does it allow us to ignore the real-world drift $\mu$ when pricing derivatives?"*
-3. *"Construct a riskless portfolio containing an option and its underlying stock. What SDE must it satisfy?"*
-4. *"Explain how a change of probability measure removes the risk premium from an asset path SDE."*
-5. *"Write out the Black-Scholes PDE and explain the physical meaning of each term."*
+1. <i>"Derive the Black-Scholes PDE using a no-arbitrage delta-hedging argument."</i>
+2. <i>"What is Girsanov’s theorem, and how does it allow us to ignore the real-world drift $\mu$ when pricing derivatives?"</i>
+3. <i>"Construct a riskless portfolio containing an option and its underlying stock. What SDE must it satisfy?"</i>
+4. <i>"Explain how a change of probability measure removes the risk premium from an asset path SDE."</i>
+5. <i>"Write out the Black-Scholes PDE and explain the physical meaning of each term."</i>
 
 #### Core Mapping & Equivalence
 
@@ -939,11 +939,11 @@ $$d_{1,2} = \frac{\ln(S/K) + (r \pm \frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"How do you calculate the standard error of a sample Sharpe ratio under the assumption of i.i.d. normal returns?"*
-2. *"If a strategy has a backtested Sharpe of 1.5 over one year, how confident are you that its true structural Sharpe is greater than zero?"*
-3. *"What is Andrew Lo’s correction for the standard error of the Sharpe ratio when returns have fat tails?"*
-4. *"How do skewness and kurtosis change the confidence interval of your performance metrics?"*
-5. *"Why is 252 days of data often insufficient to validate a high-Sharpe trading strategy?"*
+1. <i>"How do you calculate the standard error of a sample Sharpe ratio under the assumption of i.i.d. normal returns?"</i>
+2. <i>"If a strategy has a backtested Sharpe of 1.5 over one year, how confident are you that its true structural Sharpe is greater than zero?"</i>
+3. <i>"What is Andrew Lo’s correction for the standard error of the Sharpe ratio when returns have fat tails?"</i>
+4. <i>"How do skewness and kurtosis change the confidence interval of your performance metrics?"</i>
+5. <i>"Why is 252 days of data often insufficient to validate a high-Sharpe trading strategy?"</i>
 
 #### Core Mapping & Equivalence
 
@@ -996,11 +996,11 @@ CI widens to $(1.29, 1.71)$ — fat tails inflate uncertainty by ~16%.
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"Set up and solve the quadratic optimization problem for a mean-variance optimal portfolio."*
-2. *"Prove the Two-Fund Separation Theorem mathematically."*
-3. *"Why does the sample covariance matrix fail in out-of-sample portfolio optimization when $N > T$?"*
-4. *"Explain Ledoit-Wolf shrinkage. What is the target matrix and how is the mixing weight determined?"*
-5. *"Derive the weights of the Global Minimum Variance portfolio."*
+1. <i>"Set up and solve the quadratic optimization problem for a mean-variance optimal portfolio."</i>
+2. <i>"Prove the Two-Fund Separation Theorem mathematically."</i>
+3. <i>"Why does the sample covariance matrix fail in out-of-sample portfolio optimization when $N > T$?"</i>
+4. <i>"Explain Ledoit-Wolf shrinkage. What is the target matrix and how is the mixing weight determined?"</i>
+5. <i>"Derive the weights of the Global Minimum Variance portfolio."</i>
 
 #### Core Mapping & Equivalence
 
@@ -1063,11 +1063,11 @@ Optimal $\alpha^*$ minimizes expected Frobenius loss $\mathbb{E}[\|\hat{\boldsym
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"Why does an L1 penalty cause weights to become exactly zero, while an L2 penalty only shrinks them?"*
-2. *"Draw the geometric constraints of Ridge and Lasso and explain how corners produce feature selection."*
-3. *"Derive the soft-thresholding operator for Lasso under an orthogonal design matrix."*
-4. *"What is a sub-gradient, and how do you use it to show sparsity in L1 regularization?"*
-5. *"If you have 1000 highly correlated features, would you use Lasso or Ridge? Why?"*
+1. <i>"Why does an L1 penalty cause weights to become exactly zero, while an L2 penalty only shrinks them?"</i>
+2. <i>"Draw the geometric constraints of Ridge and Lasso and explain how corners produce feature selection."</i>
+3. <i>"Derive the soft-thresholding operator for Lasso under an orthogonal design matrix."</i>
+4. <i>"What is a sub-gradient, and how do you use it to show sparsity in L1 regularization?"</i>
+5. <i>"If you have 1000 highly correlated features, would you use Lasso or Ridge? Why?"</i>
 
 #### Core Mapping & Equivalence
 
@@ -1118,11 +1118,11 @@ Ridge: $\hat{\beta}_{R,j} = \hat{\beta}_{OLS,j}/(1+\lambda)$ — never zero.
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"Prove that compensated squared Brownian motion is a martingale."*
-2. *"What theorem guarantees that any derivative payoff can be perfectly replicated using a stock and a bond?"*
-3. *"State the definition of a martingale and check if $W_t^2$ fulfills it."*
-4. *"How does the Martingale Representation Theorem relate to the existence of a delta-hedging strategy?"*
-5. *"Show that $\mathbb{E}[W_t^2 | \mathcal{F}_s] = W_s^2 + t - s$."*
+1. <i>"Prove that compensated squared Brownian motion is a martingale."</i>
+2. <i>"What theorem guarantees that any derivative payoff can be perfectly replicated using a stock and a bond?"</i>
+3. <i>"State the definition of a martingale and check if $W_t^2$ fulfills it."</i>
+4. <i>"How does the Martingale Representation Theorem relate to the existence of a delta-hedging strategy?"</i>
+5. <i>"Show that $\mathbb{E}[W_t^2 | \mathcal{F}_s] = W_s^2 + t - s$."</i>
 
 #### Core Mapping & Equivalence
 
@@ -1179,11 +1179,11 @@ The process $\phi_t$ identifies the **delta hedge** (number of shares to hold at
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"What is Implementation Shortfall, and how do you break it down into execution frictions?"*
-2. *"How do you statistically prove that execution Algo A outperforms benchmark Algo B given highly noisy trade cost data?"*
-3. *"What are White’s heteroskedasticity-robust standard errors, and why are they mandatory for transaction cost analysis?"*
-4. *"How do you handle unexecuted orders (canceled shares) when calculating total transaction costs?"*
-5. *"Design a hypothesis test to evaluate if an execution strategy minimizes market impact compared to a VWAP target."*
+1. <i>"What is Implementation Shortfall, and how do you break it down into execution frictions?"</i>
+2. <i>"How do you statistically prove that execution Algo A outperforms benchmark Algo B given highly noisy trade cost data?"</i>
+3. <i>"What are White’s heteroskedasticity-robust standard errors, and why are they mandatory for transaction cost analysis?"</i>
+4. <i>"How do you handle unexecuted orders (canceled shares) when calculating total transaction costs?"</i>
+5. <i>"Design a hypothesis test to evaluate if an execution strategy minimizes market impact compared to a VWAP target."</i>
 
 #### Core Mapping & Equivalence
 
@@ -1231,11 +1231,11 @@ Or use **WLS** with weights inversely proportional to variance (e.g., weighted b
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"What is the difference between temporary and permanent market impact? How do you write them as a regression model?"*
-2. *"Why is estimating market impact via standard OLS severely biased by endogeneity?"*
-3. *"How do you use Two-Stage Least Squares (2SLS) to find the true price impact coefficient of parent orders?"*
-4. *"What makes an institutional trading volume variable endogenous, and what constitutes a valid instrument ($Z$)?"*
-5. *"Explain the feedback loop between execution speed and simultaneous market price moves."*
+1. <i>"What is the difference between temporary and permanent market impact? How do you write them as a regression model?"</i>
+2. <i>"Why is estimating market impact via standard OLS severely biased by endogeneity?"</i>
+3. <i>"How do you use Two-Stage Least Squares (2SLS) to find the true price impact coefficient of parent orders?"</i>
+4. <i>"What makes an institutional trading volume variable endogenous, and what constitutes a valid instrument ($Z$)?"</i>
+5. <i>"Explain the feedback loop between execution speed and simultaneous market price moves."</i>
 
 #### Core Mapping & Equivalence
 
@@ -1282,11 +1282,11 @@ $$\mathrm{Var}(\hat{\boldsymbol{\beta}}_{IV}) = \sigma^2(\hat{\mathbf{X}}^\top\m
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"How do you evaluate a new algorithmic execution policy using historical order logs without running it live?"*
-2. *"What is selection bias in reinforcement learning / policy optimization for trading, and how does IPW fix it?"*
-3. *"Explain Inverse Propensity Weighting. What happens if the behavior policy probability is near zero?"*
-4. *"How does the Doubly-Robust estimator combine tree-based regressions with propensity scores for transaction cost analysis?"*
-5. *"How do you account for the fact that historical trade logs only show the execution path that was actually chosen?"*
+1. <i>"How do you evaluate a new algorithmic execution policy using historical order logs without running it live?"</i>
+2. <i>"What is selection bias in reinforcement learning / policy optimization for trading, and how does IPW fix it?"</i>
+3. <i>"Explain Inverse Propensity Weighting. What happens if the behavior policy probability is near zero?"</i>
+4. <i>"How does the Doubly-Robust estimator combine tree-based regressions with propensity scores for transaction cost analysis?"</i>
+5. <i>"How do you account for the fact that historical trade logs only show the execution path that was actually chosen?"</i>
 
 #### Core Mapping & Equivalence
 
@@ -1321,11 +1321,11 @@ GBM trains $\hat{Q}(s,a)$ as the direct model (DM component), then IPW corrects 
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"Frame optimal liquidation as a continuous-time stochastic control problem and derive its partial differential equation."*
-2. *"Why does a mean-reverting or linear price impact model lead to a trading speed that is proportional to current holdings?"*
-3. *"Set up the Hamilton-Jacobi-Bellman (HJB) equation for a trader liquidating a large block of shares under volatility risk."*
-4. *"Solve the optimal trading path using a quadratic value function ansatz $V(t,x) = a(t)x^2 + b(t)$."*
-5. *"How does the optimal execution rate change as the trading deadline approaches ($\tau \to 0$)?"*
+1. <i>"Frame optimal liquidation as a continuous-time stochastic control problem and derive its partial differential equation."</i>
+2. <i>"Why does a mean-reverting or linear price impact model lead to a trading speed that is proportional to current holdings?"</i>
+3. <i>"Set up the Hamilton-Jacobi-Bellman (HJB) equation for a trader liquidating a large block of shares under volatility risk."</i>
+4. <i>"Solve the optimal trading path using a quadratic value function ansatz $V(t,x) = a(t)x^2 + b(t)$."</i>
+5. <i>"How does the optimal execution rate change as the trading deadline approaches ($\tau \to 0$)?"</i>
 
 #### Core Mapping & Equivalence
 
@@ -1383,11 +1383,11 @@ This is **linear in $x(t)$** — sell at a rate proportional to remaining invent
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"Derive the long-run steady-state variance of a GARCH(1,1) process."*
-2. *"What happens mathematically to a GARCH model when the sum of the ARCH and GARCH parameters equals or exceeds 1?"*
-3. *"How do you measure how fast a volatility shock decays back to its long-run mean?"*
-4. *"What is Integrated GARCH (IGARCH), and what are its implications for long-term option pricing?"*
-5. *"Write out the conditional variance equation for daily asset returns and state the constraints required to keep variance positive and finite."*
+1. <i>"Derive the long-run steady-state variance of a GARCH(1,1) process."</i>
+2. <i>"What happens mathematically to a GARCH model when the sum of the ARCH and GARCH parameters equals or exceeds 1?"</i>
+3. <i>"How do you measure how fast a volatility shock decays back to its long-run mean?"</i>
+4. <i>"What is Integrated GARCH (IGARCH), and what are its implications for long-term option pricing?"</i>
+5. <i>"Write out the conditional variance equation for daily asset returns and state the constraints required to keep variance positive and finite."</i>
 
 #### Core Mapping & Equivalence
 
@@ -1426,11 +1426,11 @@ $$\boxed{\bar{\sigma}^2 = \frac{\omega}{1 - \alpha - \beta}} \quad \text{valid i
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"Explain the HAR-RV model by Fulvio Corsi. How does it mimic a cascade of different trading horizons?"*
-2. *"Why is high-frequency Realized Variance typically easier to forecast using simple OLS than standard daily squared returns via GARCH?"*
-3. *"How do you construct daily, weekly, and monthly volatility components for an empirical multi-horizon regression?"*
-4. *"Does the HAR model capture long-memory behavior in volatility without using fractional integration?"*
-5. *"What are the practical estimation advantages of linear regression over Maximum Likelihood for volatility modeling?"*
+1. <i>"Explain the HAR-RV model by Fulvio Corsi. How does it mimic a cascade of different trading horizons?"</i>
+2. <i>"Why is high-frequency Realized Variance typically easier to forecast using simple OLS than standard daily squared returns via GARCH?"</i>
+3. <i>"How do you construct daily, weekly, and monthly volatility components for an empirical multi-horizon regression?"</i>
+4. <i>"Does the HAR model capture long-memory behavior in volatility without using fractional integration?"</i>
+5. <i>"What are the practical estimation advantages of linear regression over Maximum Likelihood for volatility modeling?"</i>
 
 #### Core Mapping & Equivalence
 
@@ -1476,11 +1476,11 @@ OLS estimate: $\hat{\boldsymbol{\beta}} = (\mathbf{X}^\top\mathbf{X})^{-1}\mathb
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"Why does standard k-fold cross-validation look artificially amazing in backtests but fail completely out-of-sample on financial series?"*
-2. *"Explain the concepts of purging and embargoing in quantitative backtesting as defined by Marcos López de Prado."*
-3. *"How do you prevent look-ahead bias and information leakage when your target variable spans an overlapping multi-day horizon?"*
-4. *"What is Combinatorial Purged Cross-Validation, and how does it generate multiple backtest paths?"*
-5. *"How many days of data must you drop between your training set and your test set if your model predicts returns over a weekly horizon?"*
+1. <i>"Why does standard k-fold cross-validation look artificially amazing in backtests but fail completely out-of-sample on financial series?"</i>
+2. <i>"Explain the concepts of purging and embargoing in quantitative backtesting as defined by Marcos López de Prado."</i>
+3. <i>"How do you prevent look-ahead bias and information leakage when your target variable spans an overlapping multi-day horizon?"</i>
+4. <i>"What is Combinatorial Purged Cross-Validation, and how does it generate multiple backtest paths?"</i>
+5. <i>"How many days of data must you drop between your training set and your test set if your model predicts returns over a weekly horizon?"</i>
 
 #### Core Mapping & Equivalence
 
@@ -1521,11 +1521,11 @@ CPCV(T observations, K folds, purge_gap G):
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"What is the Heston stochastic volatility model? Write the coupled SDEs for the asset and its variance."*
-2. *"How does the Feller condition protect the variance process in a square-root diffusion model?"*
-3. *"Explain how the correlation parameter $\rho$ in the Heston model maps to the implied volatility smile seen in options markets."*
-4. *"How do you use Fourier inversion techniques and characteristic functions to price options when no explicit analytical density exists?"*
-5. *"Apply the Feynman-Kac theorem to convert the Heston joint diffusion process into a pricing partial differential equation."*
+1. <i>"What is the Heston stochastic volatility model? Write the coupled SDEs for the asset and its variance."</i>
+2. <i>"How does the Feller condition protect the variance process in a square-root diffusion model?"</i>
+3. <i>"Explain how the correlation parameter $\rho$ in the Heston model maps to the implied volatility smile seen in options markets."</i>
+4. <i>"How do you use Fourier inversion techniques and characteristic functions to price options when no explicit analytical density exists?"</i>
+5. <i>"Apply the Feynman-Kac theorem to convert the Heston joint diffusion process into a pricing partial differential equation."</i>
 
 #### Core Mapping & Equivalence
 
@@ -1579,11 +1579,11 @@ $$P_{1,2} = \frac{1}{2} + \frac{1}{\pi}\int_0^\infty \mathrm{Re}\!\left[\frac{e^
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"Derive Grinold’s Fundamental Law of Active Management. What are its components?"*
-2. *"How does transaction cost friction reduce your theoretical Information Ratio? Define the Transfer Coefficient ($TC$)."*
-3. *"Why can a high-turnover execution desk maintain a massive Information Ratio even if its directional stock-picking accuracy ($IC$) is tiny?"*
-4. *"What is the mathematical connection between strategy breadth, signal correlation, and portfolio risk?"*
-5. *"How do you calculate the tracking error and active return for an idiosyncratic trading book?"*
+1. <i>"Derive Grinold’s Fundamental Law of Active Management. What are its components?"</i>
+2. <i>"How does transaction cost friction reduce your theoretical Information Ratio? Define the Transfer Coefficient ($TC$)."</i>
+3. <i>"Why can a high-turnover execution desk maintain a massive Information Ratio even if its directional stock-picking accuracy ($IC$) is tiny?"</i>
+4. <i>"What is the mathematical connection between strategy breadth, signal correlation, and portfolio risk?"</i>
+5. <i>"How do you calculate the tracking error and active return for an idiosyncratic trading book?"</i>
 
 #### Core Mapping & Equivalence
 
@@ -1629,11 +1629,11 @@ $$IR = \frac{IC \cdot \sigma \cdot \sqrt{BR}}{\sigma} = IC\sqrt{BR}$$
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"What is the mathematical definition of Out-of-Sample $R^2$ ($R^2_{OOS}$), and why can it become negative?"*
-2. *"How do AIC and BIC penalize the inclusion of unnecessary explanatory variables in factor models?"*
-3. *"Why is a high in-sample $R^2$ frequently an indicator of overfitting in return-prediction regressions?"*
-4. *"Explain the difference between using Root Mean Squared Error (RMSE) and Information Coefficient (IC) when scoring alpha signals."*
-5. *"How do you test if a group of factors are jointly significant in a linear regression model?"*
+1. <i>"What is the mathematical definition of Out-of-Sample $R^2$ ($R^2_{OOS}$), and why can it become negative?"</i>
+2. <i>"How do AIC and BIC penalize the inclusion of unnecessary explanatory variables in factor models?"</i>
+3. <i>"Why is a high in-sample $R^2$ frequently an indicator of overfitting in return-prediction regressions?"</i>
+4. <i>"Explain the difference between using Root Mean Squared Error (RMSE) and Information Coefficient (IC) when scoring alpha signals."</i>
+5. <i>"How do you test if a group of factors are jointly significant in a linear regression model?"</i>
 
 #### Core Mapping & Equivalence
 
@@ -1679,11 +1679,11 @@ $$IR = \frac{IC \cdot \sigma \cdot \sqrt{BR}}{\sigma} = IC\sqrt{BR}$$
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"What happens during backpropagation if you initialize all the weights in a neural network layer to the exact same value?"*
-2. *"Derive Xavier (Glorot) initialization. What assumptions does it make about layer activations and network gradients?"*
-3. *"Why do we use He initialization instead of Xavier when training networks with Rectified Linear Units (ReLU)?"*
-4. *"Explain the variance preservation problem across forward and backward passes in deep architectures."*
-5. *"How do you break symmetry in a fully connected neural network layer?"*
+1. <i>"What happens during backpropagation if you initialize all the weights in a neural network layer to the exact same value?"</i>
+2. <i>"Derive Xavier (Glorot) initialization. What assumptions does it make about layer activations and network gradients?"</i>
+3. <i>"Why do we use He initialization instead of Xavier when training networks with Rectified Linear Units (ReLU)?"</i>
+4. <i>"Explain the variance preservation problem across forward and backward passes in deep architectures."</i>
+5. <i>"How do you break symmetry in a fully connected neural network layer?"</i>
 
 #### Core Mapping & Equivalence
 
@@ -1728,11 +1728,11 @@ ReLU zeroes half the neurons: effective fan-in is $n_l/2$, requiring $2\times$ l
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"How do you replicate a variance swap using a static portfolio of vanilla European options?"*
-2. *"Derive the relationship between the expectation of log-returns and integrated variance."*
-3. *"What is a 'log contract,' and why is it essential for model-free variance pricing?"*
-4. *"Walk me through the mathematical derivation behind the CBOE VIX Index formula."*
-5. *"Why does a variance swap have a linear payoff in variance, and how do you hedge its underlying convexity?"*
+1. <i>"How do you replicate a variance swap using a static portfolio of vanilla European options?"</i>
+2. <i>"Derive the relationship between the expectation of log-returns and integrated variance."</i>
+3. <i>"What is a 'log contract,' and why is it essential for model-free variance pricing?"</i>
+4. <i>"Walk me through the mathematical derivation behind the CBOE VIX Index formula."</i>
+5. <i>"Why does a variance swap have a linear payoff in variance, and how do you hedge its underlying convexity?"</i>
 
 #### Core Mapping & Equivalence
 
@@ -1782,11 +1782,11 @@ $$\boxed{VIX^2 = K_{var} = \frac{2e^{rT}}{T}\left(\int_0^{F}\frac{P(K,T)}{K^2}dK
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"How do you statistically verify if your daily portfolio residual P&L is pure white noise?"*
-2. *"What is the difference between the Durbin-Watson test and the Ljung-Box test for checking serial correlation?"*
-3. *"If your execution desk's idiosyncratic P&L shows significant positive autocorrelation, what does that tell you about your risk model?"*
-4. *"Write out the formula for the Durbin-Watson statistic and show how it maps to first-order autocorrelation ($\rho$)."*
-5. *"What are the trading implications of finding mean-reverting (negatively autocorrelated) residual P&L in a central risk book?"*
+1. <i>"How do you statistically verify if your daily portfolio residual P&L is pure white noise?"</i>
+2. <i>"What is the difference between the Durbin-Watson test and the Ljung-Box test for checking serial correlation?"</i>
+3. <i>"If your execution desk's idiosyncratic P&L shows significant positive autocorrelation, what does that tell you about your risk model?"</i>
+4. <i>"Write out the formula for the Durbin-Watson statistic and show how it maps to first-order autocorrelation ($\rho$)."</i>
+5. <i>"What are the trading implications of finding mean-reverting (negatively autocorrelated) residual P&L in a central risk book?"</i>
 
 #### Core Mapping & Equivalence
 
@@ -1826,11 +1826,11 @@ $$Q_{BL} = T(T+2)\sum_{k=1}^m \frac{\hat{\rho}_k^2}{T-k} \sim \chi^2_m \text{ un
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"What happens to your hypothesis testing ($t$-stats) if the variance of your residuals depends on the independent variables?"*
-2. *"Explain how the Breusch-Pagan test detects non-constant error variance."*
-3. *"Why does the White test not require any prior assumptions about the specific functional form of heteroskedasticity?"*
-4. *"Name three structural reasons why asset return errors have non-constant variance across a cross-section of equities."*
-5. *"How do you construct the auxiliary regression used to check for heteroskedasticity in OLS?"*
+1. <i>"What happens to your hypothesis testing ($t$-stats) if the variance of your residuals depends on the independent variables?"</i>
+2. <i>"Explain how the Breusch-Pagan test detects non-constant error variance."</i>
+3. <i>"Why does the White test not require any prior assumptions about the specific functional form of heteroskedasticity?"</i>
+4. <i>"Name three structural reasons why asset return errors have non-constant variance across a cross-section of equities."</i>
+5. <i>"How do you construct the auxiliary regression used to check for heteroskedasticity in OLS?"</i>
 
 #### Core Mapping & Equivalence
 
@@ -1870,11 +1870,11 @@ $$Q_{BL} = T(T+2)\sum_{k=1}^m \frac{\hat{\rho}_k^2}{T-k} \sim \chi^2_m \text{ un
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"Why do standard deep reinforcement learning algorithms like DQN diverge when applied to live order book trading?"*
-2. *"How do Temporal Convolutional Networks (TCNs) handle sequence processing differently than recurrent LSTM units?"*
-3. *"What is the clipped surrogate objective in Proximal Policy Optimization (PPO), and why is it preferred for stable policy updates?"*
-4. *"How does a non-stationary Markov Decision Process (MDP) break the fundamental assumptions of standard reinforcement learning?"*
-5. *"Design an ML architecture to manage the inventory risk of an equity central risk book under regime shifts."*
+1. <i>"Why do standard deep reinforcement learning algorithms like DQN diverge when applied to live order book trading?"</i>
+2. <i>"How do Temporal Convolutional Networks (TCNs) handle sequence processing differently than recurrent LSTM units?"</i>
+3. <i>"What is the clipped surrogate objective in Proximal Policy Optimization (PPO), and why is it preferred for stable policy updates?"</i>
+4. <i>"How does a non-stationary Markov Decision Process (MDP) break the fundamental assumptions of standard reinforcement learning?"</i>
+5. <i>"Design an ML architecture to manage the inventory risk of an equity central risk book under regime shifts."</i>
 
 #### Core Mapping & Equivalence
 
@@ -1911,11 +1911,11 @@ $$Q_{BL} = T(T+2)\sum_{k=1}^m \frac{\hat{\rho}_k^2}{T-k} \sim \chi^2_m \text{ un
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"Derive the analytical formulas for Gamma and Vega for a standard vanilla call option."*
-2. *"Explain the economic trade-off between Theta and Gamma in a delta-neutral option trading strategy."*
-3. *"Show how the Black-Scholes PDE explicitly describes the premium earned from gamma scalping vs. time decay."*
-4. *"What happens to the P&L of a delta-hedged option portfolio if realized volatility exceeds implied volatility?"*
-5. *"Differentiate the Black-Scholes call price formula with respect to the spot price twice to find Gamma."*
+1. <i>"Derive the analytical formulas for Gamma and Vega for a standard vanilla call option."</i>
+2. <i>"Explain the economic trade-off between Theta and Gamma in a delta-neutral option trading strategy."</i>
+3. <i>"Show how the Black-Scholes PDE explicitly describes the premium earned from gamma scalping vs. time decay."</i>
+4. <i>"What happens to the P&L of a delta-hedged option portfolio if realized volatility exceeds implied volatility?"</i>
+5. <i>"Differentiate the Black-Scholes call price formula with respect to the spot price twice to find Gamma."</i>
 
 #### Core Mapping & Equivalence
 
@@ -1971,11 +1971,11 @@ $$\Theta + \frac{1}{2}\sigma^2 S^2 \Gamma = r(V - S\Delta)$$
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"What is toxic order flow, and how do you measure it using volume-clock synchronization?"*
-2. *"Explain the mechanics of the VPIN model by Easley, Lopez de Prado, and O’Hara."*
-3. *"How do you calculate buy and sell volume allocations using the bulk volume classification method?"*
-4. *"How can a market maker adapt their spreads dynamically when the probability of informed trading spikes?"*
-5. *"Why is volume time superior to standard chronological time when designing toxic flow indicators?"*
+1. <i>"What is toxic order flow, and how do you measure it using volume-clock synchronization?"</i>
+2. <i>"Explain the mechanics of the VPIN model by Easley, Lopez de Prado, and O’Hara."</i>
+3. <i>"How do you calculate buy and sell volume allocations using the bulk volume classification method?"</i>
+4. <i>"How can a market maker adapt their spreads dynamically when the probability of informed trading spikes?"</i>
+5. <i>"Why is volume time superior to standard chronological time when designing toxic flow indicators?"</i>
 
 #### Core Mapping & Equivalence
 
@@ -2020,11 +2020,11 @@ VPIN threshold $\lambda^*$: calibrate via ROC curve on historical toxic flow eve
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"How do you construct a regression model to dynamically determine your volume participation rate during execution?"*
-2. *"Why is simple linear regression inappropriate for predicting percentages or bounded rates, and how do you fix it?"*
-3. *"What are the risks of using mean imputation for missing features in a real-time trading algorithm?"*
-4. *"Explain how a Tobit model or a logistic transformation handles censored dependent variables in execution algorithms."*
-5. *"How do you handle missing market data fields (like real-time bid-ask spread dropouts) when running an online prediction model?"*
+1. <i>"How do you construct a regression model to dynamically determine your volume participation rate during execution?"</i>
+2. <i>"Why is simple linear regression inappropriate for predicting percentages or bounded rates, and how do you fix it?"</i>
+3. <i>"What are the risks of using mean imputation for missing features in a real-time trading algorithm?"</i>
+4. <i>"Explain how a Tobit model or a logistic transformation handles censored dependent variables in execution algorithms."</i>
+5. <i>"How do you handle missing market data fields (like real-time bid-ask spread dropouts) when running an online prediction model?"</i>
 
 #### Core Mapping & Equivalence
 
@@ -2061,11 +2061,11 @@ $$\pi^*_t = \mathbf{x}_t^\top\boldsymbol{\beta} + \epsilon_t, \qquad \pi_t = \ma
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"How does XGBoost mathematically regularize leaf weights to prevent overfitting on noisy data?"*
-2. *"What is the explicit difference between Gain, Cover, and Frequency metrics when checking XGBoost feature importance?"*
-3. *"Derive the second-order Taylor expansion objective function used by the XGBoost training algorithm."*
-4. *"How do column subsampling (`colsample_bytree`) and row subsampling (`subsample`) control variance in gradient boosted models?"*
-5. *"Why can traditional tree gain metrics be misleading for highly correlated market microstructure features?"*
+1. <i>"How does XGBoost mathematically regularize leaf weights to prevent overfitting on noisy data?"</i>
+2. <i>"What is the explicit difference between Gain, Cover, and Frequency metrics when checking XGBoost feature importance?"</i>
+3. <i>"Derive the second-order Taylor expansion objective function used by the XGBoost training algorithm."</i>
+4. <i>"How do column subsampling (`colsample_bytree`) and row subsampling (`subsample`) control variance in gradient boosted models?"</i>
+5. <i>"Why can traditional tree gain metrics be misleading for highly correlated market microstructure features?"</i>
 
 #### Core Mapping & Equivalence
 
@@ -2113,11 +2113,11 @@ Optimal leaf weight: $w_j^* = -\frac{G_j}{H_j + \lambda}$, Gain: $\frac{G_j^2}{H
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"State and prove the Itô Isometry for stochastic integrals."*
-2. *"How do you calculate the variance of the stochastic integral $\int_0^T g(t) dW_t$ where $g(t)$ is a non-random function?"*
-3. *"Why do cross-product terms vanish when you take the expectation of the square of an Itô sum?"*
-4. *"Show that the expectation of an Itô integral is zero: $\mathbb{E}\left[\int_0^T H_t dW_t\right] = 0$."*
-5. *"How do you use the Itô Isometry to model timing risk variance in Transaction Cost Analysis?"*
+1. <i>"State and prove the Itô Isometry for stochastic integrals."</i>
+2. <i>"How do you calculate the variance of the stochastic integral $\int_0^T g(t) dW_t$ where $g(t)$ is a non-random function?"</i>
+3. <i>"Why do cross-product terms vanish when you take the expectation of the square of an Itô sum?"</i>
+4. <i>"Show that the expectation of an Itô integral is zero: $\mathbb{E}\left[\int_0^T H_t dW_t\right] = 0$."</i>
+5. <i>"How do you use the Itô Isometry to model timing risk variance in Transaction Cost Analysis?"</i>
 
 #### Core Mapping & Equivalence
 
@@ -2175,11 +2175,11 @@ This is the **timing risk** component of Implementation Shortfall.
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"Explain the Baum-Welch algorithm for hidden Markov models. How is it related to Expectation-Maximization (EM)?"*
-2. *"Write out the forward and backward recursive equations used to compute hidden state probabilities."*
-3. *"How do you update the transition probability matrix ($A_{ij}$) of an HMM during the maximization step?"*
-4. *"What statistical criteria (like AIC/BIC) do you use to choose the optimal number of latent states in a regime model?"*
-5. *"What are 'responsibilities' ($\gamma_t(j)$) in the context of fitting mixture models and hidden state models?"*
+1. <i>"Explain the Baum-Welch algorithm for hidden Markov models. How is it related to Expectation-Maximization (EM)?"</i>
+2. <i>"Write out the forward and backward recursive equations used to compute hidden state probabilities."</i>
+3. <i>"How do you update the transition probability matrix ($A_{ij}$) of an HMM during the maximization step?"</i>
+4. <i>"What statistical criteria (like AIC/BIC) do you use to choose the optimal number of latent states in a regime model?"</i>
+5. <i>"What are 'responsibilities' ($\gamma_t(j)$) in the context of fitting mixture models and hidden state models?"</i>
 
 #### Core Mapping & Equivalence
 
@@ -2231,11 +2231,11 @@ $$\hat{\mu}_j = \frac{\sum_t \gamma_t(j)r_t}{\sum_t \gamma_t(j)}, \qquad \hat{\s
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"How do you run a linear regression where the coefficients are conditioned on a hidden probability state?"*
-2. *"Why does running a single pooled OLS regression across alternating market regimes distort your true factor exposures?"*
-3. *"Derive the weighted least squares solution for a regime-switching regression model."*
-4. *"What is the label switching problem in mixture models and regime detection, and how do you solve it?"*
-5. *"How do equity factor betas change between a normal growth regime and a liquidity crisis regime?"*
+1. <i>"How do you run a linear regression where the coefficients are conditioned on a hidden probability state?"</i>
+2. <i>"Why does running a single pooled OLS regression across alternating market regimes distort your true factor exposures?"</i>
+3. <i>"Derive the weighted least squares solution for a regime-switching regression model."</i>
+4. <i>"What is the label switching problem in mixture models and regime detection, and how do you solve it?"</i>
+5. <i>"How do equity factor betas change between a normal growth regime and a liquidity crisis regime?"</i>
 
 #### Core Mapping & Equivalence
 
@@ -2274,11 +2274,11 @@ where $W_s = \mathrm{diag}(\gamma_1(s),\ldots,\gamma_T(s))$.
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"What are the trade-offs between using a generative sequential model (HMM) vs. a discriminative model (XGBoost) for market regime classification?"*
-2. *"How do you train a machine learning model when the target event (like a market crash) only appears in 5% of your dataset?"*
-3. *"Explain how SMOTE creates synthetic points. What are the dangers of using it on highly auto-correlated time-series data?"*
-4. *"How do you modify a tree model's loss function to penalize false negatives much more heavily than false positives?"*
-5. *"What features would you extract from option surfaces and cross-asset feeds to predict systemic shifts?"*
+1. <i>"What are the trade-offs between using a generative sequential model (HMM) vs. a discriminative model (XGBoost) for market regime classification?"</i>
+2. <i>"How do you train a machine learning model when the target event (like a market crash) only appears in 5% of your dataset?"</i>
+3. <i>"Explain how SMOTE creates synthetic points. What are the dangers of using it on highly auto-correlated time-series data?"</i>
+4. <i>"How do you modify a tree model's loss function to penalize false negatives much more heavily than false positives?"</i>
+5. <i>"What features would you extract from option surfaces and cross-asset feeds to predict systemic shifts?"</i>
 
 #### Core Mapping & Equivalence
 
@@ -2329,11 +2329,11 @@ In XGBoost: `scale_pos_weight = C(FN)/C(FP)`.
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"Write down the SDE for Merton’s Jump Diffusion model and explain how the Poisson process handles price breaks."*
-2. *"Derive the total variance of an asset price over a horizon $T$ when it includes both continuous Brownian noise and discontinuous jumps."*
-3. *"Why does a standard Black-Scholes model underestimate the risk of out-of-the-money options, and how do jumps fix this?"*
-4. *"What is the characteristic function of a jump-diffusion process?"*
-5. *"How do asset jumps impact short-term Value-at-Risk calculations compared to a pure geometric Brownian motion framework?"*
+1. <i>"Write down the SDE for Merton’s Jump Diffusion model and explain how the Poisson process handles price breaks."</i>
+2. <i>"Derive the total variance of an asset price over a horizon $T$ when it includes both continuous Brownian noise and discontinuous jumps."</i>
+3. <i>"Why does a standard Black-Scholes model underestimate the risk of out-of-the-money options, and how do jumps fix this?"</i>
+4. <i>"What is the characteristic function of a jump-diffusion process?"</i>
+5. <i>"How do asset jumps impact short-term Value-at-Risk calculations compared to a pure geometric Brownian motion framework?"</i>
 
 #### Core Mapping & Equivalence
 
@@ -2401,11 +2401,11 @@ For daily VaR ($T=1/252$): jump contribution $\approx \frac{1}{252}\times 0.20 \
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"If you have a predictive signal with an $R^2$ of 100% in-sample, how do you construct your trading portfolio, and what are the limits to your profits?"*
-2. *"Prove that a deterministic return predictor for a risky asset implies the non-existence of an equivalent martingale measure ($\mathbb{Q}$)."*
-3. *"Does a perfect prediction model constitute a pure arbitrage opportunity under the First Fundamental Theorem of Asset Pricing?"*
-4. *"How do transaction costs, market capacity, and execution impact prevent an $R^2 = 1$ model from generating infinite returns?"*
-5. *"What would you check first if a researcher brought you a strategy backtest showing an out-of-sample $R^2$ of 1.0?"*
+1. <i>"If you have a predictive signal with an $R^2$ of 100% in-sample, how do you construct your trading portfolio, and what are the limits to your profits?"</i>
+2. <i>"Prove that a deterministic return predictor for a risky asset implies the non-existence of an equivalent martingale measure ($\mathbb{Q}$)."</i>
+3. <i>"Does a perfect prediction model constitute a pure arbitrage opportunity under the First Fundamental Theorem of Asset Pricing?"</i>
+4. <i>"How do transaction costs, market capacity, and execution impact prevent an $R^2 = 1$ model from generating infinite returns?"</i>
+5. <i>"What would you check first if a researcher brought you a strategy backtest showing an out-of-sample $R^2$ of 1.0?"</i>
 
 #### Core Mapping & Equivalence
 
@@ -2439,11 +2439,11 @@ $R^2=1$ implies $\hat{y}_i = y_i$ for all $i$ — perfect prediction of every re
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"Can you prove the mathematical link between an alpha signal's predictive $R^2$ and its theoretical Sharpe Ratio or Information Ratio?"* *(Glassdoor — Citadel Enterprise)*
-2. *"If a quantitative researcher brings you an equity strategy backtest with an out-of-sample daily $R^2$ of 5%, why should you be highly skeptical, and how do you scale it to annualized terms?"* *(WallStreetOasis — Millennium)*
-3. *"Explain the Campbell-Thompson constraint. How does restricting the sign of the forecast change the operational value of a low-$R^2$ model?"* *(Medium — Quant Research Topics)*
-4. *"How do you model signal decay in an alpha model, and what happens to your execution costs if you attempt to exploit a fast-decaying signal?"* *(eFinancialCareers — Point72)*
-5. *"Why is an $R^2$ of 0.5% considered a 'home run' in statistical arbitrage for liquid equities? Walk me through the Grinold-Kahn translation."* *(StreetOfWall — Balyasny)*
+1. <i>"Can you prove the mathematical link between an alpha signal's predictive $R^2$ and its theoretical Sharpe Ratio or Information Ratio?" (Glassdoor — Citadel Enterprise)</i>
+2. <i>"If a quantitative researcher brings you an equity strategy backtest with an out-of-sample daily $R^2$ of 5%, why should you be highly skeptical, and how do you scale it to annualized terms?" (WallStreetOasis — Millennium)</i>
+3. <i>"Explain the Campbell-Thompson constraint. How does restricting the sign of the forecast change the operational value of a low-$R^2$ model?" (Medium — Quant Research Topics)</i>
+4. <i>"How do you model signal decay in an alpha model, and what happens to your execution costs if you attempt to exploit a fast-decaying signal?" (eFinancialCareers — Point72)</i>
+5. <i>"Why is an $R^2$ of 0.5% considered a 'home run' in statistical arbitrage for liquid equities? Walk me through the Grinold-Kahn translation." (StreetOfWall — Balyasny)</i>
 
 #### Core Mapping & Equivalence
 
@@ -2475,11 +2475,11 @@ With $R^2 = 1.0$: $IC = 1.0$, $SR = \sqrt{252} \approx 15.9$ (per year) — theo
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"What does a negative out-of-sample $R^2$ mean mathematically, and what structural model failures cause it?"* *(LeetCode — Quantitative Engineering)*
-2. *"Walk me through your diagnostic checklist when a machine learning model scores high in-sample but shows near-zero performance out-of-sample."* *(Blind — Two Sigma)*
-3. *"If a model produces a Train $R^2 = 0.05$ and a Test $R^2 = 0.02$, is this model broken, or is it usable? Defend your answer."* *(LinkedIn — Squarepoint Capital)*
-4. *"How do you use early stopping, tree depth constraints, and learning rate shrinkage to rescue an overfit gradient boosted tree model?"* *(HackerRank — Citadel Securities)*
-5. *"How do you distinguish between a model that has overfit its parameter space versus a model suffering from structural regime changes between the train and test windows?"* *(LinkAI — Quant Leadership Questions)*
+1. <i>"What does a negative out-of-sample $R^2$ mean mathematically, and what structural model failures cause it?" (LeetCode — Quantitative Engineering)</i>
+2. <i>"Walk me through your diagnostic checklist when a machine learning model scores high in-sample but shows near-zero performance out-of-sample." (Blind — Two Sigma)</i>
+3. <i>"If a model produces a Train $R^2 = 0.05$ and a Test $R^2 = 0.02$, is this model broken, or is it usable? Defend your answer." (LinkedIn — Squarepoint Capital)</i>
+4. <i>"How do you use early stopping, tree depth constraints, and learning rate shrinkage to rescue an overfit gradient boosted tree model?" (HackerRank — Citadel Securities)</i>
+5. <i>"How do you distinguish between a model that has overfit its parameter space versus a model suffering from structural regime changes between the train and test windows?" (LinkAI — Quant Leadership Questions)</i>
 
 #### Core Mapping & Equivalence
 
@@ -2514,11 +2514,11 @@ Plot $R^2_{train}(\lambda)$ and $R^2_{OOS}(\lambda)$ vs $\lambda$: optimal $\lam
 
 ### Top 5 Alternative Interview Formulations
 
-1. *"State the First Fundamental Theorem of Asset Pricing. How does it tie the absence of arbitrage to probability measures?"* *(QuantNet — Dynamic Hedging Questions)*
-2. *"If you can forecast a stock path perfectly ($R^2 = 1$), how do you construct a self-financing trading strategy that violates the no-arbitrage condition?"* *(Glassdoor — J.P. Morgan CIB)*
-3. *"What is an equivalent martingale measure ($\mathbb{Q}$), and why does its existence imply that you cannot generate risk-free profits from zero initial wealth?"* *(WallStreetOasis — Goldman Sachs)*
-4. *"If an asset's drift is perfectly predictable, show how you can construct a riskless portfolio that outperforms the money market account."* *(X — Academic Quant Interview Logs)*
-5. *"What mathematical conditions break when you try to define a risk-neutral measure for a market with a deterministic asset?"* *(Medium — Stochastic Calculus Pitfalls)*
+1. <i>"State the First Fundamental Theorem of Asset Pricing. How does it tie the absence of arbitrage to probability measures?" (QuantNet — Dynamic Hedging Questions)</i>
+2. <i>"If you can forecast a stock path perfectly ($R^2 = 1$), how do you construct a self-financing trading strategy that violates the no-arbitrage condition?" (Glassdoor — J.P. Morgan CIB)</i>
+3. <i>"What is an equivalent martingale measure ($\mathbb{Q}$), and why does its existence imply that you cannot generate risk-free profits from zero initial wealth?" (WallStreetOasis — Goldman Sachs)</i>
+4. <i>"If an asset's drift is perfectly predictable, show how you can construct a riskless portfolio that outperforms the money market account." (X — Academic Quant Interview Logs)</i>
+5. <i>"What mathematical conditions break when you try to define a risk-neutral measure for a market with a deterministic asset?" (Medium — Stochastic Calculus Pitfalls)</i>
 
 #### Core Mapping & Equivalence
 
