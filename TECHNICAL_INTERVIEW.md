@@ -719,7 +719,19 @@ where $\phi(\cdot)$ is the standard normal PDF.
 
 **Sub-additivity:** CVaR satisfies $\mathrm{CVaR}(L_1 + L_2) \leq \mathrm{CVaR}(L_1) + \mathrm{CVaR}(L_2)$ for all distributions (it is a coherent risk measure). VaR is **not** sub-additive in general.
 
-**Counter-example for VaR:** **Let $L_1, L_2$ be independent Bernoulli losses: each loses $\\$100$ with probability $2\\%$, else $0$. At $97.5\\%$ confidence, $\mathrm{VaR}_{0.975}(L_i) = 0$ (since $P(L_i > 0) = 2\\% < 2.5\\%$). But $P(L_1 + L_2 > 0) \approx 3.96\\% > 2.5\\%$, so $\mathrm{VaR}_{0.975}(L_1 + L_2) = 100 > 0 = \mathrm{VaR}(L_1) + \mathrm{VaR}(L_2)$. VaR penalises the diversified portfolio!**
+**Counter-example for VaR:**
+
+Let $L_1, L_2$ be independent Bernoulli losses: each loses $\\$100$ with probability $2\\%$, else $0$. At $97.5\\%$ confidence:
+
+$$
+\mathrm{VaR}_{0.975}(L_i) = 0
+$$
+
+( since $P(L_i > 0) = 2\\% < 2.5\\%$ ).
+
+But $P(L_1 + L_2 > 0) \approx 3.96\\% > 2.5\\%$ , so $\mathrm{VaR}_{0.975}(L_1 + L_2) = 100 > 0 = \mathrm{VaR}(L_1) + \mathrm{VaR}(L_2)$ .
+
+VaR penalises the diversified portfolio!
 
 ### [B] Linear Models — Ridge Regression and the Bias–Variance Tradeoff
 
