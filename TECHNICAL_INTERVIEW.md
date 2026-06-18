@@ -807,10 +807,10 @@ $$
 with: 
 
 $$
-\mathrm{MSE}(\hat{\boldsymbol{\beta}}_{\lambda^*}) < \mathrm{MSE}(\hat{\boldsymbol{\beta}}_{OLS})
-
-\blacksquare
+\mathrm{MSE}(\hat{\boldsymbol{\beta}}_{\lambda^{\*}}) < \mathrm{MSE}(\hat{\boldsymbol{\beta}}_{OLS})
 $$
+
+$\blacksquare$
 
 ### [C] Machine Learning — LSTM and Vanishing Gradient
 
