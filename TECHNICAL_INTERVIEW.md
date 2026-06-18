@@ -458,6 +458,12 @@ if __name__ == "__main__":
     main()
 ```
 
+![variance_waterfall.png](./outputs/variance_waterfall.png)
+
+![marginal_risk_contributions.png](./outputs/marginal_risk_contributions.png)
+
+![correlation_heatmap.png](./outputs/correlation_heatmap.png)
+
 ### [B] Linear Models — Factor Loadings via OLS: Gauss–Markov & Diagnostics
 
 > **Question:** **"You run cross-sectional OLS regressions each month to estimate Barra-style factor exposures $\hat{\boldsymbol{\beta}}$. State the Gauss–Markov theorem formally. What are its assumptions? Which assumption fails first in high-frequency equity data, and what is the GLS fix? Derive the GLS estimator."**
@@ -713,7 +719,7 @@ where $\phi(\cdot)$ is the standard normal PDF.
 
 **Sub-additivity:** CVaR satisfies $\mathrm{CVaR}(L_1 + L_2) \leq \mathrm{CVaR}(L_1) + \mathrm{CVaR}(L_2)$ for all distributions (it is a coherent risk measure). VaR is **not** sub-additive in general.
 
-**Counter-example for VaR:** Let $L_1, L_2$ be independent Bernoulli losses: each loses \$100 with probability 2%, else 0. At 97.5% confidence, $\mathrm{VaR}_{0.975}(L_i) = 0$ (since $P(L_i > 0) = 2\% < 2.5\%$). But $P(L_1 + L_2 > 0) \approx 3.96\% > 2.5\%$, so $\mathrm{VaR}_{0.975}(L_1 + L_2) = 100 > 0 = \mathrm{VaR}(L_1) + \mathrm{VaR}(L_2)$. VaR penalises the diversified portfolio!
+**Counter-example for VaR:** Let $L_1, L_2$ be independent Bernoulli losses: each loses $\\$100$ with probability $2\\%$, else $0$. At $97.5\\%$ confidence, $\mathrm{VaR}_{0.975}(L_i) = 0$ (since $P(L_i > 0) = 2\\% < 2.5\\%$). But $P(L_1 + L_2 > 0) \approx 3.96\\% > 2.5\\%$, so $\mathrm{VaR}_{0.975}(L_1 + L_2) = 100 > 0 = \mathrm{VaR}(L_1) + \mathrm{VaR}(L_2)$. VaR penalises the diversified portfolio!
 
 ### [B] Linear Models — Ridge Regression and the Bias–Variance Tradeoff
 
@@ -2301,7 +2307,7 @@ In XGBoost: `scale_pos_weight = C(FN)/C(FP)`.
 **Merton jump-diffusion SDE:**
 
 $$
-\frac{dS_{t}}{S_{t^{-}}}
+\frac{dS_{t}}{S_{t^{-}}} = (\mu - \lambda \bar{k}) dt + \sigma dW_{t} + (J_{t} - 1) dN_{t}
 $$
 
 where:
