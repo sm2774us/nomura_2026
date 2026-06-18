@@ -876,7 +876,7 @@ $$\frac{\partial \mathbf{c}_t}{\partial \mathbf{c}_{t-1}} = \mathrm{diag}(\mathb
 
 $$\frac{\partial \mathcal{L}}{\partial \mathbf{c}_{t-k}} = \frac{\partial \mathcal{L}}{\partial \mathbf{c}_t} \cdot \prod_{j=1}^{k} \mathrm{diag}(\mathbf{f}_{t-j+1})$$
 
-Since $\mathbf{f}_t \in (0,1)$ elementwise (sigmoid output), the product is controlled but **does not collapse to zero** as long as $\mathbf{f}_t \approx 1$ (forget gate "open"). In a vanilla RNN, the equivalent product involves repeated multiplication by the recurrent weight matrix $W_{hh}$, whose spectral radius $<1$ causes exponential vanishing.
+Since $\mathbf{f}_t \in (0,1)$ elementwise (sigmoid output), the product is controlled but **does not collapse to zero** as long as **f**<sub>*t*</sub> &asymp; 1 (forget gate "open"). In a vanilla RNN, the equivalent product involves repeated multiplication by the recurrent weight matrix $W_{hh}$, whose spectral radius $<1$ causes exponential vanishing.
 
 **Key insight:** The forget gate acts as an **adaptive gradient highway** — it can learn $f_t \approx 1$ for dimensions needing long memory, preserving gradients across hundreds of steps.
 
