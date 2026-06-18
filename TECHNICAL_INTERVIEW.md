@@ -2109,7 +2109,7 @@ Optimal leaf weight: *w*<sub>*j*</sub><sup>\*</sup> = &minus; *G*<sub>*j*</sub> 
 
 ### [D] Stochastic Calculus — Ito Isometry and Stochastic Integrals for TCA
 
-> **Question:** **"Define the Itô integral $\int_0^T H_t\,dW_t$ for an adapted process $H_t$. State and prove the Itô isometry. Use it to compute $\mathrm{Var}\!\left[\int_0^T \sigma_t\,dW_t\right]$ for a deterministic $\sigma_t$."**
+> **Question:** **"Define the Itô integral $\int_0^T H_t\,dW_t$ for an adapted process $H_t$ . State and prove the Itô isometry. Use it to compute $\mathrm{Var}\!\lbrack\int_0^T \sigma_t\,dW_t\rbrack$ for a deterministic $\sigma_t$ ."**
 
 ### Top 5 Alternative Interview Formulations
 
