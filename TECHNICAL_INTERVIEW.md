@@ -792,7 +792,25 @@ $$\mathrm{Var}(\hat{\boldsymbol{\beta}}_\lambda) = \sigma^2(\mathbf{X}^\top\math
 
 $$\mathrm{MSE}(\hat{\boldsymbol{\beta}}_\lambda) = \sigma^2\sum_j \frac{d_j^2}{(d_j^2+\lambda)^2} + \lambda^2 \sum_j \frac{\beta_j^{*2}}{(d_j^2+\lambda)^2}$$
 
-At $\lambda=0$: MSE = OLS variance. $\frac{d}{d\lambda}\mathrm{MSE}\big|_{\lambda=0} < 0$ (always), so there exists $\lambda^* > 0$ with $\mathrm{MSE}(\hat{\boldsymbol{\beta}}_{\lambda^*}) < \mathrm{MSE}(\hat{\boldsymbol{\beta}}_{OLS})$.
+At $\lambda=0$: MSE = OLS variance.
+
+$$
+\frac{d}{d\lambda}\mathrm{MSE}\big|_{\lambda=0} < 0
+$$ 
+
+(always), so there exists:
+
+$$
+\lambda^{\*} > 0
+$$
+
+with: 
+
+$$
+\mathrm{MSE}(\hat{\boldsymbol{\beta}}_{\lambda^*}) < \mathrm{MSE}(\hat{\boldsymbol{\beta}}_{OLS})
+
+\blacksquare
+$$
 
 ### [C] Machine Learning — LSTM and Vanishing Gradient
 
