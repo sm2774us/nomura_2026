@@ -769,7 +769,7 @@ OLS tries to fit the training data perfectly and sometimes overfits, especially 
 **Lagrangian form:**
 
 $$
-\hat{\boldsymbol{\beta}}_\lambda = \arg\min_{\boldsymbol{\beta}} \left\{\\|\mathbf{r} - \mathbf{X}\boldsymbol{\beta}\\|_2^2 + \lambda\\|\boldsymbol{\beta}\\|_2^2\right\}
+\hat{\boldsymbol{\beta}}_\lambda = \arg\min_{\boldsymbol{\beta}} \lbrace \\|\mathbf{r} - \mathbf{X}\boldsymbol{\beta}\\|_2^2 + \lambda\\|\boldsymbol{\beta}\\|_2^2 \rbrace
 $$
 
 **Solution:** Take derivative and set to zero:
@@ -1058,11 +1058,11 @@ Ridge wraps the OLS objective in a circular "ball" constraint in coefficient spa
 
 #### Derivation
 
-**Ridge:** $\hat{\boldsymbol{\beta}}_R = \arg\min_{\boldsymbol{\beta}} \left\{RSS + \lambda\sum_j \beta_j^2\right\}$
+**Ridge:** $\hat{\boldsymbol{\beta}}_R = \arg\min_{\boldsymbol{\beta}} \lbrace RSS + \lambda\sum_j \beta_j^2 \rbrace$
 
 Constraint region: $\{\boldsymbol{\beta}: \|\boldsymbol{\beta}\|_2^2 \leq t\}$ — **sphere** in $\mathbb{R}^K$, smooth boundary.
 
-**Lasso:** $\hat{\boldsymbol{\beta}}_L = \arg\min_{\boldsymbol{\beta}} \left\{RSS + \lambda\sum_j |\beta_j|\right\}$
+**Lasso:** $\hat{\boldsymbol{\beta}}_L = \arg\min_{\boldsymbol{\beta}} \lbrace RSS + \lambda\sum_j |\beta_j| \rbrace$
 
 Constraint region: $\{\boldsymbol{\beta}: \|\boldsymbol{\beta}\|_1 \leq t\}$ — **cross-polytope** in $\mathbb{R}^K$, vertices at $\pm t\mathbf{e}_j$.
 
@@ -1326,7 +1326,7 @@ $$J = \mathbb{E}[C] + \lambda\,\mathrm{Var}[C] = \int_0^T \left[\gamma x v + \et
 
 **HJB equation** for value function $V(t,x)$:
 
-$$\frac{\partial V}{\partial t} + \min_v\left\{\eta v^2 + \gamma x v + \lambda\sigma^2 x^2 + \frac{\partial V}{\partial x}(-v)\right\} = 0$$
+$$\frac{\partial V}{\partial t} + \min_v\lbrace \eta v^2 + \gamma x v + \lambda\sigma^2 x^2 + \frac{\partial V}{\partial x}(-v) \rbrace = 0$$
 
 **Optimal control** (FOC in $v$):
 
