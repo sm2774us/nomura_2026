@@ -2049,9 +2049,7 @@ $$\pi_t = \beta_0 + \beta_1\,\sigma_t + \beta_2\,\text{spread}_t + \beta_3\,\tex
 
 Add binary indicator 
 
-```math
-I_{miss\:j} = 1 [feature\:j\:missing]
-```
+*I*<sub>miss *j*</sub> = **1**[feature *j* missing]
 
 as additional regressor. Allows different intercept for missing obs.
 
