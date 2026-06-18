@@ -2109,20 +2109,20 @@ Optimal leaf weight: *w*<sub>*j*</sub><sup>\*</sup> = &minus; *G*<sub>*j*</sub> 
 
 ### [D] Stochastic Calculus — Ito Isometry and Stochastic Integrals for TCA
 
-> **Question:** **"Define the Itô integral $\int_0^T H_t\,dW_t$ for an adapted process *H*<sub>*t*</sub>. State and prove the Itô isometry. Use it to compute Var **[** &int;<sub>0</sub><sup>*T*</sup> &sigma;<sub>*t*</sub> *dW*<sub>*t*</sub> **]** for a deterministic &sigma;<sub>*t*</sub>."**
+> **Question:** **"Define the Itô integral &int;<sub>0</sub><sup>*T*</sup> *H*<sub>*t*</sub> *dW*<sub>*t*</sub> for an adapted process *H*<sub>*t*</sub>. State and prove the Itô isometry. Use it to compute Var **[** &int;<sub>0</sub><sup>*T*</sup> &sigma;<sub>*t*</sub> *dW*<sub>*t*</sub> **]** for a deterministic &sigma;<sub>*t*</sub>."**
 
 ### Top 5 Alternative Interview Formulations
 
 1. <i>"State and prove the Itô Isometry for stochastic integrals."</i>
-2. <i>"How do you calculate the variance of the stochastic integral $\int_0^T g(t) dW_t$ where $g(t)$ is a non-random function?"</i>
+2. <i>"How do you calculate the variance of the stochastic integral &int;<sub>0</sub><sup>*T*</sup> *g*(*t*) *dW*<sub>*t*</sub> where *g*(*t*) is a non-random function?"</i>
 3. <i>"Why do cross-product terms vanish when you take the expectation of the square of an Itô sum?"</i>
-4. <i>"Show that the expectation of an Itô integral is zero: $\mathbb{E}\left[\int_0^T H_t dW_t\right] = 0$."</i>
+4. <i>"Show that the expectation of an Itô integral is zero: &#120124; **[** &int;<sub>0</sub><sup>*T*</sup> *H*<sub>*t*</sub> *dW*<sub>*t*</sub> **]** = 0."</i>
 5. <i>"How do you use the Itô Isometry to model timing risk variance in Transaction Cost Analysis?"</i>
 
 #### Core Mapping & Equivalence
 
 * **Why they are the same:** These variations require building the Itô integral from simple step functions to prove that its variance matches the integral of its squared integrand.
-* **How the original answer satisfies them:** The expansion of the squared sum showing why the cross terms vanish ($\mathbb{E}[H_{t_j}H_{t_k}\Delta W_j\Delta W_k]=0$) completes the proofs for Variations 1, 3, and 4. Computing the deterministic variance ($\int_0^T \sigma_t^2 dt$) solves Variation 2, while the execution risk application covers Variation 5.
+* **How the original answer satisfies them:** The expansion of the squared sum showing why the cross terms vanish (&#120124; **[** *H*<sub>*t*<sub>*j*</sub></sub> *H*<sub>*t*<sub>*k*</sub></sub> &Delta;*W*<sub>*j*</sub> &Delta;*W*<sub>*k*</sub> **]** = 0) completes the proofs for Variations 1, 3, and 4. Computing the deterministic variance (&int;<sub>0</sub><sup>*T*</sup> &sigma;<sub>*t*</sub><sup>2</sup> *dt*) solves Variation 2, while the execution risk application covers Variation 5.
 
 ---
 
@@ -2132,35 +2132,35 @@ Optimal leaf weight: *w*<sub>*j*</sub><sup>\*</sup> = &minus; *G*<sub>*j*</sub> 
 
 #### Derivation
 
-**Itô integral definition (via simple processes):** For step process $H_t = H_{t_k}$ on $[t_k, t_{k+1})$:
+**Itô integral definition (via simple processes):** For step process *H*<sub>*t*</sub> = *H*<sub>*t*<sub>*k*</sub></sub> on [*t*<sub>*k*</sub>, *t*<sub>*k*+1</sub>):
 
-$$\int_0^T H_t\,dW_t = \sum_{k=0}^{n-1} H_{t_k}(W_{t_{k+1}} - W_{t_k})$$
+&int;<sub>0</sub><sup>*T*</sup> *H*<sub>*t*</sub> *dW*<sub>*t*</sub> = &sum;<sub>*k*=0</sub><sup>*n*&minus;1</sup> *H*<sub>*t*<sub>*k*</sub></sub>(*W*<sub>*t*<sub>*k*+1</sub></sub> &minus; *W*<sub>*t*<sub>*k*</sub></sub>)
 
-**Itô Isometry:** For adapted $H_t$ with $\mathbb{E}\!\left[\int_0^T H_t^2\,dt\right] < \infty$:
+**Itô Isometry:** For adapted *H*<sub>*t*</sub> with &#120124; **[** &int;<sub>0</sub><sup>*T*</sup> *H*<sub>*t*</sub><sup>2</sup> *dt* **]** < &infin;:
 
-$$\mathbb{E}\!\left[\left(\int_0^T H_t\,dW_t\right)^2\right] = \mathbb{E}\!\left[\int_0^T H_t^2\,dt\right]$$
+&#120124; **[** (&int;<sub>0</sub><sup>*T*</sup> *H*<sub>*t*</sub> *dW*<sub>*t*</sub>)<sup>2</sup> **]** = &#120124; **[** &int;<sub>0</sub><sup>*T*</sup> *H*<sub>*t*</sub><sup>2</sup> *dt* **]**
 
 **Proof:**
 
-$$\mathbb{E}\!\left[\left(\sum_k H_{t_k}\Delta W_k\right)^2\right] = \sum_k \mathbb{E}[H_{t_k}^2\,\Delta W_k^2] + 2\sum_{j<k}\mathbb{E}[H_{t_j}H_{t_k}\Delta W_j\Delta W_k]$$
+&#120124; **[** (&sum;<sub>*k*</sub> *H*<sub>*t*<sub>*k*</sub></sub> &Delta;*W*<sub>*k*</sub>)<sup>2</sup> **]** = &sum;<sub>*k*</sub> &#120124; **[** *H*<sub>*t*<sub>*k*</sub></sub><sup>2</sup> &Delta;*W*<sub>*k*</sub><sup>2</sup> **]** + 2&sum;<sub>*j*<*k*</sub> &#120124; **[** *H*<sub>*t*<sub>*j*</sub></sub> *H*<sub>*t*<sub>*k*</sub></sub> &Delta;*W*<sub>*j*</sub> &Delta;*W*<sub>*k*</sub> **]**
 
-Cross terms: for $j < k$, $\Delta W_k \perp \mathcal{F}_{t_k}$ and $H_{t_j}, H_{t_k}, \Delta W_j$ are $\mathcal{F}_{t_k}$-measurable, so:
+Cross terms: for *j* < *k*, &Delta;*W*<sub>*k*</sub> &perp; &Fscr;<sub>*t*<sub>*k*</sub></sub> and *H*<sub>*t*<sub>*j*</sub></sub>, *H*<sub>*t*<sub>*k*</sub></sub>, &Delta;*W*<sub>*j*</sub> are &Fscr;<sub>*t*<sub>*k*</sub></sub>-measurable, so:
 
-$$\mathbb{E}[H_{t_j}H_{t_k}\Delta W_j\Delta W_k] = \mathbb{E}[H_{t_j}H_{t_k}\Delta W_j] \cdot \underbrace{\mathbb{E}[\Delta W_k]}_{=0} = 0$$
+&#120124; **[** *H*<sub>*t*<sub>*j*</sub></sub> *H*<sub>*t*<sub>*k*</sub></sub> &Delta;*W*<sub>*j*</sub> &Delta;*W*<sub>*k*</sub> **]** = &#120124; **[** *H*<sub>*t*<sub>*j*</sub></sub> *H*<sub>*t*<sub>*k*</sub></sub> &Delta;*W*<sub>*j*</sub> **]** &middot; &#120124; **[** &Delta;*W*<sub>*k*</sub> **]**<sub>(=0)</sub> = 0
 
-Diagonal terms: $H_{t_k} \perp \Delta W_k$, $\mathbb{E}[\Delta W_k^2] = \Delta t_k$:
+Diagonal terms: *H*<sub>*t*<sub>*k*</sub></sub> &perp; &Delta;*W*<sub>*k*</sub>, &#120124; **[** &Delta;*W*<sub>*k*</sub><sup>2</sup> **]** = &Delta;*t*<sub>*k*</sub>:
 
-$$\sum_k \mathbb{E}[H_{t_k}^2]\Delta t_k \to \mathbb{E}\!\left[\int_0^T H_t^2\,dt\right] \qquad \square$$
+&sum;<sub>*k*</sub> &#120124; **[** *H*<sub>*t*<sub>*k*</sub></sub><sup>2</sup> **]** &Delta;*t*<sub>*k*</sub> &rarr; &#120124; **[** &int;<sub>0</sub><sup>*T*</sup> *H*<sub>*t*</sub><sup>2</sup> *dt* **]** &emsp;&emsp; &block;
 
-**Application:** For deterministic $\sigma_t$ (e.g., intraday volatility pattern):
+**Application:** For deterministic &sigma;<sub>*t*</sub> (e.g., intraday volatility pattern):
 
-$$I = \int_0^T \sigma_t\,dW_t \sim \mathcal{N}\!\left(0, \int_0^T \sigma_t^2\,dt\right)$$
+*I* = &int;<sub>0</sub><sup>*T*</sup> &sigma;<sub>*t*</sub> *dW*<sub>*t*</sub> &sim; &Nscr;(0, &int;<sub>0</sub><sup>*T*</sup> &sigma;<sub>*t*</sub><sup>2</sup> *dt*)
 
-$$\mathrm{Var}[I] = \int_0^T \sigma_t^2\,dt$$
+Var[*I*] = &int;<sub>0</sub><sup>*T*</sup> &sigma;<sub>*t*</sub><sup>2</sup> *dt*
 
-**TCA application:** Execution price uncertainty over $[0,T]$ for a VWAP trade:
+**TCA application:** Execution price uncertainty over [0, *T*] for a VWAP trade:
 
-$$\sigma^2_{execution} = \frac{1}{T^2}\int_0^T \sigma_t^2\,dt \cdot \left(\text{market impact terms}\right)$$
+&sigma;<sup>2</sup><sub>*execution*</sub> = (1 / *T*<sup>2</sup>) &int;<sub>0</sub><sup>*T*</sup> &sigma;<sub>*t*</sub><sup>2</sup> *dt* &middot; (market impact terms)
 
 This is the **timing risk** component of Implementation Shortfall.
 
