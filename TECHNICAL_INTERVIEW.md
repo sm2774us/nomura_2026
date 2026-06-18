@@ -2070,7 +2070,7 @@ VPIN threshold $\lambda^*$: calibrate via ROC curve on historical toxic flow eve
 #### Core Mapping & Equivalence
 
 * **Why they are the same:** They look at using the second-order objective expansion of boosting algorithms to control variance and understand feature contributions.
-* **How the original answer satisfies them:** The regularized loss formula ($\Omega(f) = \gamma T + \frac{1}{2}\lambda\sum w_j^2$) and the optimal weight equation ($w_j^* = -\frac{G_j}{H_j+\lambda}$) solve Variations 1 and 3. The structural definitions of Gain vs. Cover alongside the SHAP alternative solve Variations 2 and 5. Listing the explicit hyperparameter bounds answers Variation 4.
+* **How the original answer satisfies them:** The regularized loss formula (&Omega;(*f*) = &gamma;*T* + &frac12;&lambda;&sum;*w*<sub>*j*</sub><sup>2</sup>) and the optimal weight equation (*w*<sub>*j*</sub><sup>\*</sup> = &minus; *G*<sub>*j*</sub> / (*H*<sub>*j*</sub> + &lambda;)) solve Variations 1 and 3. The structural definitions of Gain vs. Cover alongside the SHAP alternative solve Variations 2 and 5. Listing the explicit hyperparameter bounds answers Variation 4.
 
 ---
 
