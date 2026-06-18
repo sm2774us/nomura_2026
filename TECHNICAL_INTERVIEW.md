@@ -2053,7 +2053,7 @@ $$\pi_t = \beta_0 + \beta_1\,\sigma_t + \beta_2\,\text{spread}_t + \beta_3\,\tex
 
 **Tobit model** when &pi;<sub>*t*</sub> &isin; [0, &pi;<sub>*max*</sub>]:
 
-$$\pi^*_t = \mathbf{x}_t^\top\boldsymbol{\beta} + \epsilon_t, \qquad \pi_t = \max(0, \min(\pi^*_t, \pi_{max}))$$
+$$\pi^{\*}_t = \mathbf{x}_t^{\top\boldsymbol{\beta}} + \epsilon_t, \qquad \pi_t = \max(0, \min(\pi^{\*}_t, \pi_{max}))$$
 
 ### [C] Machine Learning — Gradient Boosting Feature Importance in SOR
 
