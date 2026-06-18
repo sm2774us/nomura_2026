@@ -769,7 +769,7 @@ OLS tries to fit the training data perfectly and sometimes overfits, especially 
 **Lagrangian form:**
 
 $$
-\hat{\boldsymbol{\beta}}_\lambda = \arg\min_{\boldsymbol{\beta}} \lbrace \\|\mathbf{r} - \mathbf{X}\boldsymbol{\beta}\\|_2^2 + \lambda\\|\boldsymbol{\beta}\\|_2^2 \rbrace
+\hat{\boldsymbol{\beta}}_\lambda = \arg\min_{\boldsymbol{\beta}} \lbrace \|\mathbf{r} - \mathbf{X}\boldsymbol{\beta}\|_2^2 + \lambda\|\boldsymbol{\beta}\|_2^2 \rbrace
 $$
 
 **Solution:** Take derivative and set to zero:
