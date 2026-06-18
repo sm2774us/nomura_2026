@@ -2029,7 +2029,7 @@ VPIN threshold $\lambda^*$: calibrate via ROC curve on historical toxic flow eve
 #### Core Mapping & Equivalence
 
 * **Why they are the same:** They target feature imputation strategies and mathematical transformations needed when using linear models to predict values bounded within a specific range like $(0,1)$.
-* **How the original answer satisfies them:** Specifying the feature matrix containing spread and volatility solves Variation 1. Explaining the three data imputation methods (MICE, Indicator, and KNN) directly addresses Variations 3 and 5. Using the logistic link function $\sigma(\hat{y}_t)$ and the Tobit constraint setup solves Variations 2 and 4.
+* **How the original answer satisfies them:** Specifying the feature matrix containing spread and volatility solves Variation 1. Explaining the three data imputation methods (MICE, Indicator, and KNN) directly addresses Variations 3 and 5. Using the logistic link function &sigma;(&circ;*y*<sub>*t*</sub>) and the Tobit constraint setup solves Variations 2 and 4.
 
 ---
 
@@ -2039,7 +2039,7 @@ VPIN threshold $\lambda^*$: calibrate via ROC curve on historical toxic flow eve
 
 **Model (from Commonly_Asked_Quant_Interview_Questions.txt Q1.4):**
 
-$$\pi_t = \beta_0 + \beta_1\,\sigma_t + \beta_2\,\text{spread}_t + \beta_3\,\text{VolumeRatio}_t + \beta_4\,\text{TimeOfDay}_t + \epsilon_t$$
+&pi;<sub>*t*</sub> = &beta;<sub>0</sub> + &beta;<sub>1</sub>&nbsp;&sigma;<sub>*t*</sub> + &beta;<sub>2</sub>&nbsp;spread<sub>*t*</sub> + &beta;<sub>3</sub>&nbsp;VolumeRatio<sub>*t*</sub> + &beta;<sub>4</sub>&nbsp;TimeOfDay<sub>*t*</sub> + &epsilon;<sub>*t*</sub>
 
 **Missing value handling options:**
 
