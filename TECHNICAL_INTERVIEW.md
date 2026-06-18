@@ -2434,7 +2434,7 @@ For daily VaR (*T*=1/252): jump contribution &asymp; (1 / 252) &times; 0.20 &asy
 
 ### [B] Linear Models — Signal Decay and the Expected Returns Reality Check
 
-> **Question:** **"Empirical research shows that out-of-sample $R^2$ for daily equity return predictions rarely exceeds $0.5\% \text{ to } 1\%$, yet Campbell & Thompson (2008) demonstrate this is economically significant. Given a linear model with a daily $R^2 = 5\%$, derive the relationship between the predictive $R^2$ and the maximum attainable information Ratio ($IR$) before transaction costs. How does signal decay over a multi-day horizon affect the choice of your optimization's rebalancing frequency, and how do you implement a reality check on your expected return forecasts to ensure they do not imply unphysical turnover?"**
+> **Question:** **"Empirical research shows that out-of-sample *R*<sup>2</sup> for daily equity return predictions rarely exceeds 0.5% to 1%, yet Campbell & Thompson (2008) demonstrate this is economically significant. Given a linear model with a daily *R*<sup>2</sup> = 5%, derive the relationship between the predictive *R*<sup>2</sup> and the maximum attainable information Ratio (*IR*) before transaction costs. How does signal decay over a multi-day horizon affect the choice of your optimization's rebalancing frequency, and how do you implement a reality check on your expected return forecasts to ensure they do not imply unphysical turnover?"**
 
 ### Top 5 Alternative Interview Formulations
 
@@ -2470,13 +2470,13 @@ With *R*<sup>2</sup> = 1.0: *IC* = 1.0, *SR* = &radic;252 &asymp; 15.9 (per year
 
 ### [C] Machine Learning — Overfitting Detection: Train vs Test R²
 
-> **Question:** **"You train a complex non-linear model (e.g., an XGBoost regressor or a deep neural network) to predict cross-sectional equity returns. Diagnose the following three optimization regimes based on their performance: (1) $\text{Train } R^2 = 1.0, \text{ Test } R^2 = -0.3$, (2) $\text{Train } R^2 = 0.95, \text{ Test } R^2 = 0.04$, and (3) $\text{Train } R^2 = 0.05, \text{ Test } R^2 = 0.02$. What structural components of your model or regularization parameters will you adjust to move from regimes 1 and 2 toward an optimal model? How do you statistically test whether the difference between your Train and Test $R^2$ is driven by true signal overfit or non-stationarity/regime shifts?"**
+> **Question:** **"You train a complex non-linear model (e.g., an XGBoost regressor or a deep neural network) to predict cross-sectional equity returns. Diagnose the following three optimization regimes based on their performance: (1) Train *R*<sup>2</sup> = 1.0, Test *R*<sup>2</sup> = &minus;0.3, (2) Train *R*<sup>2</sup> = 0.95, Test *R*<sup>2</sup> = 0.04, and (3) Train *R*<sup>2</sup> = 0.05, Test *R*<sup>2</sup> = 0.02. What structural components of your model or regularization parameters will you adjust to move from regimes 1 and 2 toward an optimal model? How do you statistically test whether the difference between your Train and Test *R*<sup>2</sup> is driven by true signal overfit or non-stationarity/regime shifts?"**
 
 ### Top 5 Alternative Interview Formulations
 
 1. <i>"What does a negative out-of-sample *R*<sup>2</sup> mean mathematically, and what structural model failures cause it?" (LeetCode — Quantitative Engineering)</i>
 2. <i>"Walk me through your diagnostic checklist when a machine learning model scores high in-sample but shows near-zero performance out-of-sample." (Blind — Two Sigma)</i>
-3. <i>"If a model produces a Train *R*<sup>2</sup> = 0.05 and a Test *R*<sup>2</sup> = 0.02$, is this model broken, or is it usable? Defend your answer." (LinkedIn — Squarepoint Capital)</i>
+3. <i>"If a model produces a Train *R*<sup>2</sup> = 0.05 and a Test *R*<sup>2</sup> = 0.02, is this model broken, or is it usable? Defend your answer." (LinkedIn — Squarepoint Capital)</i>
 4. <i>"How do you use early stopping, tree depth constraints, and learning rate shrinkage to rescue an overfit gradient boosted tree model?" (HackerRank — Citadel Securities)</i>
 5. <i>"How do you distinguish between a model that has overfit its parameter space versus a model suffering from structural regime changes between the train and test windows?" (LinkAI — Quant Leadership Questions)</i>
 
