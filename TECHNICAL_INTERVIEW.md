@@ -2086,7 +2086,7 @@ VPIN threshold $\lambda^*$: calibrate via ROC curve on historical toxic flow eve
 
 &Omega;(*f*) = &gamma;*T* + &frac12;&lambda;&sum;<sub>*j*=1</sub><sup>*T*</sup> *w*<sub>*j*</sub><sup>2</sup>
 
-where $T$ = number of leaves, $w_j$ = leaf weight, $\gamma$ = min gain threshold, $\lambda$ = L2 penalty on weights.
+where *T* = number of leaves, *w*<sub>*j*</sub> = leaf weight, &gamma; = min gain threshold, &lambda; = L2 penalty on weights.
 
 **Second-order Taylor expansion:**
 
