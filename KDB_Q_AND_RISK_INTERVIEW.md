@@ -1543,15 +1543,15 @@ Bloomberg PORT (Portfolio & Risk Analytics) is a portfolio analytics platform bu
 │                                                                  │
 │  2. Set benchmark: SPX Index / Russell 3000                      │
 │                                                                  │
-│  3. Risk Model Selection: Barra USE4 (PORT-native)              │
+│  3. Risk Model Selection: Barra USE4 (PORT-native)               │
 │                                                                  │
 │  4. Outputs:                                                     │
-│     ├─ Exposure Report: active betas vs benchmark               │
+│     ├─ Exposure Report: active betas vs benchmark                │
 │     ├─ Risk Decomposition: factor vs specific risk               │
-│     ├─ P&L Attribution: date-range factor PnL breakdown         │
-│     └─ Stress Test: 2008/COVID/rate shock scenarios             │
+│     ├─ P&L Attribution: date-range factor PnL breakdown          │
+│     └─ Stress Test: 2008/COVID/rate shock scenarios              │
 │                                                                  │
-│  5. Export to Excel / API pull via BQL                          │
+│  5. Export to Excel / API pull via BQL                           │
 └──────────────────────────────────────────────────────────────────┘
 ```
 
