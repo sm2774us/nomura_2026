@@ -948,7 +948,7 @@ $$d_{1,2} = \frac{\ln(S/K) + (r \pm \frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}
 #### Core Mapping & Equivalence
 
 * **Why they are the same:** These variations explore the variance of the Sharpe ratio estimator when sample sizes are small and data exhibits fat tails.
-* **How the original answer satisfies them:** The complete Lo (2002) standard error formula explicitly isolates the impacts of sample length ($T$), skewness ($\gamma$), and kurtosis ($\kappa$), answering Variations 1, 3, and 4. Calculating the explicit values for the 95% CI ($(1.32, 1.68)$ and $(1.29, 1.71)$) addresses Variations 2 and 5.
+* **How the original answer satisfies them:** The complete Lo (2002) standard error formula explicitly isolates the impacts of sample length ($T$), skewness ($\gamma$), and kurtosis ($\kappa$), answering Variations 1, 3, and 4. Calculating the explicit values for the 95% CI ( $(1.32, 1.68)$ and $(1.29, 1.71)$ ) addresses Variations 2 and 5.
 
 ---
 
