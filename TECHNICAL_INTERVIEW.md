@@ -708,7 +708,7 @@ $$\mathrm{CVaR}_\alpha(L) = \mathbb{E}\!\left[L \mid L \geq \mathrm{VaR}_\alpha(
 
 **Closed form for $L \sim \mathcal{N}(\mu, \sigma^2)$:**
 
-Let $z_\alpha = \Phi^{-1}(\alpha)$ (standard normal quantile). Then $\mathrm{VaR}_\alpha = \mu + \sigma z_\alpha$.
+Let $z_\alpha = \Phi^{-1}(\alpha)$ (standard normal quantile). Then $\mathrm{VaR}_\alpha = \mu + \sigma z_\alpha$ .
 
 $$\mathrm{CVaR}_\alpha = \mathbb{E}[L \mid L \geq \mu + \sigma z_\alpha]$$
 
