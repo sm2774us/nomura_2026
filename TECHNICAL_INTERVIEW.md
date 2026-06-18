@@ -2300,7 +2300,9 @@ In XGBoost: `scale_pos_weight = C(FN)/C(FP)`.
 
 **Merton jump-diffusion SDE:**
 
-$$\frac{dS_t}{S_{t^-}} = (\mu - \lambda\bar{k})\,dt + \sigma\,dW_t + (J_t - 1)\,dN_t$$
+$$
+\frac{dS_t}{S_{t^-}} = (\mu - \lambda\bar{k})\,dt + \sigma\,dW_t + (J_t - 1)\,dN_t
+$$
 
 where:
 - $N_t \sim \text{Poisson}(\lambda t)$: jump count process
