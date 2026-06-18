@@ -1050,7 +1050,7 @@ $$\lambda = \frac{C\mu_p - B}{D}, \qquad \gamma = \frac{A - B\mu_p}{D}$$
 
 **Minimum variance frontier:**
 
-$$\sigma^2_p(\mu_p) = \mathbf{w}^{*\top}\boldsymbol{\Sigma}\mathbf{w}^* = \frac{C\mu_p^2 - 2B\mu_p + A}{D}$$
+&sigma;<sub>*p*</sub><sup>2</sup>(&mu;<sub>*p*</sub>) = **w**<sup>\*&top;</sup> **&Sigma; w**<sup>\*</sup> = (*C*&mu;<sub>*p*</sub><sup>2</sup> &minus; 2*B*&mu;<sub>*p*</sub> + *A*) / *D*
 
 This is a **parabola** in $(\sigma^2_p, \mu_p)$ space.
 
@@ -2011,21 +2011,21 @@ $$P_\tau(buy) = \Phi\!\left(\frac{\Delta P_\tau}{\sigma_{\Delta P}}\right)$$
 
 $$V_\tau^B = P_\tau(buy)\cdot V_\tau, \qquad V_\tau^S = (1 - P_\tau(buy))\cdot V_\tau$$
 
-**VPIN over rolling window of $n$ buckets:**
+**VPIN over rolling window of *n* buckets:**
 
-$$VPIN = \frac{\sum_{\tau=T-n+1}^T |V_\tau^B - V_\tau^S|}{nV}$$
+VPIN = [&sum;<sub>&tau;=*T*&minus;*n*+1</sub><sup>*T*</sup> |*V*<sub>&tau;</sub><sup>*B*</sup> &minus; *V*<sub>&tau;</sub><sup>*S*</sup>|] / (*nV*)
 
-where $V$ = bucket size (equal for all $\tau$).
+where *V* = bucket size (equal for all &tau;).
 
 **CRB application:**
-- High VPIN → likely informed flow → widen spread, reduce facilitation size, hedge faster
-- Low VPIN → mostly noise traders → tighten spread, provide more liquidity, earn bid-ask spread
+- High VPIN &rarr; likely informed flow &rarr; widen spread, reduce facilitation size, hedge faster
+- Low VPIN &rarr; mostly noise traders &rarr; tighten spread, provide more liquidity, earn bid-ask spread
 
-VPIN threshold $\lambda^*$: calibrate via ROC curve on historical toxic flow events.
+VPIN threshold &lambda;<sup>\*</sup>: calibrate via ROC curve on historical toxic flow events.
 
 ### [B] Linear Models — TWAP/VWAP Participation Rate Regression
 
-> **Question:** **"You want to model the optimal participation rate $\pi_t$ in an execution algorithm as a linear function of current market features. Specify the model, handle missing values (from Q1.4), and discuss whether participation rate should be bounded."**
+> **Question:** **"You want to model the optimal participation rate &pi;<sub>*t*</sub> in an execution algorithm as a linear function of current market features. Specify the model, handle missing values (from Q1.4), and discuss whether participation rate should be bounded."**
 
 ### Top 5 Alternative Interview Formulations
 
@@ -2037,7 +2037,7 @@ VPIN threshold $\lambda^*$: calibrate via ROC curve on historical toxic flow eve
 
 #### Core Mapping & Equivalence
 
-* **Why they are the same:** They target feature imputation strategies and mathematical transformations needed when using linear models to predict values bounded within a specific range like $(0,1)$.
+* **Why they are the same:** They target feature imputation strategies and mathematical transformations needed when using linear models to predict values bounded within a specific range like (0,1).
 * **How the original answer satisfies them:** Specifying the feature matrix containing spread and volatility solves Variation 1. Explaining the three data imputation methods (MICE, Indicator, and KNN) directly addresses Variations 3 and 5. Using the logistic link function &sigma;(&circ;*y*<sub>*t*</sub>) and the Tobit constraint setup solves Variations 2 and 4.
 
 ---
