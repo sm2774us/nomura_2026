@@ -2177,14 +2177,14 @@ This is the **timing risk** component of Implementation Shortfall.
 
 1. <i>"Explain the Baum-Welch algorithm for hidden Markov models. How is it related to Expectation-Maximization (EM)?"</i>
 2. <i>"Write out the forward and backward recursive equations used to compute hidden state probabilities."</i>
-3. <i>"How do you update the transition probability matrix ($A_{ij}$) of an HMM during the maximization step?"</i>
+3. <i>"How do you update the transition probability matrix (*A*<sub>*ij*</sub>) of an HMM during the maximization step?"</i>
 4. <i>"What statistical criteria (like AIC/BIC) do you use to choose the optimal number of latent states in a regime model?"</i>
-5. <i>"What are 'responsibilities' ($\gamma_t(j)$) in the context of fitting mixture models and hidden state models?"</i>
+5. <i>"What are 'responsibilities' (&gamma;<sub>*t*</sub>(*j*)) in the context of fitting mixture models and hidden state models?"</i>
 
 #### Core Mapping & Equivalence
 
 * **Why they are the same:** They require outlining the Baum-Welch EM algorithm, specifically how hidden state sequences map onto observable parameters.
-* **How the original answer satisfies them:** The recursive updates for $\alpha_t(j)$ and $\beta_t(j)$ provide the required forward-backward equations for Variation 2. The definition of responsibilities ($\gamma_t(j)$ and $\xi_t(i,j)$) answers Variations 1 and 5. Showing the fraction updates for $\hat{A}_{ij}$ and the BIC formulation satisfies Variations 3 and 4.
+* **How the original answer satisfies them:** The recursive updates for &alpha;<sub>*t*</sub>(*j*) and &beta;<sub>*t*</sub>(*j*) provide the required forward-backward equations for Variation 2. The definition of responsibilities (&gamma;<sub>*t*</sub>(*j*) and &xi;<sub>*t*</sub>(*i*,*j*)) answers Variations 1 and 5. Showing the fraction updates for &circ;*A*<sub>*ij*</sub> and the BIC formulation satisfies Variations 3 and 4.
 
 ---
 
@@ -2194,36 +2194,37 @@ This is the **timing risk** component of Implementation Shortfall.
 
 #### Derivation
 
-**HMM:** Hidden state $s_t \in \{1,\ldots,K\}$, observed returns $r_t$.
+**HMM:** Hidden state *s*<sub>*t*</sub> &isin; {1,&hellip;,*K*}, observed returns *r*<sub>*t*</sub>.
 
-- Transition: $A_{ij} = P(s_t = j | s_{t-1} = i)$
-- Emission: $b_j(r_t) = p(r_t | s_t = j) = \mathcal{N}(r_t;\mu_j,\sigma_j^2)$
-- Initial: $\pi_j = P(s_1 = j)$
+- Transition: *A*<sub>*ij*</sub> = *P*(*s*<sub>*t*</sub> = *j* | *s*<sub>*t*&minus;1</sub> = *i*)
+- Emission: *b*<sub>*j*</sub>(*r*<sub>*t*</sub>) = *p*(*r*<sub>*t*</sub> | *s*<sub>*t*</sub> = *j*) = &Nscr;(*r*<sub>*t*</sub>; &mu;<sub>*j*</sub>, &sigma;<sub>*j*</sub><sup>2</sup>)
+- Initial: &pi;<sub>*j*</sub> = *P*(*s*<sub>1</sub> = *j*)
 
-**Forward variable:** $\alpha_t(j) = P(r_1,\ldots,r_t, s_t=j|\theta)$
+**Forward variable:** &alpha;<sub>*t*</sub>(*j*) = *P*(*r*<sub>1</sub>,&hellip;,*r*<sub>*t*</sub>, *s*<sub>*t*</sub>=*j*|&theta;)
 
-$$\alpha_1(j) = \pi_j b_j(r_1)$$
-$$\alpha_t(j) = b_j(r_t)\sum_{i=1}^K \alpha_{t-1}(i)A_{ij}$$
+&alpha;<sub>1</sub>(*j*) = &pi;<sub>*j*</sub> *b*<sub>*j*</sub>(*r*<sub>1</sub>)
 
-**Backward variable:** $\beta_t(j) = P(r_{t+1},\ldots,r_T | s_t=j,\theta)$
+&alpha;<sub>*t*</sub>(*j*) = *b*<sub>*j*</sub>(*r*<sub>*t*</sub>) &sum;<sub>*i*=1</sub><sup>*K*</sup> &alpha;<sub>*t*&minus;1</sub>(*i*)*A*<sub>*ij*</sub>
 
-$$\beta_T(j) = 1, \qquad \beta_t(j) = \sum_{k=1}^K A_{jk}b_k(r_{t+1})\beta_{t+1}(k)$$
+**Backward variable:** &beta;<sub>*t*</sub>(*j*) = *P*(*r*<sub>*t*+1</sub>,&hellip;,*r*<sub>*T*</sub> | *s*<sub>*t*</sub>=*j*,&theta;)
+
+&beta;<sub>*T*</sub>(*j*) = 1, &emsp;&emsp; &beta;<sub>*t*</sub>(*j*) = &sum;<sub>*k*=1</sub><sup>*K*</sup> *A*<sub>*jk*</sub>*b*<sub>*k*</sub>(*r*<sub>*t*+1</sub>)&beta;<sub>*t*+1</sub>(*k*)
 
 **E-step:** Compute responsibilities:
 
-$$\gamma_t(j) = P(s_t=j|r_{1:T}) = \frac{\alpha_t(j)\beta_t(j)}{\sum_k \alpha_t(k)\beta_t(k)}$$
+&gamma;<sub>*t*</sub>(*j*) = *P*(*s*<sub>*t*</sub>=*j*|*r*<sub>1:*T*</sub>) = [&alpha;<sub>*t*</sub>(*j*)&beta;<sub>*t*</sub>(*j*)] / [&sum;<sub>*k*</sub> &alpha;<sub>*t*</sub>(*k*)&beta;<sub>*t*</sub>(*k*)]
 
-$$\xi_t(i,j) = P(s_t=i, s_{t+1}=j|r_{1:T}) \propto \alpha_t(i)A_{ij}b_j(r_{t+1})\beta_{t+1}(j)$$
+&xi;<sub>*t*</sub>(*i*,*j*) = *P*(*s*<sub>*t*</sub>=*i*, *s*<sub>*t*+1</sub>=*j*|*r*<sub>1:*T*</sub>) &prop; &alpha;<sub>*t*</sub>(*i*)*A*<sub>*ij*</sub>*b*<sub>*j*</sub>(*r*<sub>*t*+1</sub>)&beta;<sub>*t*+1</sub>(*j*)
 
 **M-step:** Update parameters:
 
-$$\hat{\pi}_j = \gamma_1(j)$$
+&circ;&pi;<sub>*j*</sub> = &gamma;<sub>1</sub>(*j*)
 
-$$\hat{A}_{ij} = \frac{\sum_{t=1}^{T-1}\xi_t(i,j)}{\sum_{t=1}^{T-1}\gamma_t(i)}$$
+&circ;*A*<sub>*ij*</sub> = [&sum;<sub>*t*=1</sub><sup>*T*&minus;1</sup> &xi;<sub>*t*</sub>(*i*,*j*)] / [&sum;<sub>*t*=1</sub><sup>*T*&minus;1</sup> &gamma;<sub>*t*</sub>(*i*)]
 
-$$\hat{\mu}_j = \frac{\sum_t \gamma_t(j)r_t}{\sum_t \gamma_t(j)}, \qquad \hat{\sigma}^2_j = \frac{\sum_t \gamma_t(j)(r_t-\hat{\mu}_j)^2}{\sum_t \gamma_t(j)}$$
+&circ;&mu;<sub>*j*</sub> = [&sum;<sub>*t*</sub> &gamma;<sub>*t*</sub>(*j*)*r*<sub>*t*</sub>] / [&sum;<sub>*t*</sub> &gamma;<sub>*t*</sub>(*j*)], &emsp;&emsp; &circ;&sigma;<sup>2</sup><sub>*j*</sub> = [&sum;<sub>*t*</sub> &gamma;<sub>*t*</sub>(*j*)(*r*<sub>*t*</sub> &minus; &circ;&mu;<sub>*j*</sub>)<sup>2</sup>] / [&sum;<sub>*t*</sub> &gamma;<sub>*t*</sub>(*j*)]
 
-**Number of states:** Select $K$ by BIC = $-2\ln\hat{L} + \#\text{params}\cdot\ln T$ (penalizes complexity) or by domain knowledge ($K=2$: risk-on/off; $K=3$: bull/neutral/crisis).
+**Number of states:** Select *K* by BIC = &minus;2 ln &circ;*L* + (#params) &middot; ln *T* (penalizes complexity) or by domain knowledge (*K*=2: risk-on/off; *K*=3: bull/neutral/crisis).
 
 ### [B] Linear Models — Regime-Conditional Factor Models
 
@@ -2240,7 +2241,7 @@ $$\hat{\mu}_j = \frac{\sum_t \gamma_t(j)r_t}{\sum_t \gamma_t(j)}, \qquad \hat{\s
 #### Core Mapping & Equivalence
 
 * **Why they are the same:** These questions address combining continuous regressors with discrete state paths, highlighting the risks of ignoring parameter structural breaks.
-* **How the original answer satisfies them:** The soft-regime weighted matrix equation $\hat{\boldsymbol{\beta}}^{(s)} = (\mathbf{F}^\top W_s \mathbf{F})^{-1}\mathbf{F}^\top W_s \mathbf{r}$ solves Variations 1 and 3. The pooling bias analysis showing why crisis risk is underestimated handles Variations 2 and 5. The description of ordering constraints solves the label-switching problem for Variation 4.
+* **How the original answer satisfies them:** The soft-regime weighted matrix equation &circ;**&beta;**<sup>(*s*)</sup> = (**F**<sup>&top;</sup> *W*<sub>*s*</sub> **F**)<sup>&minus;1</sup>**F**<sup>&top;</sup> *W*<sub>*s*</sub> **r** solves Variations 1 and 3. The pooling bias analysis showing why crisis risk is underestimated handles Variations 2 and 5. The description of ordering constraints solves the label-switching problem for Variation 4.
 
 ---
 
@@ -2252,21 +2253,21 @@ $$\hat{\mu}_j = \frac{\sum_t \gamma_t(j)r_t}{\sum_t \gamma_t(j)}, \qquad \hat{\s
 
 **Model:**
 
-$$r_t = \beta^{(s_t)}\mathbf{f}_t + \epsilon_t, \quad s_t \in \{1,2\}$$
+*r*<sub>*t*</sub> = **&beta;**<sup>(*s*<sub>*t*</sub>)</sup>**f**<sub>*t*</sub> + &epsilon;<sub>*t*</sub>, &emsp; *s*<sub>*t*</sub> &isin; {1,2}
 
 **Soft-regime weighted GLS:**
 
-Let $\gamma_t(s)$ = posterior probability of regime $s$ at time $t$ (from HMM E-step).
+Let &gamma;<sub>*t*</sub>(*s*) = posterior probability of regime *s* at time *t* (from HMM E-step).
 
-For each regime $s$, construct weighted regression with weight $w_{t,s} = \gamma_t(s)$:
+For each regime *s*, construct weighted regression with weight *w*<sub>*t*,*s*</sub> = &gamma;<sub>*t*</sub>(*s*):
 
-$$\hat{\boldsymbol{\beta}}^{(s)} = (\mathbf{F}^\top W_s \mathbf{F})^{-1}\mathbf{F}^\top W_s \mathbf{r}$$
+&circ;**&beta;**<sup>(*s*)</sup> = (**F**<sup>&top;</sup> *W*<sub>*s*</sub> **F**)<sup>&minus;1</sup>**F**<sup>&top;</sup> *W*<sub>*s*</sub> **r**
 
-where $W_s = \mathrm{diag}(\gamma_1(s),\ldots,\gamma_T(s))$.
+where *W*<sub>*s*</sub> = diag(&gamma;<sub>1</sub>(*s*),&hellip;,&gamma;<sub>*T*</sub>(*s*)).
 
-**Pooling bias:** Pooled OLS $\hat{\boldsymbol{\beta}}_{pool}$ estimates $\sum_s P(s)\boldsymbol{\beta}^{(s)}$ — a regime-averaged beta that misrepresents both regimes. During a crisis, $\boldsymbol{\beta}^{(crisis)}$ has higher market beta and lower style exposures. Pooling underestimates crisis risk.
+**Pooling bias:** Pooled OLS &circ;**&beta;**<sub>*pool*</sub> estimates &sum;<sub>*s*</sub> *P*(*s*)**&beta;**<sup>(*s*)</sup> &mdash; a regime-averaged beta that misrepresents both regimes. During a crisis, **&beta;**<sup>(*crisis*)</sup> has higher market beta and lower style exposures. Pooling underestimates crisis risk.
 
-**Identification problem:** In a $K$-regime model with symmetric emission distributions, regimes can be permuted without changing likelihood. Fix via ordering constraints (e.g., $\mu_1 < \mu_2 < \ldots < \mu_K$) or economic labeling.
+**Identification problem:** In a *K*-regime model with symmetric emission distributions, regimes can be permuted without changing likelihood. Fix via ordering constraints (e.g., &mu;<sub>1</sub> < &mu;<sub>2</sub> < &hellip; < &mu;<sub>*K*</sub>) or economic labeling.
 
 ### [C] Machine Learning — Gradient Boosting for Regime Classification
 
@@ -2283,7 +2284,7 @@ where $W_s = \mathrm{diag}(\gamma_1(s),\ldots,\gamma_T(s))$.
 #### Core Mapping & Equivalence
 
 * **Why they are the same:** They evaluate how to structure classification models for rare events using feature design and loss-function adjustments.
-* **How the original answer satisfies them:** The structural comparison table solves Variation 1. Detailing both SMOTE neighborhood interpolation and `scale_pos_weight` adjustments handles Variations 2, 3, and 4. Listing features such as the vol premium ($RV_t/IV_t$) and credit spreads solves Variation 5.
+* **How the original answer satisfies them:** The structural comparison table solves Variation 1. Detailing both SMOTE neighborhood interpolation and `scale_pos_weight` adjustments handles Variations 2, 3, and 4. Listing features such as the vol premium (*RV*<sub>*t*</sub>/*IV*<sub>*t*</sub>) and credit spreads solves Variation 5.
 
 ---
 
@@ -2302,26 +2303,26 @@ where $W_s = \mathrm{diag}(\gamma_1(s),\ldots,\gamma_T(s))$.
 | Overfitting risk | Higher | Lower |
 
 **Features for GBM regime classifier:**
-- VIX level and change: $VIX_t$, $\Delta VIX_t$
-- Realized volatility vs implied: $RV_t / IV_t$ (vol premium)
+- VIX level and change: *VIX*<sub>*t*</sub>, &Delta;*VIX*<sub>*t*</sub>
+- Realized volatility vs implied: *RV*<sub>*t*</sub> / *IV*<sub>*t*</sub> (vol premium)
 - Cross-asset stress: credit spread (HY-IG), TED spread
 - Equity momentum: 1M, 3M return
 - Market microstructure: bid-ask spread, turnover ratio
 
 **Class imbalance (5% crisis days):**
 
-**SMOTE (Synthetic Minority Oversampling):** For each minority sample $x_i$:
-1. Find $k$ nearest neighbors in feature space
-2. Randomly sample along the line: $\tilde{x} = x_i + \lambda(x_{nn} - x_i)$, $\lambda \sim U[0,1]$
+**SMOTE (Synthetic Minority Oversampling):** For each minority sample *x*<sub>*i*</sub>:
+1. Find *k* nearest neighbors in feature space
+2. Randomly sample along the line: &tilde;*x* = *x*<sub>*i*</sub> + &lambda;(*x*<sub>*nn*</sub> &minus; *x*<sub>*i*</sub>), &lambda; &sim; *U*[0,1]
 3. Augment training set with synthetic samples
 
-**Cost-sensitive learning:** Assign misclassification cost $C(FN) \gg C(FP)$ (false negative = missing a crisis is very costly):
+**Cost-sensitive learning:** Assign misclassification cost *C*(*FN*) &gt;&gt; *C*(*FP*) (false negative = missing a crisis is very costly):
 
-$$\text{Weighted loss} = C(FP)\cdot \mathbf{1}[\hat{y}=1, y=0] + C(FN)\cdot\mathbf{1}[\hat{y}=0, y=1]$$
+Weighted loss = *C*(*FP*) &middot; **1**[&circ;*y*=1, *y*=0] + *C*(*FN*) &middot; **1**[&circ;*y*=0, *y*=1]
 
 In XGBoost: `scale_pos_weight = C(FN)/C(FP)`.
 
-**Evaluation metric for imbalanced:** Use **F1-score**, **AUC-ROC**, or **Precision-Recall AUC** — not accuracy (which is trivially high if you predict "no crisis" always).
+**Evaluation metric for imbalanced:** Use **F1-score**, **AUC-ROC**, or **Precision-Recall AUC** &mdash; not accuracy (which is trivially high if you predict "no crisis" always).
 
 ### [D] Stochastic Calculus — Jump-Diffusion Models for Crisis Regimes
 
@@ -2330,7 +2331,7 @@ In XGBoost: `scale_pos_weight = C(FN)/C(FP)`.
 ### Top 5 Alternative Interview Formulations
 
 1. <i>"Write down the SDE for Merton’s Jump Diffusion model and explain how the Poisson process handles price breaks."</i>
-2. <i>"Derive the total variance of an asset price over a horizon $T$ when it includes both continuous Brownian noise and discontinuous jumps."</i>
+2. <i>"Derive the total variance of an asset price over a horizon *T* when it includes both continuous Brownian noise and discontinuous jumps."</i>
 3. <i>"Why does a standard Black-Scholes model underestimate the risk of out-of-the-money options, and how do jumps fix this?"</i>
 4. <i>"What is the characteristic function of a jump-diffusion process?"</i>
 5. <i>"How do asset jumps impact short-term Value-at-Risk calculations compared to a pure geometric Brownian motion framework?"</i>
@@ -2338,7 +2339,7 @@ In XGBoost: `scale_pos_weight = C(FN)/C(FP)`.
 #### Core Mapping & Equivalence
 
 * **Why they are the same:** They require augmenting standard continuous processes with compound Poisson jumps to accurately capture extreme tail behavior.
-* **How the original answer satisfies them:** The Merton SDE containing the $(J_t-1)dN_t$ term satisfies Variation 1. The variance equation ($\sigma^2 T + \lambda T(\delta^2 + \bar{k}^2)$) solves Variation 2. The characteristic function formulation solves Variation 4, while the 99% VaR distribution analysis addresses Variations 3 and 5.
+* **How the original answer satisfies them:** The Merton SDE containing the (*J*<sub>*t*</sub>&minus;1)*dN*<sub>*t*</sub> term satisfies Variation 1. The variance equation (&sigma;<sup>2</sup> *T* + &lambda; *T*(&delta;<sup>2</sup> + &circ;*k*<sup>2</sup>)) solves Variation 2. The characteristic function formulation solves Variation 4, while the 99% VaR distribution analysis addresses Variations 3 and 5.
 
 ---
 
@@ -2350,67 +2351,65 @@ In XGBoost: `scale_pos_weight = C(FN)/C(FP)`.
 
 **Merton jump-diffusion SDE:**
 
-$$
-\frac{dS_{t}}{S_{t^{-}}} = (\mu - \lambda \bar{k}) dt + \sigma dW_{t} + (J_{t} - 1) dN_{t}
-$$
+*dS*<sub>*t*</sub> / *S*<sub>*t*<sup>&minus;</sup></sub> = (&mu; &minus; &lambda;&circ;*k*) *dt* + &sigma; *dW*<sub>*t*</sub> + (*J*<sub>*t*</sub> &minus; 1) *dN*<sub>*t*</sub>
 
 where:
-- $N_t \sim \text{Poisson}(\lambda t)$: jump count process
-- $J_t$: jump size, $\ln J_t \sim \mathcal{N}(\ln(1+\bar{k}) - \frac{1}{2}\delta^2, \delta^2)$
-- $\bar{k} = \mathbb{E}[J-1]$: expected jump size minus 1
+- *N*<sub>*t*</sub> &sim; Poisson(&lambda; *t*): jump count process
+- *J*<sub>*t*</sub>: jump size, ln *J*<sub>*t*</sub> &sim; &Nscr;(ln(1+&circ;*k*) &minus; &frac12;&delta;<sup>2</sup>, &delta;<sup>2</sup>)
+- &circ;*k* = &#120124;[*J* &minus; 1]: expected jump size minus 1
 
-**Return distribution (log-price over $[0,T]$):**
+**Return distribution (log-price over [0,*T*]):**
 
-$$\ln\frac{S_T}{S_0} = \left(\mu - \frac{\sigma^2}{2} - \lambda\bar{k}\right)T + \sigma W_T + \sum_{j=1}^{N_T}\ln J_j$$
+ln(*S*<sub>*T*</sub> / *S*<sub>0</sub>) = (&mu; &minus; &sigma;<sup>2</sup>/2 &minus; &lambda;&circ;*k*)*T* + &sigma; *W*<sub>*T*</sub> + &sum;<sub>*j*=1</sub><sup>*N*<sub>*T*</sub></sup> ln *J*<sub>*j*</sub>
 
-**Variance:** Conditioning on $N_T = n$:
+**Variance:** Conditioning on *N*<sub>*T*</sub> = *n*:
 
-$$\mathrm{Var}\!\left[\ln\frac{S_T}{S_0}\right] = \sigma^2 T + \lambda T(\delta^2 + (\ln(1+\bar{k})-\frac{1}{2}\delta^2)^2) \approx \sigma^2 T + \lambda T(\delta^2 + \bar{k}^2)$$
+Var **[** ln(*S*<sub>*T*</sub> / *S*<sub>0</sub>) **]** = &sigma;<sup>2</sup> *T* + &lambda; *T* (&delta;<sup>2</sup> + (ln(1+&circ;*k*) &minus; &frac12;&delta;<sup>2</sup>)<sup>2</sup>) &asymp; &sigma;<sup>2</sup> *T* + &lambda; *T* (&delta;<sup>2</sup> + &circ;*k*<sup>2</sup>)
 
-Jump contribution: $\lambda T(\delta^2 + \bar{k}^2)$ — increases variance super-linearly with crisis intensity $\lambda$.
+Jump contribution: &lambda; *T* (&delta;<sup>2</sup> + &circ;*k*<sup>2</sup>) &mdash; increases variance super-linearly with crisis intensity &lambda;.
 
 **Characteristic function:**
 
-$$\phi_T(u) = \exp\!\left[iu\left(\mu - \frac{\sigma^2}{2} - \lambda\bar{k}\right)T - \frac{\sigma^2 u^2 T}{2} + \lambda T\left(e^{iu\mu_J - \frac{\delta^2 u^2}{2}} - 1\right)\right]$$
+&phi;<sub>*T*</sub>(*u*) = exp **[** *iu*(&mu; &minus; &sigma;<sup>2</sup>/2 &minus; &lambda;&circ;*k*)*T* &minus; &sigma;<sup>2</sup> *u*<sup>2</sup> *T* / 2 + &lambda; *T* (exp(*iu*&mu;<sub>*J*</sub> &minus; &delta;<sup>2</sup> *u*<sup>2</sup> / 2) &minus; 1) **]**
 
-**VaR impact:** Under pure diffusion, $VaR_{99\%} = -(\mu - \frac{\sigma^2}{2})T - 2.33\sigma\sqrt{T}$.
+**VaR impact:** Under pure diffusion, *VaR*<sub>99%</sub> = &minus;(&mu; &minus; &sigma;<sup>2</sup>/2)*T* &minus; 2.33&sigma;&radic;*T*.
 
-Under jump-diffusion, the tails are fatter (mixture of normals with varying means). For $\lambda = 1$ jump/year, $\bar{k} = -20\%$, $\delta = 5\%$:
+Under jump-diffusion, the tails are fatter (mixture of normals with varying means). For &lambda; = 1 jump/year, &circ;*k* = &minus;20%, &delta; = 5%:
 
-$$VaR_{99\%}^{JD} \approx VaR_{99\%}^{GBM} + \lambda T \cdot |\bar{k}| \cdot \text{(jump probability correction)}$$
+*VaR*<sub>99%</sub><sup>*JD*</sup> &asymp; *VaR正式*<sub>99%</sub><sup>*GBM*</sup> + &lambda; *T* &middot; |&circ;*k*| &middot; (jump probability correction)
 
-For daily VaR ($T=1/252$): jump contribution $\approx \frac{1}{252}\times 0.20 \approx 8$ bps — material at the 99% level.
+For daily VaR (*T*=1/252): jump contribution &asymp; (1 / 252) &times; 0.20 &asymp; 8 bps &mdash; material at the 99% level.
 
 ---
 
 <a name="set-10"></a>
 ## Interview Set 10 — The Perfect `R^2` Gotcha (Stochastic Calculus Meets Strategy Design)
 
-### ⚠️ GOTCHA QUESTION — Discussion Required First
+### &Aacute;; GOTCHA QUESTION — Discussion Required First
 
 > **Question:** **"We trade stocks and futures, and you can both long and short for futures. Assume you built a perfect quantitative trading model with perfect R<sup>2</sup> = 1.0, what trading strategy do you recommend and what are the expected returns of such a strategy?"**
 
-> **⚠️ STOP — Before answering, ask the interviewer:**
-> 1. "When you say R<sup>2</sup> = 1, do you mean the model predicts **direction** perfectly (classification, R<sup>2</sup> = 1 for sign), or **magnitude** (regression, $R^2=1$ for exact return levels)?"
+> **&Aacute;; STOP — Before answering, ask the interviewer:**
+> 1. "When you say R<sup>2</sup> = 1, do you mean the model predicts **direction** perfectly (classification, R<sup>2</sup> = 1 for sign), or **magnitude** (regression, *R*<sup>2</sup> = 1 for exact return levels)?"
 > 2. "Are the stocks and futures on the same underlying? Are the futures cash-settled?"
 > 3. "What are the transaction cost and market impact assumptions — can we trade any size at quoted prices?"
 
-> **The trap:** A naive answer is "go long stocks with positive predictions." But R<sup>2</sup> = 1 means you predict returns **exactly** — you can exploit this far more efficiently via a market-neutral strategy. Also, $R^2=1$ in-sample is almost certainly overfitting; the interviewer is testing whether you challenge unrealistic assumptions.
+> **The trap:** A naive answer is "go long stocks with positive predictions." But R<sup>2</sup> = 1 means you predict returns **exactly** — you can exploit this far more efficiently via a market-neutral strategy. Also, *R*<sup>2</sup> = 1 in-sample is almost certainly overfitting; the interviewer is testing whether you challenge unrealistic assumptions.
 
 ---
 
 ### Top 5 Alternative Interview Formulations
 
-1. <i>"If you have a predictive signal with an $R^2$ of 100% in-sample, how do you construct your trading portfolio, and what are the limits to your profits?"</i>
-2. <i>"Prove that a deterministic return predictor for a risky asset implies the non-existence of an equivalent martingale measure ($\mathbb{Q}$)."</i>
+1. <i>"If you have a predictive signal with an *R*<sup>2</sup> of 100% in-sample, how do you construct your trading portfolio, and what are the limits to your profits?"</i>
+2. <i>"Prove that a deterministic return predictor for a risky asset implies the non-existence of an equivalent martingale measure (&#120130;)."</i>
 3. <i>"Does a perfect prediction model constitute a pure arbitrage opportunity under the First Fundamental Theorem of Asset Pricing?"</i>
-4. <i>"How do transaction costs, market capacity, and execution impact prevent an $R^2 = 1$ model from generating infinite returns?"</i>
-5. <i>"What would you check first if a researcher brought you a strategy backtest showing an out-of-sample $R^2$ of 1.0?"</i>
+4. <i>"How do transaction costs, market capacity, and execution impact prevent an *R*<sup>2</sup> = 1 model from generating infinite returns?"</i>
+5. <i>"What would you check first if a researcher brought you a strategy backtest showing an out-of-sample *R*<sup>2</sup> of 1.0?"</i>
 
 #### Core Mapping & Equivalence
 
-* **Why they are the same:** This group of questions uses an impossible idealized scenario ($R^2=1$) to test whether an applicant understands model validation, data leakage, and the theoretical boundaries of market equilibrium.
-* **How the original answer satisfies them:** Explaining market-neutral long/short positioning under infinite Kelly leverage answers Variation 1. The definition of pure arbitrage ($V_0=0, P(V_T \geq 0)=1$) and its mapping to the FFTAP addresses Variations 2 and 3. The structural breakdown of constraints (market impact, signal decay) answers Variation 4, while the warning regarding data leakage and overfit checks addresses Variation 5.
+* **Why they are the same:** This group of questions uses an impossible idealized scenario (*R*<sup>2</sup> = 1) to test whether an applicant understands model validation, data leakage, and the theoretical boundaries of market equilibrium.
+* **How the original answer satisfies them:** Explaining market-neutral long/short positioning under infinite Kelly leverage answers Variation 1. The definition of pure arbitrage (*V*<sub>0</sub> = 0, *P*(*V*<sub>*T*</sub> &ge; 0) = 1) and its mapping to the FFTAP addresses Variations 2 and 3. The structural breakdown of constraints (market impact, signal decay) answers Variation 4, while the warning regarding data leakage and overfit checks addresses Variation 5.
 
 ---
 
@@ -2418,20 +2417,20 @@ For daily VaR ($T=1/252$): jump contribution $\approx \frac{1}{252}\times 0.20 \
 
 ---
 
-### [A] Statistics — $R^2 = 1$: What Does It Actually Mean?
+### [A] Statistics — *R*<sup>2</sup> = 1: What Does It Actually Mean?
 
-$$R^2 = 1 - \frac{\sum_i(y_i - \hat{y}_i)^2}{\sum_i(y_i - \bar{y})^2}$$
+*R*<sup>2</sup> = 1 &minus; [&sum;<sub>*i*</sub>(*y*<sub>*i*</sub> &minus; &circ;*y*<sub>*i*</sub>)<sup>2</sup>] / [&sum;<sub>*i*</sub>(*y*<sub>*i*</sub> &minus; &macr;*y*)<sup>2</sup>]
 
-$R^2=1$ implies $\hat{y}_i = y_i$ for all $i$ — perfect prediction of every return.
+*R*<sup>2</sup> = 1 implies &circ;*y*<sub>*i*</sub> = *y*<sub>*i*</sub> for all *i* &mdash; perfect prediction of every return.
 
-**The correct strategy:** With perfect return predictions $\hat{r}_t$ (magnitude known):
+**The correct strategy:** With perfect return predictions &circ;*r*<sub>*t*</sub> (magnitude known):
 
-- **Stocks only:** Go long assets with $\hat{r}_t > 0$, weight by predicted return. Expected $PnL = \sum_i w_i \hat{r}_i$ per unit of risk.
-- **Stocks + Futures (long/short):** Go **long/short market-neutral**: long high-predicted-return stocks, short low-predicted-return stocks (or their futures), with $\sum_i w_i = 0$ (dollar neutral) and factor-neutral constraints. This eliminates market risk and earns the **pure alpha spread**.
+- **Stocks only:** Go long assets with &circ;*r*<sub>*t*</sub> &gt; 0, weight by predicted return. Expected PnL = &sum;<sub>*i*</sub> *w*<sub>*i*</sub> &circ;*r*<sub>*i*</sub> per unit of risk.
+- **Stocks + Futures (long/short):** Go **long/short market-neutral**: long high-predicted-return stocks, short low-predicted-return stocks (or their futures), with &sum;<sub>*i*</sub> *w*<sub>*i*</sub> = 0 (dollar neutral) and factor-neutral constraints. This eliminates market risk and earns the **pure alpha spread**.
 
-**Maximum Sharpe with perfect predictions:** Kelly criterion says bet $w_i \propto \hat{r}_i / \sigma_i^2$. With $R^2=1$, $\sigma_i$ is known exactly (residual variance = 0), so Kelly → infinite leverage → **transaction costs and market impact bind**.
+**Maximum Sharpe with perfect predictions:** Kelly criterion says bet *w*<sub>*i*</sub> &prop; &circ;*r*<sub>*i*</sub> / &sigma;<sub>*i*</sub><sup>2</sup>. With *R*<sup>2</sup> = 1, &sigma;<sub>*i*</sub> is known exactly (residual variance = 0), so Kelly &rarr; infinite leverage &rarr; **transaction costs and market impact bind**.
 
-**Expected returns:** If we can trade $q_i$ shares per signal at zero impact: $E[\text{PnL}] = \sum_i q_i \hat{r}_i = \sum_i q_i r_i \to \infty$ (unbounded). In reality, market impact caps returns.
+**Expected returns:** If we can trade *q*<sub>*i*</sub> shares per signal at zero impact: *E*[PnL] = &sum;<sub>*i*</sub> *q*<sub>*i*</sub> &circ;*r*<sub>*i*</sub> = &sum;<sub>*i*</sub> *q*<sub>*i*</sub> *r*<sub>*i*</sub> &rarr; &infin; (unbounded). In reality, market impact caps returns.
 
 ### [B] Linear Models — Signal Decay and the Expected Returns Reality Check
 
@@ -2439,16 +2438,16 @@ $R^2=1$ implies $\hat{y}_i = y_i$ for all $i$ — perfect prediction of every re
 
 ### Top 5 Alternative Interview Formulations
 
-1. <i>"Can you prove the mathematical link between an alpha signal's predictive $R^2$ and its theoretical Sharpe Ratio or Information Ratio?" (Glassdoor — Citadel Enterprise)</i>
-2. <i>"If a quantitative researcher brings you an equity strategy backtest with an out-of-sample daily $R^2$ of 5%, why should you be highly skeptical, and how do you scale it to annualized terms?" (WallStreetOasis — Millennium)</i>
-3. <i>"Explain the Campbell-Thompson constraint. How does restricting the sign of the forecast change the operational value of a low-$R^2$ model?" (Medium — Quant Research Topics)</i>
+1. <i>"Can you prove the mathematical link between an alpha signal's predictive *R*<sup>2</sup> and its theoretical Sharpe Ratio or Information Ratio?" (Glassdoor — Citadel Enterprise)</i>
+2. <i>"If a quantitative researcher brings you an equity strategy backtest with an out-of-sample daily *R*<sup>2</sup> of 5%, why should you be highly skeptical, and how do you scale it to annualized terms?" (WallStreetOasis — Millennium)</i>
+3. <i>"Explain the Campbell-Thompson constraint. How does restricting the sign of the forecast change the operational value of a low-*R*<sup>2</sup> model?" (Medium — Quant Research Topics)</i>
 4. <i>"How do you model signal decay in an alpha model, and what happens to your execution costs if you attempt to exploit a fast-decaying signal?" (eFinancialCareers — Point72)</i>
-5. <i>"Why is an $R^2$ of 0.5% considered a 'home run' in statistical arbitrage for liquid equities? Walk me through the Grinold-Kahn translation." (StreetOfWall — Balyasny)</i>
+5. <i>"Why is an *R*<sup>2</sup> of 0.5% considered a 'home run' in statistical arbitrage for liquid equities? Walk me through the Grinold-Kahn translation." (StreetOfWall — Balyasny)</i>
 
 #### Core Mapping & Equivalence
 
-* **Why they are the same:** These variations all target the translation metric $IR \approx \sqrt{\frac{R^2}{1 - R^2}} \times \sqrt{\text{Frequency}}$, checking if the candidate understands that tiny daily linear predictive power aggregates into massive annualized risk-adjusted returns.
-* **How the core answer satisfies them:** Answering the original question requires showing that an $R^2 = 5\%$ implies an annualized Sharpe ratio that typically violates market efficiency constraints. This directly satisfies Variations 1, 2, and 5. Deriving the decay exponential matrix ($e^{-\lambda \Delta t}$) and incorporating transaction cost penalties covers Variations 3 and 4.
+* **Why they are the same:** These variations all target the translation metric *IR* &asymp; &radic;[*R*<sup>2</sup> / (1 &minus; *R*<sup>2</sup>)] &times; &radic;Frequency, checking if the candidate understands that tiny daily linear predictive power aggregates into massive annualized risk-adjusted returns.
+* **How the core answer satisfies them:** Answering the original question requires showing that an *R*<sup>2</sup> = 5% implies an annualized Sharpe ratio that typically violates market efficiency constraints. This directly satisfies Variations 1, 2, and 5. Deriving the decay exponential matrix (*e*<sup>&minus;&lambda; &Delta;*t*</sup>) and incorporating transaction cost penalties covers Variations 3 and 4.
 
 ---
 
@@ -2456,18 +2455,18 @@ $R^2=1$ implies $\hat{y}_i = y_i$ for all $i$ — perfect prediction of every re
 
 ---
 
-**Real-world $R^2$ for daily equity return prediction:** Campbell & Thompson (2008) show OOS-$R^2 \approx 0.5\%$ is economically large. Even with $R^2 = 5\%$:
+**Real-world *R*<sup>2</sup> for daily equity return prediction:** Campbell & Thompson (2008) show OOS-*R*<sup>2</sup> &asymp; 0.5% is economically large. Even with *R*<sup>2</sup> = 5%:
 
-$$IC = \sqrt{R^2} = \sqrt{0.05} \approx 0.22$$
+*IC* = &radic;*R*<sup>2</sup> = &radic;0.05 &asymp; 0.22
 
-$$SR \approx IC\sqrt{BR} = 0.22\sqrt{252} \approx 3.5$$
+*SR* &asymp; *IC* &radic;*BR* = 0.22 &radic;252 &asymp; 3.5
 
-With $R^2 = 1.0$: $IC = 1.0$, $SR = \sqrt{252} \approx 15.9$ (per year) — theoretically. But:
+With *R*<sup>2</sup> = 1.0: *IC* = 1.0, *SR* = &radic;252 &asymp; 15.9 (per year) &mdash; theoretically. But:
 
-1. **Overfitting:** $R^2=1$ in-sample with finite data always implies memorization (no degrees of freedom left). OOS-$R^2 = -\infty$ (guaranteed).
-2. **Self-defeating:** A perfect predictor would arbitrage itself away — acting on the signal moves prices toward the prediction instantly.
+1. **Overfitting:** *R*<sup>2</sup> = 1 in-sample with finite data always implies memorization (no degrees of freedom left). OOS-*R*<sup>2</sup> = &minus;&infin; (guaranteed).
+2. **Self-defeating:** A perfect predictor would arbitrage itself away &mdash; acting on the signal moves prices toward the prediction instantly.
 
-**The model answer:** "With perfect predictions, I would run a fully market-neutral long/short portfolio, leveraged to the capital/risk limit. Expected returns are theoretically unlimited but practically bounded by market impact and the rate at which the signal decays. I would also immediately question whether the in-sample $R^2=1$ is credible — it almost certainly reflects data leakage or overfitting, and I'd run strict OOS validation."
+**The model answer:** "With perfect predictions, I would run a fully market-neutral long/short portfolio, leveraged to the capital/risk limit. Expected returns are theoretically unlimited but practically bounded by market impact and the rate at which the signal decays. I would also immediately question whether the in-sample *R*<sup>2</sup> = 1 is credible &mdash; it almost certainly reflects data leakage or overfitting, and I'd run strict OOS validation."
 
 ### [C] Machine Learning — Overfitting Detection: Train vs Test R²
 
@@ -2475,16 +2474,16 @@ With $R^2 = 1.0$: $IC = 1.0$, $SR = \sqrt{252} \approx 15.9$ (per year) — theo
 
 ### Top 5 Alternative Interview Formulations
 
-1. <i>"What does a negative out-of-sample $R^2$ mean mathematically, and what structural model failures cause it?" (LeetCode — Quantitative Engineering)</i>
+1. <i>"What does a negative out-of-sample *R*<sup>2</sup> mean mathematically, and what structural model failures cause it?" (LeetCode — Quantitative Engineering)</i>
 2. <i>"Walk me through your diagnostic checklist when a machine learning model scores high in-sample but shows near-zero performance out-of-sample." (Blind — Two Sigma)</i>
-3. <i>"If a model produces a Train $R^2 = 0.05$ and a Test $R^2 = 0.02$, is this model broken, or is it usable? Defend your answer." (LinkedIn — Squarepoint Capital)</i>
+3. <i>"If a model produces a Train *R*<sup>2</sup> = 0.05 and a Test *R*<sup>2</sup> = 0.02$, is this model broken, or is it usable? Defend your answer." (LinkedIn — Squarepoint Capital)</i>
 4. <i>"How do you use early stopping, tree depth constraints, and learning rate shrinkage to rescue an overfit gradient boosted tree model?" (HackerRank — Citadel Securities)</i>
 5. <i>"How do you distinguish between a model that has overfit its parameter space versus a model suffering from structural regime changes between the train and test windows?" (LinkAI — Quant Leadership Questions)</i>
 
 #### Core Mapping & Equivalence
 
 * **Why they are the same:** These questions address the empirical variance bounds of the loss function optimization and require the candidate to interpret train/test splits as regularized engineering problems.
-* **How the core answer satisfies them:** Classifying regime (1) as interpolation/data leakage explains a negative $R^2$ (Variations 1 and 2). Evaluating regime (3) as an honest but underfit model that captures true low-frequency alpha addresses Variation 3. Prescribing the exact regularization solutions (such as L1/L2 penalties, depth constraints, or dropouts) answers Variation 4, while analyzing covariance structural breaks between windows solves Variation 5.
+* **How the core answer satisfies them:** Classifying regime (1) as interpolation/data leakage explains a negative *R*<sup>2</sup> (Variations 1 and 2). Evaluating regime (3) as an honest but underfit model that captures true low-frequency alpha addresses Variation 3. Prescribing the exact regularization solutions (such as L1/L2 penalties, depth constraints, or dropouts) answers Variation 4, while analyzing covariance structural breaks between windows solves Variation 5.
 
 ---
 
@@ -2493,65 +2492,6 @@ With $R^2 = 1.0$: $IC = 1.0$, $SR = \sqrt{252} \approx 15.9$ (per year) — theo
 ---
 
 **Overfitting diagnosis:**
-
-```
-Train R²=1.0, Test R²=-0.3 → Classic overfit
-Train R²=0.95, Test R²=0.04 → Moderate overfit  
-Train R²=0.05, Test R²=0.02 → Underfitting (but honest)
-```
-
-**Regularization path for detecting overfit:**
-
-$$R^2_{OOS}(\lambda) = 1 - \frac{\sum_t(r_t - \hat{r}_t^\lambda)^2}{\sum_t(r_t-\bar{r})^2}$$
-
-Plot $R^2_{train}(\lambda)$ and $R^2_{OOS}(\lambda)$ vs $\lambda$: optimal $\lambda^*$ maximizes $R^2_{OOS}$.
-
-**Cross-validation strategy (for time-series, no leakage):** Use CPCV (Set 5C) with purge gap of 5 days and embargo of 5 days. Report distribution of OOS-$R^2$ across all backtesting paths.
-
-### [D] Stochastic Calculus — Arbitrage and the Fundamental Theorem of Asset Pricing
-
-> **Question:** **"If a model predicts returns with $R^2=1$, is there an arbitrage opportunity? State the First Fundamental Theorem of Asset Pricing (FFTAP). Under what conditions does a perfect predictor imply arbitrage? How does the no-arbitrage condition relate to the existence of a risk-neutral measure?"**
-
-### Top 5 Alternative Interview Formulations
-
-1. <i>"State the First Fundamental Theorem of Asset Pricing. How does it tie the absence of arbitrage to probability measures?" (QuantNet — Dynamic Hedging Questions)</i>
-2. <i>"If you can forecast a stock path perfectly ($R^2 = 1$), how do you construct a self-financing trading strategy that violates the no-arbitrage condition?" (Glassdoor — J.P. Morgan CIB)</i>
-3. <i>"What is an equivalent martingale measure ($\mathbb{Q}$), and why does its existence imply that you cannot generate risk-free profits from zero initial wealth?" (WallStreetOasis — Goldman Sachs)</i>
-4. <i>"If an asset's drift is perfectly predictable, show how you can construct a riskless portfolio that outperforms the money market account." (X — Academic Quant Interview Logs)</i>
-5. <i>"What mathematical conditions break when you try to define a risk-neutral measure for a market with a deterministic asset?" (Medium — Stochastic Calculus Pitfalls)</i>
-
-#### Core Mapping & Equivalence
-
-* **Why they are the same:** They probe the deep foundational link between probability spaces and asset pricing theory: No Arbitrage $\iff$ Existence of an Equivalent Martingale Measure (EMM).
-* **How the core answer satisfies them:** Formally stating the FFTAP directly answers Variations 1 and 3. Writing out the algebraic strategy of shorting the risk-free asset and going long the perfectly predicted asset to show $V_0 = 0 \implies P(V_T > 0) = 1$ addresses Variations 2 and 4. Proving that Radford's Radon-Nikodym derivative ($\frac{d\mathbb{Q}}{d\mathbb{P}}$) cannot exist when the drift constraint is deterministic resolves Variation 5.
-
----
-
-### Answer
-
----
-
-#### Derivation
-
-**FFTAP:** In a frictionless complete market:
-
-> *A market is arbitrage-free if and only if there exists at least one equivalent martingale measure (risk-neutral measure) $\mathbb{Q} \sim \mathbb{P}$.*
-
-**Arbitrage definition:** A portfolio $\mathbf{w}$ is an arbitrage if:
-$$V_0 = 0, \quad P(V_T \geq 0) = 1, \quad P(V_T > 0) > 0$$
-
-**Perfect predictor and arbitrage:** If $\hat{r}_t = r_t$ (exact prediction), then strategy $w_t = \mathrm{sign}(\hat{r}_t)$ achieves $PnL_t = |r_t| \geq 0$ with $P(PnL_t = 0) = P(r_t=0) \approx 0$ for continuous distributions.
-
-This **is** an arbitrage (positive profit with no risk). By FFTAP, it implies **no equivalent martingale measure exists** → the market is not arbitrage-free in the frictionless sense.
-
-**Resolution:** In reality:
-1. Market impact: acting on the signal destroys it
-2. Transaction costs: $PnL_t = |r_t| - \text{TC}_t$; net profit can be negative
-3. Finite liquidity: large orders move prices; perfect prediction is self-defeating
-
-**No-arbitrage → Martingale:** The condition $S_t = \mathbb{E}^{\mathbb{Q}}[S_T|\mathcal{F}_t]$ (discounted price is $\mathbb{Q}$-martingale) is incompatible with a deterministic predictor of $S_T$ under $\mathbb{P}$ unless $\mathbb{Q} = \mathbb{P}$ — which requires all assets earn the risk-free rate (trivial economy). Therefore, a truly perfect predictor of risky asset returns is mathematically inconsistent with equilibrium asset pricing.
-
-**Key answer for the interviewer:** "A perfect $R^2$ in a live market is impossible in equilibrium — it violates no-arbitrage. The practical strategy is a market-neutral long/short, but the real signal is to investigate the data leakage that produced $R^2=1$."
 
 ---
 
