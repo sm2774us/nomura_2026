@@ -1122,12 +1122,12 @@ $$\mathbf{r} = \mathbf{B}_{Axioma}\,\mathbf{f} + \boldsymbol{\epsilon}$$
 ┌─────────────────────────────────────────────────────────┐
 │              Axioma Factor Taxonomy (AXWW21)            │
 ├─────────────────┬───────────────────────────────────────┤
-│ Market          │ Global Market                          │
+│ Market          │ Global Market                         │
 ├─────────────────┼───────────────────────────────────────┤
 │ Style           │ Value, Growth, Size, Leverage,        │
-│                 │ Liquidity, Market Sensitivity,         │
+│                 │ Liquidity, Market Sensitivity,        │
 │                 │ Momentum, Short-Term Momentum,        │
-│                 │ Exchange Rate Sensitivity, Volatility  │
+│                 │ Exchange Rate Sensitivity, Volatility │
 ├─────────────────┼───────────────────────────────────────┤
 │ Industry        │ GICS Level-2 (24 industry groups)     │
 ├─────────────────┼───────────────────────────────────────┤
