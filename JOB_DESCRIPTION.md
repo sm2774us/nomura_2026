@@ -1,5 +1,13 @@
 # Nomura Securities International, Inc. · Quantitative Researcher
 
+---
+---
+
+[↩️ Back to README.md](./README.md)
+
+---
+---
+
 ## Job Metadata
 - Job Title:  Quant Researcher
 - Job Code:  13458
