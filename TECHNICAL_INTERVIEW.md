@@ -27,7 +27,7 @@
 9. [Interview Set 9 — Regime Detection & Hidden Markov Models (Stat / LinReg / ML / Stoch)](#set-9)
 10. [Interview Set 10 — Perfect-`R^2` Gotcha & Trading Strategy Design (Stat / LinReg / ML / Stoch)](#set-10)
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -40,14 +40,14 @@
 | **[C] Machine Learning** | Gradient boosting, neural networks, CV, regularization |
 | **[D] Stochastic Calculus** | Brownian motion, Itô, martingales, SDEs, option pricing |
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
 <a name="set-1"></a>
 ## Interview Set 1 — Equity Factor Model: Risk Decomposition
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -493,7 +493,7 @@ Condition Number cond(B'B): 2.1
 
 ![correlation_heatmap.png](./outputs/correlation_heatmap.png)
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -564,7 +564,7 @@ $$\mathrm{Var}(\hat{\boldsymbol{\beta}}_{GLS}) = (\mathbf{X}^\top\boldsymbol{\Om
 **In practice (Barra WLS):** Use market cap as weights: $\boldsymbol{\Omega} = \mathrm{diag}(w_1,\ldots,w_N)^{-1}$ where $w_i \propto \sqrt{\text{MktCap}_i}$.
 
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -628,7 +628,7 @@ $$\phi_j(f, x) = \sum_{S \subseteq \mathcal{F} \setminus \{j\}} \frac{|S|!(|\mat
 
 In CRB context: explains which order-flow feature most drove the model's residual risk estimate — actionable for hedging.
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -700,14 +700,14 @@ $$\mathbb{E}[S_T] = \mathbb{E}\!\left[e^{X_T}\right] = e^{\mathbb{E}[X_T] + \fra
 
 The $-\frac{1}{2}\sigma^2$ in the drift of $X_t$ exactly cancels with the variance term in the MGF, leaving the "economically correct" expected return $e^{\mu T}$.
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
 <a name="set-2"></a>
 ## Interview Set 2 — Tail Risk: CVaR and Expected Shortfall
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -786,7 +786,7 @@ So $\mathrm{VaR}_{0.975}(L_1 + L_2) = 100 > 0 = \mathrm{VaR}(L_1) + \mathrm{VaR}
 
 **VaR penalises the diversified portfolio!**
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -863,7 +863,7 @@ with:
 
 $$\mathrm{MSE}(\hat{\boldsymbol{\beta}}_{\lambda^{\*}}) < \mathrm{MSE}(\hat{\boldsymbol{\beta}}_{OLS}) \quad \text{■}$$
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -930,7 +930,7 @@ Since $\mathbf{f}_t \in (0,1)$ elementwise (sigmoid output), the product is cont
 
 **Key insight:** The forget gate acts as an **adaptive gradient highway** — it can learn $f_t \approx 1$ for dimensions needing long memory, preserving gradients across hundreds of steps.
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -991,14 +991,14 @@ $$C(t,S) = S\Phi(d_1) - Ke^{-r(T-t)}\Phi(d_2)$$
 
 $$d_{1,2} = \frac{\ln(S/K) + (r \pm \frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}$$
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
 <a name="set-3"></a>
 ## Interview Set 3 — Mean–Variance Portfolio Optimization
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -1059,7 +1059,7 @@ $$\mathrm{SE} = \sqrt{\frac{1 + \frac{1}{2}(1.5)^2 + \frac{3}{4}}{252}} = \sqrt{
 
 CI widens to $(1.29, 1.71)$ — fat tails inflate uncertainty by ~16%.
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -1130,7 +1130,7 @@ $$\hat{\boldsymbol{\Sigma}}_{LW} = (1-\alpha)\hat{\boldsymbol{\Sigma}}_S + \alph
 
 Optimal $\alpha^*$ minimizes expected Frobenius loss $\mathbb{E}[\|\hat{\boldsymbol{\Sigma}} - \boldsymbol{\Sigma}\|_F^2]$, with an analytical formula (Oracle Approximating Shrinkage estimator).
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -1189,7 +1189,7 @@ $$\hat{\beta}_{L,j} = \mathrm{sign}(\hat{\beta}_{OLS,j})\max(|\hat{\beta}_{OLS,j
 
 Ridge: $\hat{\beta}_{R,j} = \hat{\beta}_{OLS,j}/(1+\lambda)$ — never zero.
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -1249,14 +1249,14 @@ $$M_t = M_0 + \int_0^t \phi_s\,dW_s^\mathbb{Q}$$
 
 The process $\phi_t$ identifies the **delta hedge** (number of shares to hold at each time $t$), guaranteeing a replicating portfolio exists for every square-integrable payoff.
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
 <a name="set-4"></a>
 ## Interview Set 4 — Transaction Cost Analysis & Market Impact
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -1312,7 +1312,7 @@ $$\hat{V}_{HC3} = (X'X)^{-1}\left(\sum_i \frac{\hat{u}_i^2}{(1-h_{ii})^2} x_i x_
 
 Or use **WLS** with weights inversely proportional to variance (e.g., weighted by $1/ADV_i$ since large-cap trades have lower IS variance).
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -1367,7 +1367,7 @@ Stage 2: $\hat{\boldsymbol{\beta}}_{IV} = (\hat{\mathbf{X}}^\top\mathbf{X})^{-1}
 
 $$\mathrm{Var}(\hat{\boldsymbol{\beta}}_{IV}) = \sigma^2(\hat{\mathbf{X}}^\top\mathbf{X})^{-1}\hat{\mathbf{X}}^\top\mathbf{X}(\hat{\mathbf{X}}^\top\mathbf{X})^{-1}$$
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -1410,7 +1410,7 @@ $$\hat{V}^{DR} = \frac{1}{n}\sum_i \left[\hat{Q}(s_i,\pi_e) + \frac{\pi_e(a_i|s_
 
 GBM trains $\hat{Q}(s,a)$ as the direct model (DM component), then IPW corrects residuals.
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -1471,14 +1471,14 @@ Solution: $a(t) = \sqrt{\lambda\sigma^2\eta}\coth(\kappa(T-t))$ where $\kappa = 
 
 This is **linear in $x(t)$** — sell at a rate proportional to remaining inventory, accelerating as urgency grows (as $\tau \to 0$, $\sinh(\kappa\tau) \to \kappa\tau$, so $v^* \to x/\tau$ — full liquidation).
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
 <a name="set-5"></a>
 ## Interview Set 5 — Volatility Modeling: GARCH and HAR-RV
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -1525,7 +1525,7 @@ $$\boxed{\bar{\sigma}^2 = \frac{\omega}{1 - \alpha - \beta}} \quad \text{valid i
 
 **Persistence:** Autocorrelation of squared returns decays as $(\alpha+\beta)^k$ for lag $k$. For S&P 500, typical estimates: $\alpha \approx 0.09$, $\beta \approx 0.90$, persistence $= 0.99$.
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -1579,7 +1579,7 @@ OLS estimate: $\hat{\boldsymbol{\beta}} = (\mathbf{X}^\top\mathbf{X})^{-1}\mathb
 - HAR: OLS estimation, better out-of-sample forecasting, uses high-frequency RV
 - GARCH: MLE estimation, parametric, requires only daily close prices
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -1628,7 +1628,7 @@ CPCV(T observations, K folds, purge_gap G):
 
 **CPCV advantage:** Generates $\binom{K}{K-2}$ backtesting paths, giving a full distribution of out-of-sample performance — not just one backtest path.
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -1685,14 +1685,14 @@ $$P_{1,2} = \frac{1}{2} + \frac{1}{\pi}\int_0^\infty \mathrm{Re}\!\left[\frac{e^
 3. Mean-reversion of $V_t$ is empirically consistent with VIX dynamics
 4. Better pricing of barrier options, variance swaps, and exotic hedges used in CRB
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
 <a name="set-6"></a>
 ## Interview Set 6 — Central Risk Book: Residual Risk Pricing
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -1746,7 +1746,7 @@ $$IR = \frac{IC \cdot \sigma \cdot \sqrt{BR}}{\sigma} = IC\sqrt{BR}$$
 
 **CRB implication:** The residual book has $BR$ = trades facilitated per day × 252. Even with $IC = 0.03$ (a weak signal), $IR = 0.03\sqrt{252 \times 50} \approx 3.4$ — highly attractive, justifying the CRB business model.
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -1799,7 +1799,7 @@ $$IR = \frac{IC \cdot \sigma \cdot \sqrt{BR}}{\sigma} = IC\sqrt{BR}$$
 
 **For factor risk models:** OOS-*R*<sup>2</sup> and IC over a rolling walk-forward window. Positive OOS-*R*<sup>2</sup> is a high bar (Campbell & Thompson 2008: even $OOS\text{-}R^2 \approx 0.5\%$ is economically large for equity return prediction).
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -1852,7 +1852,7 @@ $$W_{ij}^{(l)} \sim \mathcal{N}\!\left(0,\, \frac{2}{n_l}\right)$$
 
 ReLU zeroes half the neurons: effective fan-in is $n_l/2$, requiring $2\times$ larger variance.
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -1905,14 +1905,14 @@ $$\boxed{VIX^2 = K_{var} = \frac{2e^{rT}}{T}\left(\int_0^{F}\frac{P(K,T)}{K^2}dK
 
 **CRB implications:** Dealers in the CRB are naturally short variance via client facilitation. Hedging with variance swaps or VIX futures provides pure vega exposure. The model-free formula above means CRB can mark its variance book without assuming a specific vol model.
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
 <a name="set-7"></a>
 ## Interview Set 7 — P&L Attribution and Greeks
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -1960,7 +1960,7 @@ $$Q_{BL} = T(T+2)\sum_{k=1}^m \frac{\hat{\rho}_k^2}{T-k} \sim \chi^2_m \text{ un
 - Negative autocorrelation: residual risk is mean-reverting — potential alpha, can trade against it
 - Both imply the factor model is **misspecified** (missing factors)
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -2008,7 +2008,7 @@ $$Q_{BL} = T(T+2)\sum_{k=1}^m \frac{\hat{\rho}_k^2}{T-k} \sim \chi^2_m \text{ un
 
 **Fix:** WLS with market-cap weights, or GLS, or HC3 robust standard errors.
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -2053,7 +2053,7 @@ $$Q_{BL} = T(T+2)\sum_{k=1}^m \frac{\hat{\rho}_k^2}{T-k} \sim \chi^2_m \text{ un
 
 **Non-stationarity problem:** Financial environments violate the RL assumption of a stationary MDP. Solution: meta-RL (MAML), online learning with decaying weights, or regime-conditioned policies using HMM state as input feature.
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -2112,7 +2112,7 @@ $$\Theta + \frac{1}{2}\sigma^2 S^2 \Gamma = r(V - S\Delta)$$
 
 **P&L interpretation:** The right side $r(V - S\Delta)$ is the risk-free return on the bond leg of the replicating portfolio ($\Pi_{bond} = V - S\Delta$ invested at $r$). The left side: $\Theta < 0$ (option loses value with time) is funded by $\frac{1}{2}\sigma^2 S^2 \Gamma > 0$ (gamma scalping profit from realized volatility). A delta-hedged position breaks even when $\sigma_{realized} = \sigma_{implied}$.
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -2120,7 +2120,7 @@ $$\Theta + \frac{1}{2}\sigma^2 S^2 \Gamma = r(V - S\Delta)$$
 ## Interview Set 8 — Smart Order Routing & Algorithmic Execution
 
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -2173,7 +2173,7 @@ where *V* = bucket size (equal for all &tau;).
 
 VPIN threshold &lambda;<sup>\*</sup>: calibrate via ROC curve on historical toxic flow events.
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -2218,7 +2218,7 @@ VPIN threshold &lambda;<sup>\*</sup>: calibrate via ROC curve on historical toxi
 
 &pi;<sup>\*</sup><sub>*t*</sub> = ***x***<sub>*t*</sub><sup>&top;&beta;</sup> + &epsilon;<sub>*t*</sub>, &emsp;&emsp; &pi;<sub>*t*</sub> = max(0, min(&pi;<sup>\*</sup><sub>*t*</sub>, &pi;<sub>*max*</sub>))
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -2274,7 +2274,7 @@ Optimal leaf weight: *w*<sub>*j*</sub><sup>\*</sup> = &minus; *G*<sub>*j*</sub> 
 4. Early stopping on OOS gain
 5. `max_depth` ≤ 6
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -2335,14 +2335,14 @@ Var[*I*] = &int;<sub>0</sub><sup>*T*</sup> &sigma;<sub>*t*</sub><sup>2</sup> *dt
 
 This is the **timing risk** component of Implementation Shortfall.
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
 <a name="set-9"></a>
 ## Interview Set 9 — Regime Detection with Hidden Markov Models
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -2403,7 +2403,7 @@ This is the **timing risk** component of Implementation Shortfall.
 
 **Number of states:** Select *K* by BIC = &minus;2 ln &circ;*L* + (#params) &middot; ln *T* (penalizes complexity) or by domain knowledge (*K*=2: risk-on/off; *K*=3: bull/neutral/crisis).
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -2450,7 +2450,7 @@ where *W*<sub>*s*</sub> = diag(&gamma;<sub>1</sub>(*s*),&hellip;,&gamma;<sub>*T*
 
 **Identification problem:** In a *K*-regime model with symmetric emission distributions, regimes can be permuted without changing likelihood. Fix via ordering constraints (e.g., &mu;<sub>1</sub> < &mu;<sub>2</sub> < &hellip; < &mu;<sub>*K*</sub>) or economic labeling.
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -2509,7 +2509,7 @@ In XGBoost: `scale_pos_weight = C(FN)/C(FP)`.
 
 **Evaluation metric for imbalanced:** Use **F1-score**, **AUC-ROC**, or **Precision-Recall AUC** &mdash; not accuracy (which is trivially high if you predict "no crisis" always).
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -2569,14 +2569,14 @@ Under jump-diffusion, the tails are fatter (mixture of normals with varying mean
 
 For daily VaR (*T*=1/252): jump contribution &asymp; (1 / 252) &times; 0.20 &asymp; 8 bps &mdash; material at the 99% level.
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
 <a name="set-10"></a>
 ## Interview Set 10 — The Perfect `R^2` Gotcha (Stochastic Calculus Meets Strategy Design)
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -2610,7 +2610,7 @@ For daily VaR (*T*=1/252): jump contribution &asymp; (1 / 252) &times; 0.20 &asy
 
 ### Answer
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -2629,7 +2629,7 @@ For daily VaR (*T*=1/252): jump contribution &asymp; (1 / 252) &times; 0.20 &asy
 
 **Expected returns:** If we can trade *q*<sub>*i*</sub> shares per signal at zero impact: *E*[PnL] = &sum;<sub>*i*</sub> *q*<sub>*i*</sub> &circ;*r*<sub>*i*</sub> = &sum;<sub>*i*</sub> *q*<sub>*i*</sub> *r*<sub>*i*</sub> &rarr; &infin; (unbounded). In reality, market impact caps returns.
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -2669,7 +2669,7 @@ With *R*<sup>2</sup> = 1.0: *IC* = 1.0, *SR* = &radic;252 &asymp; 15.9 (per year
 
 **The model answer:** "With perfect predictions, I would run a fully market-neutral long/short portfolio, leveraged to the capital/risk limit. Expected returns are theoretically unlimited but practically bounded by market impact and the rate at which the signal decays. I would also immediately question whether the in-sample *R*<sup>2</sup> = 1 is credible &mdash; it almost certainly reflects data leakage or overfitting, and I'd run strict OOS validation."
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
@@ -3042,7 +3042,7 @@ Annual Sharpe: 0.06  95% CI: [-1.33, 1.44]
 └─────────────────────────┴────────────────────────────────────────────┘
 ```
 
-[🔝 Back to Top](#-table-of-contents)
+[🔝 Back to Top](#%EF%B8%8F-table-of-contents)
 
 ---
 
