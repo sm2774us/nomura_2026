@@ -53,6 +53,8 @@
 
 ### [A] Statistics — Barra-Style Factor Model Covariance Decomposition
 
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET1/A1/EXPLANATION.pdf)**
+
 > **Question:** **"In a Barra-style linear factor model with $K$ factors and $N$ assets, how do you decompose total portfolio variance into systematic and idiosyncratic components? Derive the covariance matrix of returns and show each term. When would you trust systematic risk more than idiosyncratic risk, and what breaks first when factors are collinear?"**
 
 ### Top 5 Alternative Interview Formulations
@@ -499,6 +501,8 @@ Condition Number cond(B'B): 2.1
 
 ### [B] Linear Models — Factor Loadings via OLS: Gauss–Markov & Diagnostics
 
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET1/B1/EXPLANATION.pdf)**
+
 > **Question:** **"You run cross-sectional OLS regressions each month to estimate Barra-style factor exposures $\hat{\boldsymbol{\beta}}$. State the Gauss–Markov theorem formally. What are its assumptions? Which assumption fails first in high-frequency equity data, and what is the GLS fix? Derive the GLS estimator."**
 
 ### Top 5 Alternative Interview Formulations
@@ -570,6 +574,8 @@ $$\mathrm{Var}(\hat{\boldsymbol{\beta}}_{GLS}) = (\mathbf{X}^\top\boldsymbol{\Om
 
 ### [C] Machine Learning — Gradient Boosting for Factor Return Prediction
 
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET1/C1/EXPLANATION.pdf)**
+
 > **Question:** **"Explain precisely how gradient boosting minimizes a loss function via functional gradient descent. Write out the algorithm for squared-error loss. What is the variance–bias tradeoff for the number of trees $M$ and depth $d$? How does SHAP help explain factor exposures in a CRB context?"**
 
 ### Top 5 Alternative Interview Formulations
@@ -633,6 +639,8 @@ In CRB context: explains which order-flow feature most drove the model's residua
 ---
 
 ### [D] Stochastic Calculus — Itô's Lemma and the Log-Return SDE
+
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET1/D1/EXPLANATION.pdf)**
 
 > **Question:** **"Starting from GBM $dS = \mu S\,dt + \sigma S\,dW_t$, derive the SDE for $X_t = \ln S_t$ using Itô's lemma. Why is there a $-\frac{1}{2}\sigma^2$ correction? Show the distribution of $S_T$ and compute $\mathbb{E}[S_T]$."**
 
@@ -713,6 +721,8 @@ The $-\frac{1}{2}\sigma^2$ in the drift of $X_t$ exactly cancels with the varian
 
 ### [A] Statistics — CVaR Derivation for Elliptical Distributions
 
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET2/A2/EXPLANATION.pdf)**
+
 > **Question:** **"Define CVaR (Expected Shortfall) at confidence level $\alpha$ for a continuous loss distribution. Derive the closed-form CVaR for $L \sim \mathcal{N}(\mu, \sigma^2)$. Under what conditions is CVaR sub-additive but VaR is not? Give a counter-example."**
 
 ### Top 5 Alternative Interview Formulations
@@ -792,6 +802,8 @@ So $\mathrm{VaR}_{0.975}(L_1 + L_2) = 100 > 0 = \mathrm{VaR}(L_1) + \mathrm{VaR}
 
 ### [B] Linear Models — Ridge Regression and the Bias–Variance Tradeoff
 
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET2/B2/EXPLANATION.pdf)**
+
 > **Question:** **"Derive the Ridge estimator as a constrained OLS problem. Show that Ridge is equivalent to Bayesian OLS with a specific prior. Derive the bias and variance of $\hat{\boldsymbol{\beta}}_\lambda$ and show that there exists a $\lambda > 0$ yielding lower MSE than OLS."**
 
 ### Top 5 Alternative Interview Formulations
@@ -869,6 +881,8 @@ $$\mathrm{MSE}(\hat{\boldsymbol{\beta}}_{\lambda^{\*}}) < \mathrm{MSE}(\hat{\bol
 
 ### [C] Machine Learning — LSTM and Vanishing Gradient
 
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET2/C2/EXPLANATION.pdf)**
+
 > **Question (from Commonly_Asked_Quant_Interview_Questions.txt Q2.1):** **"How do LSTMs solve the vanishing gradient problem? Be specific about which gates prevent gradient vanishing and write the gradient flow equation through the cell state."**
 
 ### Top 5 Alternative Interview Formulations
@@ -935,6 +949,8 @@ Since $\mathbf{f}_t \in (0,1)$ elementwise (sigmoid output), the product is cont
 ---
 
 ### [D] Stochastic Calculus — Risk-Neutral Pricing and Black–Scholes PDE
+
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET2/D2/EXPLANATION.pdf)**
 
 > **Question:** **"Using the risk-neutral measure, derive the Black–Scholes PDE for a European call option. Define the replicating portfolio and apply Itô's lemma. What does 'risk-neutral' actually mean mathematically (Girsanov's theorem)?"**
 
@@ -1004,6 +1020,8 @@ $$d_{1,2} = \frac{\ln(S/K) + (r \pm \frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}}
 
 ### [A] Statistics — Sharpe Ratio Inference and the Uncertainty of Estimation
 
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET3/A3/EXPLANATION.pdf)**
+
 > **Question:** **"You estimate a strategy's Sharpe ratio as $\hat{SR} = 1.5$ over 252 daily observations. Construct a 95% confidence interval. What is the statistical power of testing $H_0: SR = 0$ vs $H_1: SR > 0$? How does non-normality (excess kurtosis $\kappa$) affect the standard error?"**
 
 ### Top 5 Alternative Interview Formulations
@@ -1064,6 +1082,8 @@ CI widens to $(1.29, 1.71)$ — fat tails inflate uncertainty by ~16%.
 ---
 
 ### [B] Linear Models — Mean–Variance Optimization: Derivation
+
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET3/B3/EXPLANATION.pdf)**
 
 > **Question:** **"Derive the closed-form Markowitz efficient frontier. Starting from the Lagrangian, derive the minimum-variance portfolio and the two-fund separation theorem. What goes wrong numerically when $\boldsymbol{\Sigma}$ is estimated from data, and what is the shrinkage fix (Ledoit-Wolf)?"**
 
@@ -1136,6 +1156,8 @@ Optimal $\alpha^*$ minimizes expected Frobenius loss $\mathbb{E}[\|\hat{\boldsym
 
 ### [C] Machine Learning — L1 Lasso as Feature Selection
 
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET3/C3/EXPLANATION.pdf)**
+
 > **Question (from Commonly_Asked_Quant_Interview_Questions.txt Q2.4):** **"Explain Ridge vs Lasso. Why does L1 regularization produce sparse solutions and push coefficients exactly to zero? Provide a geometric and a sub-gradient argument."**
 
 ### Top 5 Alternative Interview Formulations
@@ -1194,6 +1216,8 @@ Ridge: $\hat{\beta}_{R,j} = \hat{\beta}_{OLS,j}/(1+\lambda)$ — never zero.
 ---
 
 ### [D] Stochastic Calculus — The Martingale Representation Theorem
+
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET3/D3/EXPLANATION.pdf)**
 
 > **Question:** **"Define a martingale. Is $W_t^2 - t$ a martingale? Prove it. State the Martingale Representation Theorem and explain its role in risk-neutral derivative pricing."**
 
@@ -1262,6 +1286,8 @@ The process $\phi_t$ identifies the **delta hedge** (number of shares to hold at
 
 ### [A] Statistics — Implementation Shortfall Decomposition
 
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET4/A4/EXPLANATION.pdf)**
+
 > **Question:** **"Define Implementation Shortfall (IS) precisely. Decompose IS into delay cost, price impact, timing risk, and opportunity cost. If you measure IS across 10,000 trades and want to test whether your algorithm's IS is better than VWAP benchmark at the 99% level, what test do you use and why? What if IS is heteroskedastic?"**
 
 ### Top 5 Alternative Interview Formulations
@@ -1318,6 +1344,8 @@ Or use **WLS** with weights inversely proportional to variance (e.g., weighted b
 
 ### [B] Linear Models — Almgren-Chriss Market Impact Regression
 
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET4/B4/EXPLANATION.pdf)**
+
 > **Question:** **"The Almgren-Chriss model decomposes market impact into temporary and permanent components. Fit this as a linear regression. How do you estimate the temporary impact coefficient $\eta$ from trade data? What is the endogeneity problem and how do you fix it with IV?"**
 
 ### Top 5 Alternative Interview Formulations
@@ -1373,6 +1401,8 @@ $$\mathrm{Var}(\hat{\boldsymbol{\beta}}_{IV}) = \sigma^2(\hat{\mathbf{X}}^\top\m
 
 ### [C] Machine Learning — Gradient Boosting for Optimal Execution Scheduling
 
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET4/C4/EXPLANATION.pdf)**
+
 > **Question:** **"You want to predict optimal execution rate $v^*(t)$ using GBM. Your features include: time-of-day, spread, volatility, order size, ADV. How do you handle the feedback loop? Explain offline policy evaluation via Inverse Propensity Weighting (IPW)."**
 
 ### Top 5 Alternative Interview Formulations
@@ -1415,6 +1445,8 @@ GBM trains $\hat{Q}(s,a)$ as the direct model (DM component), then IPW corrects 
 ---
 
 ### [D] Stochastic Calculus — Optimal Execution as Stochastic Control (HJB)
+
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET4/D4/EXPLANATION.pdf)**
 
 > **Question:** **"In the Almgren-Chriss continuous-time framework, the trader minimizes $E[C] + \lambda\,\mathrm{Var}[C]$ where $C$ is execution cost. Set up the HJB equation. What is the form of the optimal strategy and why is it linear in remaining inventory?"**
 
@@ -1484,6 +1516,8 @@ This is **linear in $x(t)$** — sell at a rate proportional to remaining invent
 
 ### [A] Statistics — GARCH(1,1): Stationarity and Persistence
 
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET5/A5/EXPLANATION.pdf)**
+
 > **Question:** **"Write the GARCH(1,1) model and derive its unconditional variance. What is the condition for covariance stationarity? Define 'volatility persistence' and what $\alpha + \beta \to 1$ means empirically (IGARCH)."**
 
 ### Top 5 Alternative Interview Formulations
@@ -1530,6 +1564,8 @@ $$\boxed{\bar{\sigma}^2 = \frac{\omega}{1 - \alpha - \beta}} \quad \text{valid i
 ---
 
 ### [B] Linear Models — HAR-RV: Heterogeneous Autoregressive Realized Variance
+
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET5/B5/EXPLANATION.pdf)**
 
 > **Question:** **"Specify the HAR-RV model (Corsi 2009). Why is it linear despite modeling multi-horizon volatility clustering? Estimate it via OLS and state which coefficient captures 'weekly' vs 'monthly' persistence. Compare it to GARCH in terms of estimation and forecasting."**
 
@@ -1585,6 +1621,8 @@ OLS estimate: $\hat{\boldsymbol{\beta}} = (\mathbf{X}^\top\mathbf{X})^{-1}\mathb
 
 ### [C] Machine Learning — Time-Series Cross-Validation for Equity Models
 
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET5/C5/EXPLANATION.pdf)**
+
 > **Question (from Commonly_Asked_Quant_Interview_Questions.txt Q2.3):** **"How do you evaluate a model for time-series data (e.g., predicting equity volatility 5 days ahead)? Why is standard k-fold CV wrong here? Describe Purged Walk-Forward CV and Combinatorial Purged CV (CPCV)."**
 
 ### Top 5 Alternative Interview Formulations
@@ -1633,6 +1671,8 @@ CPCV(T observations, K folds, purge_gap G):
 ---
 
 ### [D] Stochastic Calculus — Heston Stochastic Volatility Model
+
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET5/D5/EXPLANATION.pdf)**
 
 > **Question:** **"Write the Heston (1993) SDE system. Using the Feynman-Kac formula, show that the option price satisfies a PDE. What are the model's advantages over Black-Scholes for CRB pricing? Define the characteristic function approach."**
 
@@ -1698,6 +1738,8 @@ $$P_{1,2} = \frac{1}{2} + \frac{1}{\pi}\int_0^\infty \mathrm{Re}\!\left[\frac{e^
 
 ### [A] Statistics — Residual Risk and Information Ratio Attribution
 
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET6/A6/EXPLANATION.pdf)**
+
 > **Question:** **"In a Central Risk Book, after hedging systematic factor exposures, you are left with idiosyncratic (residual) risk. How do you measure the Information Ratio of the residual book? Derive the Fundamental Law of Active Management (FLAM) and interpret its components."**
 
 ### Top 5 Alternative Interview Formulations
@@ -1752,6 +1794,8 @@ $$IR = \frac{IC \cdot \sigma \cdot \sqrt{BR}}{\sigma} = IC\sqrt{BR}$$
 
 ### [B] Linear Models — OLS Evaluation Metrics (from Commonly_Asked_Quant_Interview_Questions.txt Q1.2)
 
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET6/B6/EXPLANATION.pdf)**
+
 > **Question:** **"What are the common metrics to evaluate a linear regression model's performance? Distinguish between in-sample and out-of-sample metrics. Which metrics are most relevant for a factor risk model predicting next-month returns?"**
 
 ### Top 5 Alternative Interview Formulations
@@ -1805,6 +1849,8 @@ $$IR = \frac{IC \cdot \sigma \cdot \sqrt{BR}}{\sigma} = IC\sqrt{BR}$$
 
 ### [C] Machine Learning — Neural Network Weight Initialization (from Q2.2)
 
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET6/C6/EXPLANATION.pdf)**
+
 > **Question (from Commonly_Asked_Quant_Interview_Questions.txt Q2.2):** **"What is the problem with constant initialization of neural network weights (0-initialization or 1-initialization)? Derive the symmetry-breaking argument. What initializations work for deep networks (Xavier, He)?"**
 
 ### Top 5 Alternative Interview Formulations
@@ -1857,6 +1903,8 @@ ReLU zeroes half the neurons: effective fan-in is $n_l/2$, requiring $2\times$ l
 ---
 
 ### [D] Stochastic Calculus — Variance Swap Pricing via Realized Variance
+
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET6/D6/EXPLANATION.pdf)**
 
 > **Question:** **"A variance swap pays $(\sigma^2_{realized} - K_{var})$ at maturity. Using the log-contract replication result, derive the fair value $K_{var}$ as an integral of call and put prices over all strikes. What is the connection to the VIX formula?"**
 
@@ -1918,6 +1966,8 @@ $$\boxed{VIX^2 = K_{var} = \frac{2e^{rT}}{T}\left(\int_0^{F}\frac{P(K,T)}{K^2}dK
 
 ### [A] Statistics — P&L Attribution: Residual Analysis
 
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET7/A7/EXPLANATION.pdf)**
+
 > **Question:** **"You run daily P&L attribution against a Barra factor model. After removing factor P&L, the residual has autocorrelation. Use the Durbin-Watson test and Box-Ljung test to diagnose the serial correlation. What does autocorrelated residual P&L imply for the CRB?"**
 
 ### Top 5 Alternative Interview Formulations
@@ -1965,6 +2015,8 @@ $$Q_{BL} = T(T+2)\sum_{k=1}^m \frac{\hat{\rho}_k^2}{T-k} \sim \chi^2_m \text{ un
 ---
 
 ### [B] Linear Models — OLS for Homoskedasticity Testing (from Q1.3)
+
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET7/B7/EXPLANATION.pdf)**
 
 > **Question (from Commonly_Asked_Quant_Interview_Questions.txt Q1.3):** **"Explain homoskedasticity. Why is it important for OLS? Describe the Breusch-Pagan and White tests. In the context of equity factor models, why is heteroskedasticity the rule rather than the exception?"**
 
@@ -2014,6 +2066,8 @@ $$Q_{BL} = T(T+2)\sum_{k=1}^m \frac{\hat{\rho}_k^2}{T-k} \sim \chi^2_m \text{ un
 
 ### [C] Machine Learning — CNN/DRL Architectures for CRB (from Q2.5)
 
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET7/C7/EXPLANATION.pdf)**
+
 > **Question (from Commonly_Asked_Quant_Interview_Questions.txt Q2.5):** **"In your experience with CNNs and deep RL: which architectures work for financial applications like CRB inventory management, and which don't? What is the problem of non-stationarity in financial RL?"**
 
 ### Top 5 Alternative Interview Formulations
@@ -2058,6 +2112,8 @@ $$Q_{BL} = T(T+2)\sum_{k=1}^m \frac{\hat{\rho}_k^2}{T-k} \sim \chi^2_m \text{ un
 ---
 
 ### [D] Stochastic Calculus — Greeks and Delta-Gamma-Vega Hedging
+
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET7/D7/EXPLANATION.pdf)**
 
 > **Question:** **"Starting from the Black-Scholes PDE, derive $\Delta$, $\Gamma$, and $\mathcal{V}$ (vega) for a European call. Show that the Black-Scholes PDE can be rewritten as $\Theta + \frac{1}{2}\sigma^2 S^2\Gamma = r(V - S\Delta)$. What does this equation say about the P&L of a delta-hedged position?"**
 
@@ -2126,6 +2182,8 @@ $$\Theta + \frac{1}{2}\sigma^2 S^2 \Gamma = r(V - S\Delta)$$
 
 ### [A] Statistics — Adverse Selection and Informed Order Flow Detection
 
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET8/A8/EXPLANATION.pdf)**
+
 > **Question:** **"Define the VPIN (Volume-synchronized Probability of Informed Trading) metric. Explain how it uses buy/sell volume imbalance to estimate the probability of informed trading. How would you use it in a CRB context to avoid toxic flow?"**
 
 ### Top 5 Alternative Interview Formulations
@@ -2179,6 +2237,8 @@ VPIN threshold &lambda;<sup>\*</sup>: calibrate via ROC curve on historical toxi
 
 ### [B] Linear Models — TWAP/VWAP Participation Rate Regression
 
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET8/B8/EXPLANATION.pdf)**
+
 > **Question:** **"You want to model the optimal participation rate &pi;<sub>*t*</sub> in an execution algorithm as a linear function of current market features. Specify the model, handle missing values (from Q1.4), and discuss whether participation rate should be bounded."**
 
 ### Top 5 Alternative Interview Formulations
@@ -2223,6 +2283,8 @@ VPIN threshold &lambda;<sup>\*</sup>: calibrate via ROC curve on historical toxi
 ---
 
 ### [C] Machine Learning — Gradient Boosting Feature Importance in SOR
+
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET8/C8/EXPLANATION.pdf)**
 
 > **Question:** **"In a GBM-based smart order routing model, you have 50 features (exchange-level: spread, queue depth, fill probability; stock-level: volatility, ADV). How do you prevent overfitting? Discuss XGBoost's regularization and feature importance via gain vs. cover."**
 
@@ -2279,6 +2341,8 @@ Optimal leaf weight: *w*<sub>*j*</sub><sup>\*</sup> = &minus; *G*<sub>*j*</sub> 
 ---
 
 ### [D] Stochastic Calculus — Ito Isometry and Stochastic Integrals for TCA
+
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET8/D8/EXPLANATION.pdf)**
 
 > **Question:** **"Define the Itô integral &int;<sub>0</sub><sup>*T*</sup> *H*<sub>*t*</sub> *dW*<sub>*t*</sub> for an adapted process *H*<sub>*t*</sub>. State and prove the Itô isometry. Use it to compute Var **[** &int;<sub>0</sub><sup>*T*</sup> &sigma;<sub>*t*</sub> *dW*<sub>*t*</sub> **]** for a deterministic &sigma;<sub>*t*</sub>."**
 
@@ -2348,6 +2412,8 @@ This is the **timing risk** component of Implementation Shortfall.
 
 ### [A] Statistics — HMM Parameter Estimation via Baum-Welch
 
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET9/A9/EXPLANATION.pdf)**
+
 > **Question:** **"You model equity market regimes (low vol / high vol / crisis) as a Hidden Markov Model with 3 states. Describe the E-step and M-step of the Baum-Welch algorithm. Show the forward-backward recursion. How do you select the number of states?"**
 
 ### Top 5 Alternative Interview Formulations
@@ -2409,6 +2475,8 @@ This is the **timing risk** component of Implementation Shortfall.
 
 ### [B] Linear Models — Regime-Conditional Factor Models
 
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET9/B9/EXPLANATION.pdf)**
+
 > **Question:** **"In a regime-switching linear factor model, how do you estimate regime-conditional betas? Does pooling betas across regimes introduce bias? Derive the regime-switching GLS estimator and discuss the regime identification problem."**
 
 ### Top 5 Alternative Interview Formulations
@@ -2455,6 +2523,8 @@ where *W*<sub>*s*</sub> = diag(&gamma;<sub>1</sub>(*s*),&hellip;,&gamma;<sub>*T*
 ---
 
 ### [C] Machine Learning — Gradient Boosting for Regime Classification
+
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET9/C9/EXPLANATION.pdf)**
 
 > **Question:** **"Compare GBM to HMM for equity regime classification. What features would you use in a GBM regime classifier? How do you handle class imbalance (crisis regimes are rare ~5% of days)? Explain SMOTE and cost-sensitive learning."**
 
@@ -2514,6 +2584,8 @@ In XGBoost: `scale_pos_weight = C(FN)/C(FP)`.
 ---
 
 ### [D] Stochastic Calculus — Jump-Diffusion Models for Crisis Regimes
+
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET9/D9/EXPLANATION.pdf)**
 
 > **Question:** **"Extend GBM to a jump-diffusion model (Merton 1976). Write the SDE and derive the expected return and variance. Show the characteristic function. How do jumps affect VaR calculations vs pure diffusion?"**
 
@@ -2616,6 +2688,8 @@ For daily VaR (*T*=1/252): jump contribution &asymp; (1 / 252) &times; 0.20 &asy
 
 ### [A] Statistics — *R*<sup>2</sup> = 1: What Does It Actually Mean?
 
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET10/A10/EXPLANATION.pdf)**
+
 *R*<sup>2</sup> = 1 &minus; [&sum;<sub>*i*</sub>(*y*<sub>*i*</sub> &minus; &circ;*y*<sub>*i*</sub>)<sup>2</sup>] / [&sum;<sub>*i*</sub>(*y*<sub>*i*</sub> &minus; &macr;*y*)<sup>2</sup>]
 
 *R*<sup>2</sup> = 1 implies &circ;*y*<sub>*i*</sub> = *y*<sub>*i*</sub> for all *i* &mdash; perfect prediction of every return.
@@ -2634,6 +2708,8 @@ For daily VaR (*T*=1/252): jump contribution &asymp; (1 / 252) &times; 0.20 &asy
 ---
 
 ### [B] Linear Models — Signal Decay and the Expected Returns Reality Check
+
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET10/B10/EXPLANATION.pdf)**
 
 > **Question:** **"Empirical research shows that out-of-sample *R*<sup>2</sup> for daily equity return predictions rarely exceeds 0.5% to 1%, yet Campbell & Thompson (2008) demonstrate this is economically significant. Given a linear model with a daily *R*<sup>2</sup> = 5%, derive the relationship between the predictive *R*<sup>2</sup> and the maximum attainable information Ratio (*IR*) before transaction costs. How does signal decay over a multi-day horizon affect the choice of your optimization's rebalancing frequency, and how do you implement a reality check on your expected return forecasts to ensure they do not imply unphysical turnover?"**
 
@@ -2674,6 +2750,8 @@ With *R*<sup>2</sup> = 1.0: *IC* = 1.0, *SR* = &radic;252 &asymp; 15.9 (per year
 ---
 
 ### [C] Machine Learning — Overfitting Detection: Train vs Test R²
+
+* **[DETAILED EXPLANATION](./DETAILED_EXPLANATIONS/TECHNICAL_INTERVIEW/SET10/C10/EXPLANATION.pdf)**
 
 > **Question:** **"You train a complex non-linear model (e.g., an XGBoost regressor or a deep neural network) to predict cross-sectional equity returns. Diagnose the following three optimization regimes based on their performance: (1) Train *R*<sup>2</sup> = 1.0, Test *R*<sup>2</sup> = &minus;0.3, (2) Train *R*<sup>2</sup> = 0.95, Test *R*<sup>2</sup> = 0.04, and (3) Train *R*<sup>2</sup> = 0.05, Test *R*<sup>2</sup> = 0.02. What structural components of your model or regularization parameters will you adjust to move from regimes 1 and 2 toward an optimal model? How do you statistically test whether the difference between your Train and Test *R*<sup>2</sup> is driven by true signal overfit or non-stationarity/regime shifts?"**
 
